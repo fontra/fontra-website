@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Oh Fontra.</title>
+  <meta charset="utf-8">
+  <title>Oh Fontra</title>
+  <style type="text/css">
+
+@font-face {
+  font-family: "inria-sans";
+  src: url("./InriaSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+
+body {
+  margin: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.icon {
+  width: min(50vw, 50vh);
+  height: min(50vw, 50vh);
+}
+
+.tagline {
+  color: white;
+  font-family: sans-serif;
+  font-family: inria-sans, sans-serif;
+  font-size: 2.5rem;
+}
+
+  </style>
 </head>
 <body>
 
-Oh Fontra.
+<img class="icon" src="./fontra-icon.svg">
+
+<div class="tagline">Oh Fontra</div>
 
 </body>
 </html>
