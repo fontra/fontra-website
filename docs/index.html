@@ -1,58 +1,66 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Oh Fontra</title>
-  <style type="text/css">
+  <head>
+    <meta charset="utf-8" />
+    <title>Oh Fontra</title>
+    <style type="text/css">
+      @font-face {
+        font-family: "inria-sans";
+        src: url("./InriaSans-Regular.woff2") format("woff2");
+        font-weight: 400;
+      }
 
-@font-face {
-  font-family: "inria-sans";
-  src: url("./InriaSans-Regular.woff2") format("woff2");
-  font-weight: 400;
-}
+      body {
+        margin: 0px;
+        width: 100vw;
+        height: 150vh;
+        background-color: #222;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
 
+        /* text */
+        color: white;
+        font-family: sans-serif;
+        font-family: inria-sans, sans-serif;
+        font-size: 2.25rem;
+      }
 
-body {
-  margin: 0px;
-  width: 100vw;
-  height: 150vh;
-  background-color: #222;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+      .icon {
+        width: min(50vw, 50vh);
+        height: min(50vw, 50vh);
+        border-radius: 27.5%;
+        box-shadow: 0.5rem 0.5rem 1.5rem black;
+      }
 
-  /* text */
-  color: white;
-  font-family: sans-serif;
-  font-family: inria-sans, sans-serif;
-  font-size: 2.25rem;
-}
+      a {
+        color: inherit;
+        text-decoration: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <img class="icon" src="./fontra-icon.svg" />
 
-.icon {
-  width: min(50vw, 50vh);
-  height: min(50vw, 50vh);
-  border-radius: 27.5%;
-  box-shadow: 0.5rem 0.5rem 1.5rem black;
-}
-
-a {
-  color: inherit;
-  text-decoration: inherit;
-}
-
-  </style>
-</head>
-<body>
-
-<img class="icon" src="./fontra-icon.svg">
-
-<div class="tagline">Oh Fontra</div>
-<div class="link"><a href="https://github.com/googlefonts/fontra">→ GitHub</a></div>
-<br>
-<div>
-  <iframe title="vimeo-player" src="https://player.vimeo.com/video/827522961?h=3b3c478228" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
-</div>
-</body>
+    <div class="tagline">Oh Fontra</div>
+    <div class="link">
+      <a href="https://github.com/googlefonts/fontra">→ GitHub</a>
+    </div>
+    <div class="link">
+      <a href="./Fontra_ATypI_2023.pdf">→ Slides ATypI 2023</a>
+    </div>
+    <br />
+    <div>
+      <iframe
+        title="vimeo-player"
+        src="https://player.vimeo.com/video/827522961?h=3b3c478228"
+        width="640"
+        height="360"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </body>
 </html>
