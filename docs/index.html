@@ -70,7 +70,7 @@
               month: "short",
               day: "numeric",
             });
-            const timeString = timestamp.toLocaleTimeString();
+            const timeString = timestamp.toLocaleTimeString("en-US");
             const el = element.nextElementSibling;
             el.innerText = `Uploaded on ${dateString}, ${timeString}`;
           });
