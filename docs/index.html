@@ -64,15 +64,16 @@
           }).then((response) => {
             const headers = Object.fromEntries(response.headers.entries());
             const timestamp = new Date(headers["last-modified"]);
-            const dateString = timestamp.toLocaleDateString("en-US", {
+            const timeString = timestamp.toLocaleTimeString("en-US", {
               weekday: "long",
               year: "numeric",
               month: "short",
               day: "numeric",
+              hour: "numeric",
+              minute: "2-digit",
             });
-            const timeString = timestamp.toLocaleTimeString("en-US");
             const el = element.nextElementSibling;
-            el.innerText = `Uploaded on ${dateString}, ${timeString}`;
+            el.innerText = `Uploaded on ${timeString}`;
           });
         }
       }
