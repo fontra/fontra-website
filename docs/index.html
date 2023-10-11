@@ -43,9 +43,42 @@
       a:hover {
         color: #f11759;
       }
+
+      .download.link {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .upload-date {
+        font-size: 0.55em;
+        color: #bbb;
+      }
     </style>
+    <script>
+      function fetchUploadDates() {
+        for (const element of document.querySelectorAll(".download > a")) {
+          fetch(element.href, {
+            method: "HEAD",
+          }).then((response) => {
+            const headers = Object.fromEntries(response.headers.entries());
+            const timestamp = new Date(headers["last-modified"]);
+            const dateString = timestamp.toLocaleDateString("en-US", {
+              weekday: "long",
+              year: "numeric",
+              month: "short",
+              day: "numeric",
+            });
+            const timeString = timestamp.toLocaleTimeString();
+            const el = element.nextElementSibling;
+            el.innerText = `Uploaded on ${dateString}, ${timeString}`;
+          });
+        }
+      }
+    </script>
   </head>
-  <body>
+  <body onload="fetchUploadDates()">
     <img class="icon" src="./fontra-icon.svg" />
 
     <div class="tagline">Oh Fontra</div>
@@ -59,15 +92,17 @@
       Fontra is made by
       <a href="https://black-foundry.com/">→ Black[Foundry]</a>
     </div>
-    <div class="link">
+    <div class="download link">
       <a href="https://fontra-download.black-foundry.com/FontraPak.dmg"
         >→ Download Fontra Pak for macOS</a
       >
+      <div class="upload-date">&nbsp;</div>
     </div>
-    <div class="link">
+    <div class="download link">
       <a href="https://fontra-download.black-foundry.com/FontraPak.zip"
         >→ Download Fontra Pak for Windows</a
       >
+      <div class="upload-date">&nbsp;</div>
     </div>
     <br />
     <div>
