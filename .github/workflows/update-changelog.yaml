@@ -1,4 +1,4 @@
-name: reports
+name: Update Changelog Page
 
 on:
   # push:
