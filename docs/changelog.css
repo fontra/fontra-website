@@ -1,0 +1,298 @@
+@font-face {
+  font-family: "inria-sans";
+  src: url("./InriaSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+html {
+  max-width: 800px;
+  background-color: #222;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  max-width: 100%;
+  margin-left: 1em;
+  margin-right: 1em;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.4;
+  color: white;
+  font-family: inria-sans, sans-serif;
+  font-size: 15px;
+  word-wrap: break-word;
+}
+
+.icon {
+  width: 5em;
+  height: 5em;
+  padding-top: 0.5em;
+}
+
+body a {
+  color: #fe185e; /* link color */
+}
+
+body a:hover,
+body a:active {
+  color: #f46490; /* hovered link color */
+}
+
+body em {
+  font-style: normal;
+  font-family: inria-sans, sans-serif;
+}
+
+body strong {
+  font-family: inria-sans, sans-serif;
+  font-weight: normal;
+}
+
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  font-family: inria-sans, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  line-height: 1.25;
+}
+
+body h1 {
+  font-family: inria-sans, sans-serif;
+  font-size: 2.5em;
+}
+
+@media (min-width: 690px) {
+  body h1 {
+    font-size: 2.5em;
+  }
+}
+
+body h2 {
+  font-size: 1.4em;
+}
+
+body h3 {
+  font-size: 1.2em;
+}
+
+body h4 {
+  font-size: 1.1em;
+}
+
+body h5 {
+  font-size: 0.875em;
+}
+
+body h6 {
+  font-size: 0.85em;
+  color: #777;
+}
+
+body img {
+  max-width: 100%;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  border-style: none;
+}
+
+body code,
+body pre {
+  font-family: monospace;
+  color: #fff;
+}
+
+body hr {
+  height: 1px;
+  padding: 0;
+  margin: 12px 0;
+  background-color: #567;
+  border: 0;
+}
+
+body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+body td,
+body th {
+  padding: 0;
+}
+
+body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+body blockquote {
+  margin: 0;
+}
+
+body ul,
+body ol {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body ol ol,
+body ul ol {
+  list-style-type: lower-roman;
+}
+
+body ul ul ol,
+body ul ol ol,
+body ol ul ol,
+body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+body dd {
+  margin-left: 0;
+}
+
+body p,
+body blockquote,
+body ul,
+body ol,
+body dl,
+body table,
+body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+body blockquote {
+  padding: 0 1em;
+  color: #777;
+  border-left: 0.25em solid #ddd;
+}
+
+body blockquote > :first-child {
+  margin-top: 0;
+}
+
+body blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+body ul,
+body ol {
+  padding-left: 2em;
+}
+
+body ul ul,
+body ul ol,
+body ol ol,
+body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body li > p {
+  margin-top: 16px;
+}
+
+body li + li {
+  margin-top: 0.25em;
+}
+
+body dl {
+  padding: 0;
+}
+
+body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  //  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+body table th {
+  font-weight: bold;
+}
+
+body table th,
+body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  background-color: #234;
+  border-radius: 3px;
+}
+
+body code::before,
+body code::after {
+  letter-spacing: -0.25em;
+  content: "\00a0";
+}
+
+body pre {
+  word-wrap: normal;
+}
+
+body pre > code {
+  padding: 0;
+  margin: 0;
+  //  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 100%;
+  line-height: 1.45;
+  background-color: #234;
+  border-radius: 3px;
+}
+
+body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+body pre code::before,
+body pre code::after {
+  content: normal;
+}
