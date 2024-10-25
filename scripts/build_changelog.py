@@ -27,7 +27,7 @@ htmlTemplate = """\
 </head>
 <body>
 <img class="icon" src="./fontra-icon.svg" />
-{html}
+{mdHtml}
 </body>
 </html>
 """
@@ -41,7 +41,9 @@ changeLogURL = (
 markdownSource = downloadURL(changeLogURL)
 
 mdConverter = markdown.Markdown()
-htmlIndex = docsDir / "changelog.html"
-htmlIndex.write_text(
-    htmlTemplate.format(html=mdConverter.convert(markdownSource), encoding="utf-8")
+mdHtml = mdConverter.convert(markdownSource)
+
+outPath = docsDir / "changelog.html"
+outPath.write_text(
+    htmlTemplate.format(mdHtml=mdHtml, encoding="utf-8")
 )
