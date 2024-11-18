@@ -10,6 +10,22 @@
 <body>
 <img class="icon" src="./fontra-icon.svg" />
 <h1>Changelog for Fontra</h1>
+<h2>2024-11-18</h2>
+<p>New feature: background images.</p>
+<p>A background image can be added to a glyph in three ways:</p>
+<ul>
+<li>Paste image data</li>
+<li>Drop an image file onto the canvas</li>
+<li>Choose an image file from the user's hard drive, with the "Glyph" -&gt; "Add background image..." menu.</li>
+</ul>
+<p>The image file or data can be in PNG or JPEG format.</p>
+<p>The glyph needs to be in edit mode, and at a selected source (not at an interpolation).</p>
+<p>Fontra's background image feature is mostly compatible with UFO background images, although it doesn't implement UFO's colorization feature yet. Fontra does allow the opacity of the image to be set.</p>
+<p>Background images are locked by default, and can be unlocked with the "Unlock background images" context menu item.</p>
+<p>Selected background images can be moved around by dragging, and they participate in the Selection Transformation panel's operations.</p>
+<p>The Selection Info panel shows the settings for a selected background image: the Opacity can be edited there and the Transformation settings can be edited numerically there.</p>
+<p>Caveat: support for background images is limited to the <code>.designspace</code>/<code>.ufo</code> and <code>.fontra</code> backends. It is currently not supported in the <code>rcjk</code> backend.</p>
+<p><a href="https://github.com/googlefonts/fontra/issues/1660">Issue 1660</a>, <a href="https://github.com/googlefonts/fontra/issues/1777">Issue 1777</a> (There were too many PRs to mention individually here.)</p>
 <h2>2024-11-13</h2>
 <ul>
 <li>Improved UI translations <a href="https://github.com/googlefonts/fontra/pull/1764">PR 1764</a></li>
