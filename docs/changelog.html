@@ -10,6 +10,22 @@
 <body>
 <img class="icon" src="./fontra-icon.svg" />
 <h1>Changelog for Fontra</h1>
+<h2>2025-03-05</h2>
+<p>There have been some major changes in the front end, in order to have a clearer separation between the Python server code and the front end. This makes the front-end usable independently from the server.</p>
+<ul>
+<li>All front end code and assets moved to a new folder, <code>src-js</code></li>
+<li>A bundler (webpack) is now used to package assets and code</li>
+<li>To run the bundler once: <code>npm run bundle</code></li>
+<li>To run the bundler in "watch" mode (updates bundle on changes): <code>npm run bundle-watch</code></li>
+<li>Or start the server with the new <code>--dev</code> option, which runs <code>npm run bundle-watch</code> in the background. For example:<ul>
+<li><code>fontra --dev filesystem path/to/fonts/</code></li>
+</ul>
+</li>
+<li><code>pip install path/to/fontra/</code> will run the bundler implicitly</li>
+<li>Similar changes were made in the <code>fontra-rcjk</code> repository</li>
+<li>Fontra Pak was adjusted to these changes as well</li>
+<li><a href="https://github.com/googlefonts/fontra/issues/1952">Issue 1952</a> <a href="https://github.com/googlefonts/fontra/pull/2053">PR 2053</a> <a href="https://github.com/googlefonts/fontra-rcjk/pull/224">fontra-rcjk PR 224</a></li>
+</ul>
 <h2>2025-02-28</h2>
 <p>Many smaller bugs were fixed:</p>
 <ul>
