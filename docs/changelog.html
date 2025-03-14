@@ -10,6 +10,24 @@
 <body>
 <img class="icon" src="./fontra-icon.svg" />
 <h1>Changelog for Fontra</h1>
+<h2>2025-03-14</h2>
+<p>New features:</p>
+<ul>
+<li>Background layers are here! <a href="https://github.com/googlefonts/fontra/issues/50">Issue 50</a>, many PR's, see issue.</li>
+<li>Beginnings of writing .glyphs and .glyphspackage files. First step: glyph data. <a href="https://github.com/googlefonts/fontra-glyphs/issues/75">fontra-glyphs issue 75</a> <a href="https://github.com/googlefonts/fontra-glyphs/pull/76">fontra-glyphs PR 76</a> <a href="https://github.com/googlefonts/fontra-glyphs/issues/87">Issue for future work</a></li>
+</ul>
+<p>Bugfixes:</p>
+<ul>
+<li>Units Per Em is now exported properly (This affected "Export as", <code>fontra-workflow</code> and <code>fontra-copy</code>). <a href="https://github.com/googlefonts/fontra/issues/2044">Issue 2044</a> <a href="https://github.com/googlefonts/fontra/pull/2046">PR 2046</a></li>
+<li>Fixed bug where the context menu wouldn't go away <a href="https://github.com/googlefonts/fontra/issues/2068">Issue 2068</a> <a href="https://github.com/googlefonts/fontra/pull/2069">PR 2069</a></li>
+<li>Fixed false positive with the interpolation compatibility checker. <a href="https://github.com/googlefonts/fontra/issues/2081">Issue 2081</a> <a href="https://github.com/googlefonts/fontra/pull/2083">PR 2083</a></li>
+</ul>
+<p>Enhancements:</p>
+<ul>
+<li>Don't write empty kern data to .fontra project. <a href="https://github.com/googlefonts/fontra/issues/2045">Issue 2045</a> <a href="https://github.com/googlefonts/fontra/pull/2047">PR 2047</a></li>
+<li>Show a warning when deleting a font source. <a href="https://github.com/googlefonts/fontra/issues/2048">Issue 2048</a> <a href="https://github.com/googlefonts/fontra/pull/2055">PR 2055</a></li>
+<li>Allow menus to be opened with click-drag, not just click. <a href="https://github.com/googlefonts/fontra/issues/2049">Issue 2049</a> <a href="https://github.com/googlefonts/fontra/pull/2060">PR 2060</a></li>
+</ul>
 <h2>2025-03-05</h2>
 <p>There have been some major changes in the front end, in order to have a clearer separation between the Python server code and the front end. This makes the front-end usable independently from the server.</p>
 <ul>
