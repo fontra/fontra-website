@@ -17,21 +17,15 @@
 </ul>
 <h2>2025-03-25</h2>
 <ul>
-<li>
-<p>New features in the glyph sources list:</p>
-</li>
-<li>
-<p>The glyph sources are now sorted according to the axes (they used to be in creation order)</p>
-</li>
+<li>New features in the glyph sources list:<ul>
+<li>The glyph sources are now sorted according to the axes (they used to be in creation order)</li>
 <li>The <em>default</em> source's name is now rendered in bold, so it's easier to find</li>
 <li>For each <em>font source</em> location ("global location") for which the glyph does <em>not</em> have a source, there is now a "virtual source" in the list, rendered in gray. To create an <em>actual</em> source at that location, either double-click the virtual source, or, while the virtual source is selected, start modifying the glyph.</li>
 <li><a href="https://github.com/googlefonts/fontra/issues/1572">Issue 1572</a>, <a href="https://github.com/googlefonts/fontra/issues/1639">Issue 1639</a>, <a href="https://github.com/googlefonts/fontra/issues/1640">Issue 1640</a>, <a href="https://github.com/googlefonts/fontra/issues/2114">Issue 2114</a></li>
-<li>
-<p><a href="https://github.com/googlefonts/fontra/pull/2102">PR 2102</a>, <a href="https://github.com/googlefonts/fontra/pull/2098">PR 2098</a></p>
+<li><a href="https://github.com/googlefonts/fontra/pull/2102">PR 2102</a>, <a href="https://github.com/googlefonts/fontra/pull/2098">PR 2098</a></li>
+</ul>
 </li>
-<li>
-<p>Fixed subtle key handling bug with popup menus inside a dialog <a href="https://github.com/googlefonts/fontra/issues/2113">Issue 2113</a> <a href="https://github.com/googlefonts/fontra/pull/2115">PR 2115</a></p>
-</li>
+<li>Fixed subtle key handling bug with popup menus inside a dialog <a href="https://github.com/googlefonts/fontra/issues/2113">Issue 2113</a> <a href="https://github.com/googlefonts/fontra/pull/2115">PR 2115</a></li>
 </ul>
 <h2>2025-03-22</h2>
 <ul>
@@ -74,7 +68,7 @@
 <p>There have been some major changes in the front end, in order to have a clearer separation between the Python server code and the front end. This makes the front-end usable independently from the server.</p>
 <ul>
 <li>All front end code and assets moved to a new folder, <code>src-js</code></li>
-<li>A bundler (webpack) is now used to package assets and code</li>
+<li>A bundler (webpack) is now used to package assets and code<ul>
 <li>To run the bundler once: <code>npm run bundle</code></li>
 <li>To run the bundler in "watch" mode (updates bundle on changes): <code>npm run bundle-watch</code></li>
 <li>Or start the server with the new <code>--dev</code> option, which runs <code>npm run bundle-watch</code> in the background. For example:<ul>
@@ -82,6 +76,8 @@
 </ul>
 </li>
 <li><code>pip install path/to/fontra/</code> will run the bundler implicitly</li>
+</ul>
+</li>
 <li>Similar changes were made in the <code>fontra-rcjk</code> repository</li>
 <li>Fontra Pak was adjusted to these changes as well</li>
 <li><a href="https://github.com/googlefonts/fontra/issues/1952">Issue 1952</a> <a href="https://github.com/googlefonts/fontra/pull/2053">PR 2053</a> <a href="https://github.com/googlefonts/fontra-rcjk/pull/224">fontra-rcjk PR 224</a></li>
@@ -141,9 +137,11 @@
 <ul>
 <li>Making the interface between server and client more explicit <a href="https://github.com/googlefonts/fontra/pull/1863">PR 1863</a></li>
 <li>Fixed editing bug with multiple edit views <a href="https://github.com/googlefonts/fontra/pull/1870">PR 1870</a></li>
-<li>Prevent <code>fontra-copy</code> and Fontra Pak's "Export as..." to write on top of the source data (as this destroyed the data)</li>
+<li>Prevent <code>fontra-copy</code> and Fontra Pak's "Export as..." to write on top of the source data (as this destroyed the data)<ul>
 <li><code>fontra-copy</code>: <a href="https://github.com/googlefonts/fontra/pull/1860">PR 1860</a></li>
 <li>Fontra Pak: <a href="https://github.com/googlefonts/fontra-pak/pull/148">PR 148</a></li>
+</ul>
+</li>
 <li>Fontra Pak: add button with link to documentation <a href="https://github.com/googlefonts/fontra-pak/pull/143">PR 143</a></li>
 </ul>
 <h2>2024-12-04</h2>
@@ -245,10 +243,12 @@
 </ul>
 <h3>New sidebars</h3>
 <ul>
-<li>Selection Transformation</li>
+<li>Selection Transformation<ul>
 <li>transform objects (move, scale, rotate, skew)</li>
 <li>Align and distribute objects</li>
 <li>Path operations like remove overlaps</li>
+</ul>
+</li>
 <li>Glyph Notes</li>
 <li>Related Glyphs &amp; Characters</li>
 </ul>
@@ -274,11 +274,13 @@
 <ul>
 <li>Fontra Pak: Create new font</li>
 <li>Menu bar</li>
-<li>Axis editor</li>
+<li>Axis editor<ul>
 <li>Mapping (graph + list)</li>
 <li>Axis value labels</li>
 <li>Discrete axis</li>
 <li>Axis reordering</li>
+</ul>
+</li>
 <li>side bearings</li>
 <li>shift click</li>
 </ul>
