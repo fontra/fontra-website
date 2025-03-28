@@ -1,4 +1,5 @@
 import os
+import re
 import pathlib
 import markdown
 from urllib.request import urlopen
@@ -9,6 +10,18 @@ def downloadURL(url):
     response = urlopen(url)
     data = response.read()
     return data.decode("utf-8")
+
+
+indentPat = re.compile(r"^( +)")
+
+
+def doubleIndentation(source):
+    lines = []
+    for line in source.splitlines():
+        if line:
+            line = indentPat.sub(r"\1\1", line)
+        lines.append(line)
+    return "\n".join(lines)
 
 
 thisDir = pathlib.Path(__file__).resolve().parent
@@ -39,11 +52,10 @@ changeLogURL = (
     "https://raw.githubusercontent.com/googlefonts/fontra/refs/heads/main/CHANGELOG.md"
 )
 markdownSource = downloadURL(changeLogURL)
+markdownSource = doubleIndentation(markdownSource)
 
 mdConverter = markdown.Markdown()
 mdHtml = mdConverter.convert(markdownSource)
 
 outPath = docsDir / "changelog.html"
-outPath.write_text(
-    htmlTemplate.format(mdHtml=mdHtml, encoding="utf-8")
-)
+outPath.write_text(htmlTemplate.format(mdHtml=mdHtml, encoding="utf-8"))
