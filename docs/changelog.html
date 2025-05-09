@@ -10,6 +10,16 @@
 <body>
 <img class="icon" src="./fontra-icon.svg" />
 <h1>Changelog for Fontra</h1>
+<h2>2025-05-08</h2>
+<ul>
+<li>Fix miscellaneous bugs with the glyph source UI <a href="https://github.com/googlefonts/fontra/pull/2161">PR 2161</a><ul>
+<li>Don't misbehave when creating a new glyph source from a font source immediately after font axis/sources were edited</li>
+<li>Don't misbehave when trying to edit a glyph off-source, when a glyph axis is involved</li>
+<li>Fix default source/layer name fields in Add Source and Edit Source Properties dialog for variable glyphs (glyphs that have local axes)</li>
+</ul>
+</li>
+<li>Fix "disconnect" between two windows/tabs after network disconnect / computer sleep. <a href="https://github.com/googlefonts/fontra/pull/2152">PR 2152</a></li>
+</ul>
 <h2>2025-04-11</h2>
 <ul>
 <li>Create better placeholder strings for "undefined" glyphs, in the font overview and in the editor. This is especially effective for Arabic contextual alternates, and ligatures. Contributed by Khaled Hosny. <a href="https://github.com/googlefonts/fontra/issues/2005">Issue 2005</a> <a href="https://github.com/googlefonts/fontra/pull/2010">PR 2010</a></li>
