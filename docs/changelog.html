@@ -12,7 +12,7 @@
 <h1>Changelog for Fontra</h1>
 <h2>2025-07-25</h2>
 <ul>
-<li>Fixed serious bug in writing kerning to UFO: group references did not use the correct prefix. <a href="https://github.com/googlefonts/fontra/issues/2238">Issue 2238</a>, <a href="https://github.com/googlefonts/fontra/pull/2239">PR 2239</a></li>
+<li>Fixed a serious bug with writing kerning to UFO: group references did not use the correct prefix. <a href="https://github.com/googlefonts/fontra/issues/2238">Issue 2238</a>, <a href="https://github.com/googlefonts/fontra/pull/2239">PR 2239</a></li>
 <li>Add "inline calculator" functionality to the metrics fields in the selection info panel. Expressions evaluate to a concrete value once you type enter or leave the field. <a href="https://github.com/googlefonts/fontra/issues/2236">Issue 2236</a>, <a href="https://github.com/googlefonts/fontra/pull/2237">PR 2237</a> Quick rundown:<ul>
 <li>It supports most common operators and parentheses, for example <code>10 * (5 + 3) / 2</code>.</li>
 <li>It allows to use glyph names as variable names, to refer to the metric value for that glyph. For example, if you type <code>E</code> in the advance width field, it will take the advance width of the <code>E</code> glyph and put that in the field. Likewise, if you type <code>E</code> in the left sidebearing field, it will put the left sidebearing value from the <code>E</code> glyph in the field.</li>
