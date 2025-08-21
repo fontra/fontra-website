@@ -49,7 +49,7 @@ htmlTemplate = """\
 print("Generating html...")
 
 changeLogURL = (
-    "https://raw.githubusercontent.com/googlefonts/fontra/refs/heads/main/CHANGELOG.md"
+    "https://raw.githubusercontent.com/fontra/fontra/refs/heads/main/CHANGELOG.md"
 )
 markdownSource = downloadURL(changeLogURL)
 markdownSource = doubleIndentation(markdownSource)
