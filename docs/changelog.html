@@ -12,18 +12,18 @@
 <h1>Changelog for Fontra</h1>
 <h2>2025-08-19</h2>
 <ul>
-<li>When adding a new font source, instantiate the kerning for the new location. <a href="https://github.com/googlefonts/fontra/issues/2252">Issue 2252</a>, <a href="https://github.com/googlefonts/fontra/pull/2254">PR 2254</a></li>
-<li>When deleting a font source, also delete associated kerning sources. <a href="https://github.com/googlefonts/fontra/issues/2255">Issue 2255</a>, <a href="https://github.com/googlefonts/fontra/pull/2256">PR 2256</a></li>
+<li>When adding a new font source, instantiate the kerning for the new location. <a href="https://github.com/fontra/fontra/issues/2252">Issue 2252</a>, <a href="https://github.com/fontra/fontra/pull/2254">PR 2254</a></li>
+<li>When deleting a font source, also delete associated kerning sources. <a href="https://github.com/fontra/fontra/issues/2255">Issue 2255</a>, <a href="https://github.com/fontra/fontra/pull/2256">PR 2256</a></li>
 </ul>
 <h2>2025-08-13</h2>
 <ul>
-<li>Fixed a bug with pasting into a new glyph source (where the glyph source is created implicitly as part of the edit): the pasted item was added twice. <a href="https://github.com/googlefonts/fontra/issues/2241">Issue 2241</a>, <a href="https://github.com/googlefonts/fontra/pull/2245">PR 2245</a></li>
-<li>New "Add guideline between two points" functionality. It is an Edit menu and context menu item. Contributed by Dec/752986. <a href="https://github.com/googlefonts/fontra/pull/2226">PR 2226</a></li>
+<li>Fixed a bug with pasting into a new glyph source (where the glyph source is created implicitly as part of the edit): the pasted item was added twice. <a href="https://github.com/fontra/fontra/issues/2241">Issue 2241</a>, <a href="https://github.com/fontra/fontra/pull/2245">PR 2245</a></li>
+<li>New "Add guideline between two points" functionality. It is an Edit menu and context menu item. Contributed by Dec/752986. <a href="https://github.com/fontra/fontra/pull/2226">PR 2226</a></li>
 </ul>
 <h2>2025-07-25</h2>
 <ul>
-<li>Fixed a serious bug with writing kerning to UFO: group references did not use the correct prefix. <a href="https://github.com/googlefonts/fontra/issues/2238">Issue 2238</a>, <a href="https://github.com/googlefonts/fontra/pull/2239">PR 2239</a></li>
-<li>[Selection info panel] Added "inline calculator" functionality to the metrics fields. Expressions evaluate to a concrete value once you type enter or leave the field. <a href="https://github.com/googlefonts/fontra/issues/2236">Issue 2236</a>, <a href="https://github.com/googlefonts/fontra/pull/2237">PR 2237</a> Quick rundown:<ul>
+<li>Fixed a serious bug with writing kerning to UFO: group references did not use the correct prefix. <a href="https://github.com/fontra/fontra/issues/2238">Issue 2238</a>, <a href="https://github.com/fontra/fontra/pull/2239">PR 2239</a></li>
+<li>[Selection info panel] Added "inline calculator" functionality to the metrics fields. Expressions evaluate to a concrete value once you type enter or leave the field. <a href="https://github.com/fontra/fontra/issues/2236">Issue 2236</a>, <a href="https://github.com/fontra/fontra/pull/2237">PR 2237</a> Quick rundown:<ul>
 <li>It supports most common operators and parentheses, for example <code>10 * (5 + 3) / 2</code>.</li>
 <li>It allows to use glyph names as variable names, to refer to the metric value for that glyph. For example, if you type <code>E</code> in the advance width field, it will take the advance width of the <code>E</code> glyph and put that in the field. Likewise, if you type <code>E</code> in the left sidebearing field, it will put the left sidebearing value from the <code>E</code> glyph in the field.</li>
 <li>Glyph names can also be used as part of an expression, for example <code>E + 10</code>.</li>
@@ -33,21 +33,21 @@
 </ul>
 <h2>2025-07-24</h2>
 <ul>
-<li>Read/write guideline.locked flags from/to UFO. <a href="https://github.com/googlefonts/fontra/issues/1390">Issue 1390</a>, <a href="https://github.com/googlefonts/fontra/pull/2235">PR 2235</a></li>
-<li>Allow glyph guidelines to be selected anywhere along the line, instead of just at their anchor point. <a href="https://github.com/googlefonts/fontra/pull/2234">PR 2234</a></li>
+<li>Read/write guideline.locked flags from/to UFO. <a href="https://github.com/fontra/fontra/issues/1390">Issue 1390</a>, <a href="https://github.com/fontra/fontra/pull/2235">PR 2235</a></li>
+<li>Allow glyph guidelines to be selected anywhere along the line, instead of just at their anchor point. <a href="https://github.com/fontra/fontra/pull/2234">PR 2234</a></li>
 </ul>
 <h2>2025-07-23</h2>
 <ul>
-<li>[Selection info panel] Improved the sidebearing fields (advance, left sidebearing, right sidebearing) to alternatively accept a glyph name, to copy the value from. For example, if you enter <code>A</code> in the left sidebearing field, the left sidebearing from glyph <code>A</code> is copied into the field, once you type enter or leave the field otherwise. <a href="https://github.com/googlefonts/fontra/issues/2230">Issue 2230</a>, <a href="https://github.com/googlefonts/fontra/pull/2231">PR 2231</a></li>
-<li>[fontra-pak] New contributor sintfar fixed an issue that in some cases caused an error dialog to appear when exiting Fontra Pak on Windows. <a href="https://github.com/googlefonts/fontra-pak/pull/178">fontra-pak PR 178</a></li>
+<li>[Selection info panel] Improved the sidebearing fields (advance, left sidebearing, right sidebearing) to alternatively accept a glyph name, to copy the value from. For example, if you enter <code>A</code> in the left sidebearing field, the left sidebearing from glyph <code>A</code> is copied into the field, once you type enter or leave the field otherwise. <a href="https://github.com/fontra/fontra/issues/2230">Issue 2230</a>, <a href="https://github.com/fontra/fontra/pull/2231">PR 2231</a></li>
+<li>[fontra-pak] New contributor sintfar fixed an issue that in some cases caused an error dialog to appear when exiting Fontra Pak on Windows. <a href="https://github.com/fontra/fontra-pak/pull/178">fontra-pak PR 178</a></li>
 </ul>
 <h2>2025-07-16</h2>
 <ul>
-<li>[Kerning tool] Changed delete vs. alt-delete behavior: plain delete will now delete the selected kerning pairs across the entire designspace. Alt-delete will only delete the selected kerning pairs for the currently selected source location. <a href="https://github.com/googlefonts/fontra/pull/2224">PR 2224</a></li>
+<li>[Kerning tool] Changed delete vs. alt-delete behavior: plain delete will now delete the selected kerning pairs across the entire designspace. Alt-delete will only delete the selected kerning pairs for the currently selected source location. <a href="https://github.com/fontra/fontra/pull/2224">PR 2224</a></li>
 </ul>
 <h2>2025-07-15</h2>
 <ul>
-<li>Implemented a special placeholder notation <code>/?</code> for the text entry field, which will be substituted by the "current glyph". This is handy when spacing, kerning, or just looking at the current glyph in different context. Largely contributed by Gaëtan Baehr. <a href="https://github.com/googlefonts/fontra/issues/2198">Issue 2198</a>, <a href="https://github.com/googlefonts/fontra/pull/2206">PR 2206</a> Some notes:<ul>
+<li>Implemented a special placeholder notation <code>/?</code> for the text entry field, which will be substituted by the "current glyph". This is handy when spacing, kerning, or just looking at the current glyph in different context. Largely contributed by Gaëtan Baehr. <a href="https://github.com/fontra/fontra/issues/2198">Issue 2198</a>, <a href="https://github.com/fontra/fontra/pull/2206">PR 2206</a> Some notes:<ul>
 <li>When deselecting the current glyph (by clicking elsewhere), the "current glyph" is not reset, but kept.</li>
 <li>The glyph search panel can be used to change the "current glyph", even if there's no glyph selected in the canvas.</li>
 <li>The "select next/previous glyph" shortcuts work on the "current glyph", even if there's no glyph selected in the canvas.</li>
@@ -56,7 +56,7 @@
 </ul>
 <h2>2025-07-14</h2>
 <ul>
-<li>Added a new Sidebearing tool, as a companion to the Kerning tool. Both tools occupy the same slot in the toolbar, with the Sidebearing tool being the default. <a href="https://github.com/googlefonts/fontra/issues/2213">Issue 2213</a>, <a href="https://github.com/googlefonts/fontra/pull/2216">PR 2216</a> Quick intro:<ul>
+<li>Added a new Sidebearing tool, as a companion to the Kerning tool. Both tools occupy the same slot in the toolbar, with the Sidebearing tool being the default. <a href="https://github.com/fontra/fontra/issues/2213">Issue 2213</a>, <a href="https://github.com/fontra/fontra/pull/2216">PR 2216</a> Quick intro:<ul>
 <li>Hover over a glyph to see the sidebearing and advance values.</li>
 <li>Click-drag near a sidebearing to move it</li>
 <li>Click-drag on the glyph shape to move the glyph within its "advance area".</li>
@@ -70,7 +70,7 @@
 <li>The tab key can be used to navigate to the next sidebearing. Shift-tab will navigate to the previous sidebearing.</li>
 </ul>
 </li>
-<li>Some minor changes to the Kerning tool that we done in <a href="https://github.com/googlefonts/fontra/pull/2216">PR 2216</a>:<ul>
+<li>Some minor changes to the Kerning tool that we done in <a href="https://github.com/fontra/fontra/pull/2216">PR 2216</a>:<ul>
 <li>The cursor used for dragging is now a left-right arrow, to be more in line with the Sidebearing tool.</li>
 <li>The tab key can now be used to navigate to the next kerning pair. Shift-tab will navigate to the previous kerning pair.</li>
 </ul>
@@ -87,83 +87,83 @@
 <li>fixed a cosmetic issue on Windows</li>
 <li>and more</li>
 </ul>
-<p><a href="https://github.com/googlefonts/fontra/issues/2101">Issue 2101</a>, <a href="https://github.com/googlefonts/fontra/issues/2186">Issue 2186</a>, <a href="https://github.com/googlefonts/fontra/pull/2212">PR 2212</a></p>
+<p><a href="https://github.com/fontra/fontra/issues/2101">Issue 2101</a>, <a href="https://github.com/fontra/fontra/issues/2186">Issue 2186</a>, <a href="https://github.com/fontra/fontra/pull/2212">PR 2212</a></p>
 </li>
 </ul>
 <h2>2025-07-04</h2>
 <ul>
-<li>Gaëtan Baehr and Jérémie Hornus redesigned several of the edit tools: the knife tool, the shape/rectangle/oval tool, the kerning tool and the (soon-to-be-used) sidebearings tool. <a href="https://github.com/googlefonts/fontra/pull/2210">PR 2210</a></li>
-<li>[Kerning] The kerning tool now has a context menu, allowing users to make kerning exceptions for group kerning. <a href="https://github.com/googlefonts/fontra/issues/2204">Issue 2204</a> <a href="https://github.com/googlefonts/fontra/pull/2209">PR 2209</a></li>
-<li>Added a Bengali glyph set, kindly contributed by Dr Anirban Mitra. <a href="https://github.com/googlefonts/fontra/issues/2189">Issue 2189</a> <a href="https://github.com/googlefonts/fontra/pull/2190">PR 2190</a></li>
+<li>Gaëtan Baehr and Jérémie Hornus redesigned several of the edit tools: the knife tool, the shape/rectangle/oval tool, the kerning tool and the (soon-to-be-used) sidebearings tool. <a href="https://github.com/fontra/fontra/pull/2210">PR 2210</a></li>
+<li>[Kerning] The kerning tool now has a context menu, allowing users to make kerning exceptions for group kerning. <a href="https://github.com/fontra/fontra/issues/2204">Issue 2204</a> <a href="https://github.com/fontra/fontra/pull/2209">PR 2209</a></li>
+<li>Added a Bengali glyph set, kindly contributed by Dr Anirban Mitra. <a href="https://github.com/fontra/fontra/issues/2189">Issue 2189</a> <a href="https://github.com/fontra/fontra/pull/2190">PR 2190</a></li>
 </ul>
 <h2>2025-07-03</h2>
 <ul>
-<li>[Glyphs backend] Implemented "Find glyphs that use <em>this glyph</em>". <a href="https://github.com/googlefonts/fontra-glyphs/issues/103">fontra-glyphs issue 103</a> <a href="https://github.com/googlefonts/fontra-glyphs/pull/104">fontra-glyphs PR 104</a></li>
-<li>[Kerning] Allow kerning edits to be constrained to 5, 10 or 50 units, by using alt, shift or als-shift while dragging. Make arrow key kerning editing behave the same with respect to these modifier keys. Contributed by Gaëtan Baehr. <a href="https://github.com/googlefonts/fontra/pull/2205">PR 2205</a></li>
+<li>[Glyphs backend] Implemented "Find glyphs that use <em>this glyph</em>". <a href="https://github.com/fontra/fontra-glyphs/issues/103">fontra-glyphs issue 103</a> <a href="https://github.com/fontra/fontra-glyphs/pull/104">fontra-glyphs PR 104</a></li>
+<li>[Kerning] Allow kerning edits to be constrained to 5, 10 or 50 units, by using alt, shift or als-shift while dragging. Make arrow key kerning editing behave the same with respect to these modifier keys. Contributed by Gaëtan Baehr. <a href="https://github.com/fontra/fontra/pull/2205">PR 2205</a></li>
 </ul>
 <h2>2025-07-01</h2>
 <ul>
-<li>Fixed a bug that caused interpolated kerning to show the wrong value after editing a kerning pair. <a href="https://github.com/googlefonts/fontra/pull/2194">PR 2194</a></li>
-<li>Fixed a problem with the placeholder string for undefined glyphs in the edit canvas. <a href="https://github.com/googlefonts/fontra/issues/2192">Issue 2192</a> <a href="https://github.com/googlefonts/fontra/pull/2195">PR 2195</a></li>
-<li>Fix writing of the units-per-em value when copying/exporting to .designspace/.ufo. <a href="https://github.com/googlefonts/fontra/issues/2196">Issue 2196</a> <a href="https://github.com/googlefonts/fontra/pull/2197">PR 2197</a></li>
+<li>Fixed a bug that caused interpolated kerning to show the wrong value after editing a kerning pair. <a href="https://github.com/fontra/fontra/pull/2194">PR 2194</a></li>
+<li>Fixed a problem with the placeholder string for undefined glyphs in the edit canvas. <a href="https://github.com/fontra/fontra/issues/2192">Issue 2192</a> <a href="https://github.com/fontra/fontra/pull/2195">PR 2195</a></li>
+<li>Fix writing of the units-per-em value when copying/exporting to .designspace/.ufo. <a href="https://github.com/fontra/fontra/issues/2196">Issue 2196</a> <a href="https://github.com/fontra/fontra/pull/2197">PR 2197</a></li>
 </ul>
 <h2>2025-06-30</h2>
 <ul>
-<li>Fixed a bug that broke interpolation when adding kerning to a new source. <a href="https://github.com/googlefonts/fontra/pull/2191">PR 2191</a></li>
+<li>Fixed a bug that broke interpolation when adding kerning to a new source. <a href="https://github.com/fontra/fontra/pull/2191">PR 2191</a></li>
 </ul>
 <h2>2025-06-27</h2>
 <ul>
-<li>[Glyphs backend] Improve editing experience with larger .glyphs files. <a href="https://github.com/googlefonts/fontra-glyphs/pull/101">fontra-glyphs PR 101</a></li>
+<li>[Glyphs backend] Improve editing experience with larger .glyphs files. <a href="https://github.com/fontra/fontra-glyphs/pull/101">fontra-glyphs PR 101</a></li>
 </ul>
 <h2>2025-06-25</h2>
 <ul>
-<li>[Glyphs backend] Added support for writing kerning <a href="https://github.com/googlefonts/fontra-glyphs/pull/99">fontra-glyphs PR 99</a></li>
-<li>[Glyphs backend] Added support for deleting glyphs <a href="https://github.com/googlefonts/fontra-glyphs/pull/100">fontra-glyphs PR 100</a></li>
+<li>[Glyphs backend] Added support for writing kerning <a href="https://github.com/fontra/fontra-glyphs/pull/99">fontra-glyphs PR 99</a></li>
+<li>[Glyphs backend] Added support for deleting glyphs <a href="https://github.com/fontra/fontra-glyphs/pull/100">fontra-glyphs PR 100</a></li>
 </ul>
 <h2>2025-06-21</h2>
 <ul>
-<li>Initial support for editing kerning has landed. There is a new Kerning tool among the edit tools: ove the pointer to a combination and the pair will highlight and you can drag it to change the value. Or use arrow left or right. Tou can select multiple pairs using shift-click. A kern group can be assigned for either side of the glyph in the selection info panel, when a glyph is selected. <a href="https://github.com/googlefonts/fontra/issues/1501">Tracking issue 1501</a>.</li>
-<li>The relatively new sorting behavior in the Glyph sources panel is not loved by everyone. There is now a little hamburger menu where you can turn off sorting. <a href="https://github.com/googlefonts/fontra/issues/2126">Issue 2126</a> <a href="https://github.com/googlefonts/fontra/pull/2182">PR 2182</a></li>
-<li>[Glyphs backend] Olli Meier implemented OpenType feature reading and writing for the Glyphs backend. <a href="https://github.com/googlefonts/fontra-glyphs/pull/95">fontra-glyphs PR 95</a></li>
-<li>[Windows] Fixed a bug on Windows where Fontra Pak would refuse to launch if another application was listening to the default port (8000). <a href="https://github.com/googlefonts/fontra/issues/2180">Issue 2180</a> <a href="https://github.com/googlefonts/fontra/pull/2181">PR 2181</a> <a href="https://github.com/googlefonts/fontra-pak/pull/172">fontra-pak PR 172</a></li>
+<li>Initial support for editing kerning has landed. There is a new Kerning tool among the edit tools: ove the pointer to a combination and the pair will highlight and you can drag it to change the value. Or use arrow left or right. Tou can select multiple pairs using shift-click. A kern group can be assigned for either side of the glyph in the selection info panel, when a glyph is selected. <a href="https://github.com/fontra/fontra/issues/1501">Tracking issue 1501</a>.</li>
+<li>The relatively new sorting behavior in the Glyph sources panel is not loved by everyone. There is now a little hamburger menu where you can turn off sorting. <a href="https://github.com/fontra/fontra/issues/2126">Issue 2126</a> <a href="https://github.com/fontra/fontra/pull/2182">PR 2182</a></li>
+<li>[Glyphs backend] Olli Meier implemented OpenType feature reading and writing for the Glyphs backend. <a href="https://github.com/fontra/fontra-glyphs/pull/95">fontra-glyphs PR 95</a></li>
+<li>[Windows] Fixed a bug on Windows where Fontra Pak would refuse to launch if another application was listening to the default port (8000). <a href="https://github.com/fontra/fontra/issues/2180">Issue 2180</a> <a href="https://github.com/fontra/fontra/pull/2181">PR 2181</a> <a href="https://github.com/fontra/fontra-pak/pull/172">fontra-pak PR 172</a></li>
 </ul>
 <h2>2025-06-04</h2>
 <ul>
-<li>Fix warning caused by HTML Canvas API misuse. <a href="https://github.com/googlefonts/fontra/issues/2171">Issue 2171</a> <a href="https://github.com/googlefonts/fontra/pull/2174">PR 2174</a></li>
-<li>Added Georgian glyph sets. <a href="https://github.com/googlefonts/fontra/pull/2167">PR 2167</a></li>
-<li>Update glyph-data.csv. <a href="https://github.com/googlefonts/fontra/pull/2172">PR 2172</a></li>
+<li>Fix warning caused by HTML Canvas API misuse. <a href="https://github.com/fontra/fontra/issues/2171">Issue 2171</a> <a href="https://github.com/fontra/fontra/pull/2174">PR 2174</a></li>
+<li>Added Georgian glyph sets. <a href="https://github.com/fontra/fontra/pull/2167">PR 2167</a></li>
+<li>Update glyph-data.csv. <a href="https://github.com/fontra/fontra/pull/2172">PR 2172</a></li>
 </ul>
 <h2>2025-05-08</h2>
 <ul>
-<li>Fix miscellaneous bugs with the glyph source UI <a href="https://github.com/googlefonts/fontra/pull/2161">PR 2161</a><ul>
+<li>Fix miscellaneous bugs with the glyph source UI <a href="https://github.com/fontra/fontra/pull/2161">PR 2161</a><ul>
 <li>Don't misbehave when creating a new glyph source from a font source immediately after font axis/sources were edited</li>
 <li>Don't misbehave when trying to edit a glyph off-source, when a glyph axis is involved</li>
 <li>Fix default source/layer name fields in Add Source and Edit Source Properties dialog for variable glyphs (glyphs that have local axes)</li>
 </ul>
 </li>
-<li>Fix "disconnect" between two windows/tabs after network disconnect / computer sleep. <a href="https://github.com/googlefonts/fontra/pull/2152">PR 2152</a></li>
+<li>Fix "disconnect" between two windows/tabs after network disconnect / computer sleep. <a href="https://github.com/fontra/fontra/pull/2152">PR 2152</a></li>
 </ul>
 <h2>2025-04-11</h2>
 <ul>
-<li>Create better placeholder strings for "undefined" glyphs, in the font overview and in the editor. This is especially effective for Arabic contextual alternates, and ligatures. Contributed by Khaled Hosny. <a href="https://github.com/googlefonts/fontra/issues/2005">Issue 2005</a> <a href="https://github.com/googlefonts/fontra/pull/2010">PR 2010</a></li>
-<li>Fix glitch where the source layers (background layers) UI list does not immediately show when putting a glyph in edit mode. <a href="https://github.com/googlefonts/fontra/issues/2143">Issue 2143</a> <a href="https://github.com/googlefonts/fontra/pull/2144">PR 2144</a></li>
+<li>Create better placeholder strings for "undefined" glyphs, in the font overview and in the editor. This is especially effective for Arabic contextual alternates, and ligatures. Contributed by Khaled Hosny. <a href="https://github.com/fontra/fontra/issues/2005">Issue 2005</a> <a href="https://github.com/fontra/fontra/pull/2010">PR 2010</a></li>
+<li>Fix glitch where the source layers (background layers) UI list does not immediately show when putting a glyph in edit mode. <a href="https://github.com/fontra/fontra/issues/2143">Issue 2143</a> <a href="https://github.com/fontra/fontra/pull/2144">PR 2144</a></li>
 </ul>
 <h2>2025-04-07</h2>
 <ul>
-<li>Fixed Fontra application settings: due to a regression this view gave a 403 error. <a href="https://github.com/googlefonts/fontra/pull/2138">PR 2138</a></li>
+<li>Fixed Fontra application settings: due to a regression this view gave a 403 error. <a href="https://github.com/fontra/fontra/pull/2138">PR 2138</a></li>
 </ul>
 <h2>2025-04-06</h2>
 <ul>
-<li>Implement applying kerning in the editor canvas. <a href="https://github.com/googlefonts/fontra/issues/2135">Issue 2135</a> <a href="https://github.com/googlefonts/fontra/pull/2136">PR 2136</a></li>
+<li>Implement applying kerning in the editor canvas. <a href="https://github.com/fontra/fontra/issues/2135">Issue 2135</a> <a href="https://github.com/fontra/fontra/pull/2136">PR 2136</a></li>
 </ul>
 <h2>2025-03-30</h2>
 <ul>
-<li>[fontra-glyphs] The Glyphs backend now supports background layers, for reading and writing. <a href="https://github.com/googlefonts/fontra-glyphs/issues/88">fontra-glyphs issue 88</a> <a href="https://github.com/googlefonts/fontra-glyphs/pull/92">fontra-glyphs PR 92</a></li>
+<li>[fontra-glyphs] The Glyphs backend now supports background layers, for reading and writing. <a href="https://github.com/fontra/fontra-glyphs/issues/88">fontra-glyphs issue 88</a> <a href="https://github.com/fontra/fontra-glyphs/pull/92">fontra-glyphs PR 92</a></li>
 </ul>
 <h2>2025-03-26</h2>
 <ul>
-<li>Fixed bug with undo and source (background) layers: undo wouldn't switch to the correct source layer, with a visual glitch because the correct layer would be in edit mode. <a href="https://github.com/googlefonts/fontra/issues/2119">Issue 2119</a> <a href="https://github.com/googlefonts/fontra/pull/2120">PR 2120</a></li>
-<li>Fixed various problems with the font sources panel (in the font info view), when there were no sources at all. <a href="https://github.com/googlefonts/fontra/issues/2117">Issue 2117</a> <a href="https://github.com/googlefonts/fontra/pull/2118">PR 2118</a></li>
+<li>Fixed bug with undo and source (background) layers: undo wouldn't switch to the correct source layer, with a visual glitch because the correct layer would be in edit mode. <a href="https://github.com/fontra/fontra/issues/2119">Issue 2119</a> <a href="https://github.com/fontra/fontra/pull/2120">PR 2120</a></li>
+<li>Fixed various problems with the font sources panel (in the font info view), when there were no sources at all. <a href="https://github.com/fontra/fontra/issues/2117">Issue 2117</a> <a href="https://github.com/fontra/fontra/pull/2118">PR 2118</a></li>
 </ul>
 <h2>2025-03-25</h2>
 <ul>
@@ -171,48 +171,48 @@
 <li>The glyph sources are now sorted according to the axes (they used to be in creation order)</li>
 <li>The <em>default</em> source's name is now rendered in bold, so it's easier to find</li>
 <li>For each <em>font source</em> location ("global location") for which the glyph does <em>not</em> have a source, there is now a "virtual source" in the list, rendered in gray. To create an <em>actual</em> source at that location, either double-click the virtual source, or, while the virtual source is selected, start modifying the glyph.</li>
-<li><a href="https://github.com/googlefonts/fontra/issues/1572">Issue 1572</a>, <a href="https://github.com/googlefonts/fontra/issues/1639">Issue 1639</a>, <a href="https://github.com/googlefonts/fontra/issues/1640">Issue 1640</a>, <a href="https://github.com/googlefonts/fontra/issues/2114">Issue 2114</a></li>
-<li><a href="https://github.com/googlefonts/fontra/pull/2102">PR 2102</a>, <a href="https://github.com/googlefonts/fontra/pull/2098">PR 2098</a></li>
+<li><a href="https://github.com/fontra/fontra/issues/1572">Issue 1572</a>, <a href="https://github.com/fontra/fontra/issues/1639">Issue 1639</a>, <a href="https://github.com/fontra/fontra/issues/1640">Issue 1640</a>, <a href="https://github.com/fontra/fontra/issues/2114">Issue 2114</a></li>
+<li><a href="https://github.com/fontra/fontra/pull/2102">PR 2102</a>, <a href="https://github.com/fontra/fontra/pull/2098">PR 2098</a></li>
 </ul>
 </li>
-<li>Fixed subtle key handling bug with popup menus inside a dialog <a href="https://github.com/googlefonts/fontra/issues/2113">Issue 2113</a> <a href="https://github.com/googlefonts/fontra/pull/2115">PR 2115</a></li>
+<li>Fixed subtle key handling bug with popup menus inside a dialog <a href="https://github.com/fontra/fontra/issues/2113">Issue 2113</a> <a href="https://github.com/fontra/fontra/pull/2115">PR 2115</a></li>
 </ul>
 <h2>2025-03-22</h2>
 <ul>
-<li>[designspace/ufo] Fixed background layers for sparse masters. <a href="https://github.com/googlefonts/fontra/issues/2111">Issue 2111</a> <a href="https://github.com/googlefonts/fontra/pull/2112">PR 2112</a></li>
+<li>[designspace/ufo] Fixed background layers for sparse masters. <a href="https://github.com/fontra/fontra/issues/2111">Issue 2111</a> <a href="https://github.com/fontra/fontra/pull/2112">PR 2112</a></li>
 </ul>
 <h2>2025-03-20</h2>
 <ul>
-<li>New feature: we added a Font Info panel for editing OpenType features. <a href="https://github.com/googlefonts/fontra/issues/2080">Issue 2080</a> <a href="https://github.com/googlefonts/fontra/pull/2104">PR 2104</a></li>
+<li>New feature: we added a Font Info panel for editing OpenType features. <a href="https://github.com/fontra/fontra/issues/2080">Issue 2080</a> <a href="https://github.com/fontra/fontra/pull/2104">PR 2104</a></li>
 </ul>
 <h2>2025-03-19</h2>
 <ul>
-<li>New feature: we added UI for lower level OpenType settings, as part of the Font Info panel and the Font Sources panel. <a href="https://github.com/googlefonts/fontra/issues/2023">Issue 2023</a> <a href="https://github.com/googlefonts/fontra/pull/2039">PR 2039</a></li>
-<li>Vastly improved keyboard navigation of the menu bar and (contextual) menus. <a href="https://github.com/googlefonts/fontra/issues/2061">Issue 2061</a> <a href="https://github.com/googlefonts/fontra/pull/2062">PR 2062</a></li>
-<li>Fixed bug where components appeared incompatible. <a href="https://github.com/googlefonts/fontra/issues/2092">Issue 2092</a> <a href="https://github.com/googlefonts/fontra/pull/2093">PR 2093</a></li>
-<li>[fontra-rcjk] Fixed bug where the list of projects was duplicated. <a href="https://github.com/googlefonts/fontra/issues/2094">Issue 2094</a> <a href="https://github.com/googlefonts/fontra/pull/2095">PR 2095</a></li>
+<li>New feature: we added UI for lower level OpenType settings, as part of the Font Info panel and the Font Sources panel. <a href="https://github.com/fontra/fontra/issues/2023">Issue 2023</a> <a href="https://github.com/fontra/fontra/pull/2039">PR 2039</a></li>
+<li>Vastly improved keyboard navigation of the menu bar and (contextual) menus. <a href="https://github.com/fontra/fontra/issues/2061">Issue 2061</a> <a href="https://github.com/fontra/fontra/pull/2062">PR 2062</a></li>
+<li>Fixed bug where components appeared incompatible. <a href="https://github.com/fontra/fontra/issues/2092">Issue 2092</a> <a href="https://github.com/fontra/fontra/pull/2093">PR 2093</a></li>
+<li>[fontra-rcjk] Fixed bug where the list of projects was duplicated. <a href="https://github.com/fontra/fontra/issues/2094">Issue 2094</a> <a href="https://github.com/fontra/fontra/pull/2095">PR 2095</a></li>
 </ul>
 <h2>2025-03-16</h2>
 <ul>
-<li>Fixed several bugs in the designspace backend related to editing font sources. <a href="https://github.com/googlefonts/fontra/issues/2040">Issue 2040</a> <a href="https://github.com/googlefonts/fontra/pull/2091">PR 2091</a></li>
+<li>Fixed several bugs in the designspace backend related to editing font sources. <a href="https://github.com/fontra/fontra/issues/2040">Issue 2040</a> <a href="https://github.com/fontra/fontra/pull/2091">PR 2091</a></li>
 </ul>
 <h2>2025-03-14</h2>
 <p>New features:</p>
 <ul>
-<li>Background layers are here! <a href="https://github.com/googlefonts/fontra/issues/50">Issue 50</a>, many PR's, see issue.</li>
-<li>Beginnings of writing .glyphs and .glyphspackage files. First step: glyph data. <a href="https://github.com/googlefonts/fontra-glyphs/issues/75">fontra-glyphs issue 75</a> <a href="https://github.com/googlefonts/fontra-glyphs/pull/76">fontra-glyphs PR 76</a> <a href="https://github.com/googlefonts/fontra-glyphs/issues/87">Issue for future work</a></li>
+<li>Background layers are here! <a href="https://github.com/fontra/fontra/issues/50">Issue 50</a>, many PR's, see issue.</li>
+<li>Beginnings of writing .glyphs and .glyphspackage files. First step: glyph data. <a href="https://github.com/fontra/fontra-glyphs/issues/75">fontra-glyphs issue 75</a> <a href="https://github.com/fontra/fontra-glyphs/pull/76">fontra-glyphs PR 76</a> <a href="https://github.com/fontra/fontra-glyphs/issues/87">Issue for future work</a></li>
 </ul>
 <p>Bugfixes:</p>
 <ul>
-<li>Units Per Em is now exported properly (This affected "Export as", <code>fontra-workflow</code> and <code>fontra-copy</code>). <a href="https://github.com/googlefonts/fontra/issues/2044">Issue 2044</a> <a href="https://github.com/googlefonts/fontra/pull/2046">PR 2046</a></li>
-<li>Fixed bug where the context menu wouldn't go away <a href="https://github.com/googlefonts/fontra/issues/2068">Issue 2068</a> <a href="https://github.com/googlefonts/fontra/pull/2069">PR 2069</a></li>
-<li>Fixed false positive with the interpolation compatibility checker. <a href="https://github.com/googlefonts/fontra/issues/2081">Issue 2081</a> <a href="https://github.com/googlefonts/fontra/pull/2083">PR 2083</a></li>
+<li>Units Per Em is now exported properly (This affected "Export as", <code>fontra-workflow</code> and <code>fontra-copy</code>). <a href="https://github.com/fontra/fontra/issues/2044">Issue 2044</a> <a href="https://github.com/fontra/fontra/pull/2046">PR 2046</a></li>
+<li>Fixed bug where the context menu wouldn't go away <a href="https://github.com/fontra/fontra/issues/2068">Issue 2068</a> <a href="https://github.com/fontra/fontra/pull/2069">PR 2069</a></li>
+<li>Fixed false positive with the interpolation compatibility checker. <a href="https://github.com/fontra/fontra/issues/2081">Issue 2081</a> <a href="https://github.com/fontra/fontra/pull/2083">PR 2083</a></li>
 </ul>
 <p>Enhancements:</p>
 <ul>
-<li>Don't write empty kern data to .fontra project. <a href="https://github.com/googlefonts/fontra/issues/2045">Issue 2045</a> <a href="https://github.com/googlefonts/fontra/pull/2047">PR 2047</a></li>
-<li>Show a warning when deleting a font source. <a href="https://github.com/googlefonts/fontra/issues/2048">Issue 2048</a> <a href="https://github.com/googlefonts/fontra/pull/2055">PR 2055</a></li>
-<li>Allow menus to be opened with click-drag, not just click. <a href="https://github.com/googlefonts/fontra/issues/2049">Issue 2049</a> <a href="https://github.com/googlefonts/fontra/pull/2060">PR 2060</a></li>
+<li>Don't write empty kern data to .fontra project. <a href="https://github.com/fontra/fontra/issues/2045">Issue 2045</a> <a href="https://github.com/fontra/fontra/pull/2047">PR 2047</a></li>
+<li>Show a warning when deleting a font source. <a href="https://github.com/fontra/fontra/issues/2048">Issue 2048</a> <a href="https://github.com/fontra/fontra/pull/2055">PR 2055</a></li>
+<li>Allow menus to be opened with click-drag, not just click. <a href="https://github.com/fontra/fontra/issues/2049">Issue 2049</a> <a href="https://github.com/fontra/fontra/pull/2060">PR 2060</a></li>
 </ul>
 <h2>2025-03-05</h2>
 <p>There have been some major changes in the front end, in order to have a clearer separation between the Python server code and the front end. This makes the front-end usable independently from the server.</p>
@@ -230,73 +230,73 @@
 </li>
 <li>Similar changes were made in the <code>fontra-rcjk</code> repository</li>
 <li>Fontra Pak was adjusted to these changes as well</li>
-<li><a href="https://github.com/googlefonts/fontra/issues/1952">Issue 1952</a> <a href="https://github.com/googlefonts/fontra/pull/2053">PR 2053</a> <a href="https://github.com/googlefonts/fontra-rcjk/pull/224">fontra-rcjk PR 224</a></li>
+<li><a href="https://github.com/fontra/fontra/issues/1952">Issue 1952</a> <a href="https://github.com/fontra/fontra/pull/2053">PR 2053</a> <a href="https://github.com/fontra/fontra-rcjk/pull/224">fontra-rcjk PR 224</a></li>
 </ul>
 <h2>2025-02-28</h2>
 <p>Many smaller bugs were fixed:</p>
 <ul>
-<li>Allow menus from the menubar to be opened with click-drag <a href="https://github.com/googlefonts/fontra/issues/2049">Issue 2049</a> <a href="https://github.com/googlefonts/fontra/pull/2060">PR 2060</a></li>
-<li>Paste only plain text in editable list cells <a href="https://github.com/googlefonts/fontra/issues/2043">Issue 2043</a> <a href="https://github.com/googlefonts/fontra/pull/2057">PR 2057</a></li>
-<li>Fix tooltips layout issues <a href="https://github.com/googlefonts/fontra/issues/2050">Issue 2050</a> <a href="https://github.com/googlefonts/fontra/pull/2056">PR 2056</a></li>
-<li>Show warning befor deleting a font source, as this can have deeper consequences than one might think <a href="https://github.com/googlefonts/fontra/issues/2048">Issue 2048</a> <a href="https://github.com/googlefonts/fontra/pull/2055">PR 2055</a></li>
-<li>Improve point deletion if a point is overlapping another, or is a tangent <a href="https://github.com/googlefonts/fontra/issues/2033">Issue 2033</a> <a href="https://github.com/googlefonts/fontra/pull/2035">PR 2035</a> <a href="https://github.com/googlefonts/fontra/pull/2038">PR 2038</a></li>
-<li>Fix bug where the Italic Angle font source parameter was written as the wrong type <a href="https://github.com/googlefonts/fontra/issues/2036">Issue 2036</a> <a href="https://github.com/googlefonts/fontra/pull/2037">PR 2037</a></li>
+<li>Allow menus from the menubar to be opened with click-drag <a href="https://github.com/fontra/fontra/issues/2049">Issue 2049</a> <a href="https://github.com/fontra/fontra/pull/2060">PR 2060</a></li>
+<li>Paste only plain text in editable list cells <a href="https://github.com/fontra/fontra/issues/2043">Issue 2043</a> <a href="https://github.com/fontra/fontra/pull/2057">PR 2057</a></li>
+<li>Fix tooltips layout issues <a href="https://github.com/fontra/fontra/issues/2050">Issue 2050</a> <a href="https://github.com/fontra/fontra/pull/2056">PR 2056</a></li>
+<li>Show warning befor deleting a font source, as this can have deeper consequences than one might think <a href="https://github.com/fontra/fontra/issues/2048">Issue 2048</a> <a href="https://github.com/fontra/fontra/pull/2055">PR 2055</a></li>
+<li>Improve point deletion if a point is overlapping another, or is a tangent <a href="https://github.com/fontra/fontra/issues/2033">Issue 2033</a> <a href="https://github.com/fontra/fontra/pull/2035">PR 2035</a> <a href="https://github.com/fontra/fontra/pull/2038">PR 2038</a></li>
+<li>Fix bug where the Italic Angle font source parameter was written as the wrong type <a href="https://github.com/fontra/fontra/issues/2036">Issue 2036</a> <a href="https://github.com/fontra/fontra/pull/2037">PR 2037</a></li>
 </ul>
 <h2>2025-02-16</h2>
 <ul>
-<li>Do not display the "selection bounds" handles if the selection is only a single point <a href="https://github.com/googlefonts/fontra/issues/2022">Issue 2022</a> <a href="https://github.com/googlefonts/fontra/pull/2024">PR 2024</a></li>
-<li>Fix bug in reference font panel <a href="https://github.com/googlefonts/fontra/issues/2011">Issue 2011</a> <a href="https://github.com/googlefonts/fontra/pull/2012">PR 2012</a></li>
-<li>Redesigned the Font Source panel <a href="https://github.com/googlefonts/fontra/issues/1997">Issue 1997</a> <a href="https://github.com/googlefonts/fontra/pull/2007">PR 2007</a></li>
-<li>Added initial support for global guidelines. For now they need to be set in the Font Sources panel. Adding or editing global guidelines in the glyph editor will be implemented later. <a href="https://github.com/googlefonts/fontra/issues/909">Issue 909</a> <a href="https://github.com/googlefonts/fontra/issues/1963">Issue 1963</a> <a href="https://github.com/googlefonts/fontra/pull/2021">PR 2021</a></li>
+<li>Do not display the "selection bounds" handles if the selection is only a single point <a href="https://github.com/fontra/fontra/issues/2022">Issue 2022</a> <a href="https://github.com/fontra/fontra/pull/2024">PR 2024</a></li>
+<li>Fix bug in reference font panel <a href="https://github.com/fontra/fontra/issues/2011">Issue 2011</a> <a href="https://github.com/fontra/fontra/pull/2012">PR 2012</a></li>
+<li>Redesigned the Font Source panel <a href="https://github.com/fontra/fontra/issues/1997">Issue 1997</a> <a href="https://github.com/fontra/fontra/pull/2007">PR 2007</a></li>
+<li>Added initial support for global guidelines. For now they need to be set in the Font Sources panel. Adding or editing global guidelines in the glyph editor will be implemented later. <a href="https://github.com/fontra/fontra/issues/909">Issue 909</a> <a href="https://github.com/fontra/fontra/issues/1963">Issue 1963</a> <a href="https://github.com/fontra/fontra/pull/2021">PR 2021</a></li>
 </ul>
 <h2>2025-01-30</h2>
 <ul>
-<li>Added support for reading .woff and .woff2 <a href="https://github.com/googlefonts/fontra/pull/1999">PR 1999</a></li>
+<li>Added support for reading .woff and .woff2 <a href="https://github.com/fontra/fontra/pull/1999">PR 1999</a></li>
 </ul>
 <h2>2025-01-27</h2>
 <ul>
 <li>Misc improvements to the Font Overview</li>
 <li>Added preset glyph sets from Google Fonts, Black Foundry, Adobe and Christoph Koeberlin</li>
-<li>Fixed a bug with point deletion <a href="https://github.com/googlefonts/fontra/issues/1980">Issue 1980</a>, <a href="https://github.com/googlefonts/fontra/pull/1981">PR 1981</a></li>
+<li>Fixed a bug with point deletion <a href="https://github.com/fontra/fontra/issues/1980">Issue 1980</a>, <a href="https://github.com/fontra/fontra/pull/1981">PR 1981</a></li>
 </ul>
 <h2>2025-01-21</h2>
 <p>The Font Overview is ready to be used everywhere, including in Fontra Pak. Documentation will follow soon.</p>
 <p>It has support for "template glyphsets", that can be chosen from collections of presets, or made from any publically hosted text, .tsv or .csv data. This includes files on GitHub and publically readable Google Docs or Sheets.</p>
-<p>There will be further improvements and additions. Ongoing work: <a href="https://github.com/googlefonts/fontra/issues/1886">Issue 1886</a></p>
+<p>There will be further improvements and additions. Ongoing work: <a href="https://github.com/fontra/fontra/issues/1886">Issue 1886</a></p>
 <h2>2025-01-17</h2>
 <ul>
-<li>A change in the URL format: the project identifier is now in the URL query, instead of part of the URL path <a href="https://github.com/googlefonts/fontra/issues/1960">Issue 1960</a>, <a href="https://github.com/googlefonts/fontra/pull/1959">PR 1959</a></li>
-<li>Editor tools: right-clicking or control-clicking on a tool with sub-tools will now show the subtools instead of the browser's context menu <a href="https://github.com/googlefonts/fontra/issues/1953">Issue 1953</a>, <a href="https://github.com/googlefonts/fontra/pull/1956">PR 1956</a></li>
+<li>A change in the URL format: the project identifier is now in the URL query, instead of part of the URL path <a href="https://github.com/fontra/fontra/issues/1960">Issue 1960</a>, <a href="https://github.com/fontra/fontra/pull/1959">PR 1959</a></li>
+<li>Editor tools: right-clicking or control-clicking on a tool with sub-tools will now show the subtools instead of the browser's context menu <a href="https://github.com/fontra/fontra/issues/1953">Issue 1953</a>, <a href="https://github.com/fontra/fontra/pull/1956">PR 1956</a></li>
 </ul>
 <h2>2025-01-14</h2>
 <ul>
-<li>Fixed a regression with the Font menu <a href="https://github.com/googlefonts/fontra/issues/1941">Issue 1941</a>, <a href="https://github.com/googlefonts/fontra/pull/1942">PR 1942</a></li>
-<li>Fixed a regression with messages from server <a href="https://github.com/googlefonts/fontra/pull/1939">PR 1939</a></li>
+<li>Fixed a regression with the Font menu <a href="https://github.com/fontra/fontra/issues/1941">Issue 1941</a>, <a href="https://github.com/fontra/fontra/pull/1942">PR 1942</a></li>
+<li>Fixed a regression with messages from server <a href="https://github.com/fontra/fontra/pull/1939">PR 1939</a></li>
 </ul>
 <h2>2025-01-06</h2>
 <ul>
-<li>Fixed bug related to deleting points <a href="https://github.com/googlefonts/fontra/issues/1910">Issue 1910</a>, <a href="https://github.com/googlefonts/fontra/pull/1916">PR 1916</a></li>
-<li>Added robots.txt to HTTP root folder <a href="https://github.com/googlefonts/fontra/pull/1905">PR 1905</a></li>
-<li>Small improvements to Related Glyphs &amp; Characters panel (selecting multiple glyphs, keyboard navigation) <a href="https://github.com/googlefonts/fontra/pull/1906">PR 1906</a></li>
-<li>Accordion view: alt-click on a header folds/unfolds all items <a href="https://github.com/googlefonts/fontra/pull/1901">PR 1901</a></li>
-<li>Implement finding glyph names for code points and code points for glyph names in JS, via a CSV version of GlyphData.xml. This is a performance improvement, and needed for the upcoming Font Overview <a href="https://github.com/googlefonts/fontra/pull/1900">PR 1900</a></li>
-<li>Fixed a regression witb CJK Design Frame settings <a href="https://github.com/googlefonts/fontra/pull/1883">PR 1883</a></li>
-<li>Fixed a regression with the Knife Tool <a href="https://github.com/googlefonts/fontra/pull/1870">PR 1870</a></li>
+<li>Fixed bug related to deleting points <a href="https://github.com/fontra/fontra/issues/1910">Issue 1910</a>, <a href="https://github.com/fontra/fontra/pull/1916">PR 1916</a></li>
+<li>Added robots.txt to HTTP root folder <a href="https://github.com/fontra/fontra/pull/1905">PR 1905</a></li>
+<li>Small improvements to Related Glyphs &amp; Characters panel (selecting multiple glyphs, keyboard navigation) <a href="https://github.com/fontra/fontra/pull/1906">PR 1906</a></li>
+<li>Accordion view: alt-click on a header folds/unfolds all items <a href="https://github.com/fontra/fontra/pull/1901">PR 1901</a></li>
+<li>Implement finding glyph names for code points and code points for glyph names in JS, via a CSV version of GlyphData.xml. This is a performance improvement, and needed for the upcoming Font Overview <a href="https://github.com/fontra/fontra/pull/1900">PR 1900</a></li>
+<li>Fixed a regression witb CJK Design Frame settings <a href="https://github.com/fontra/fontra/pull/1883">PR 1883</a></li>
+<li>Fixed a regression with the Knife Tool <a href="https://github.com/fontra/fontra/pull/1870">PR 1870</a></li>
 </ul>
 <h2>2024-12-19</h2>
 <ul>
-<li>Making the interface between server and client more explicit <a href="https://github.com/googlefonts/fontra/pull/1863">PR 1863</a></li>
-<li>Fixed editing bug with multiple edit views <a href="https://github.com/googlefonts/fontra/pull/1870">PR 1870</a></li>
+<li>Making the interface between server and client more explicit <a href="https://github.com/fontra/fontra/pull/1863">PR 1863</a></li>
+<li>Fixed editing bug with multiple edit views <a href="https://github.com/fontra/fontra/pull/1870">PR 1870</a></li>
 <li>Prevent <code>fontra-copy</code> and Fontra Pak's "Export as..." to write on top of the source data (as this destroyed the data)<ul>
-<li><code>fontra-copy</code>: <a href="https://github.com/googlefonts/fontra/pull/1860">PR 1860</a></li>
-<li>Fontra Pak: <a href="https://github.com/googlefonts/fontra-pak/pull/148">PR 148</a></li>
+<li><code>fontra-copy</code>: <a href="https://github.com/fontra/fontra/pull/1860">PR 1860</a></li>
+<li>Fontra Pak: <a href="https://github.com/fontra/fontra-pak/pull/148">PR 148</a></li>
 </ul>
 </li>
-<li>Fontra Pak: add button with link to documentation <a href="https://github.com/googlefonts/fontra-pak/pull/143">PR 143</a></li>
+<li>Fontra Pak: add button with link to documentation <a href="https://github.com/fontra/fontra-pak/pull/143">PR 143</a></li>
 </ul>
 <h2>2024-12-04</h2>
 <ul>
-<li>Fixes "clean view" (space bar) on Safari <a href="https://github.com/googlefonts/fontra/pull/1835">PR 1835</a></li>
+<li>Fixes "clean view" (space bar) on Safari <a href="https://github.com/fontra/fontra/pull/1835">PR 1835</a></li>
 </ul>
 <h2>2024-11-29</h2>
 <ul>
@@ -304,18 +304,18 @@
 </ul>
 <h2>2024-11-28</h2>
 <ul>
-<li>Keep the focus on the canvas when clicking icon buttons and (some) list cell buttons <a href="https://github.com/googlefonts/fontra/pull/1829">PR 1829</a></li>
+<li>Keep the focus on the canvas when clicking icon buttons and (some) list cell buttons <a href="https://github.com/fontra/fontra/pull/1829">PR 1829</a></li>
 </ul>
 <h2>2024-11-27</h2>
 <ul>
-<li>Add 'Add background image' menu to context menu <a href="https://github.com/googlefonts/fontra/pull/1827">PR 1827</a></li>
-<li>Fixed bug with colorizing the background image on Safari <a href="https://github.com/googlefonts/fontra/pull/1825">PR 1825</a></li>
-<li>Reorganize context menu: put "Edit" items under a sub menu <a href="https://github.com/googlefonts/fontra/pull/1824">PR 1824</a></li>
-<li>Fix the Knife tool <a href="https://github.com/googlefonts/fontra/pull/1823">PR 1823</a></li>
+<li>Add 'Add background image' menu to context menu <a href="https://github.com/fontra/fontra/pull/1827">PR 1827</a></li>
+<li>Fixed bug with colorizing the background image on Safari <a href="https://github.com/fontra/fontra/pull/1825">PR 1825</a></li>
+<li>Reorganize context menu: put "Edit" items under a sub menu <a href="https://github.com/fontra/fontra/pull/1824">PR 1824</a></li>
+<li>Fix the Knife tool <a href="https://github.com/fontra/fontra/pull/1823">PR 1823</a></li>
 </ul>
 <h2>2024-11-20</h2>
 <ul>
-<li>Add support for background image colorization <a href="https://github.com/googlefonts/fontra/pull/1815">PR 1815</a></li>
+<li>Add support for background image colorization <a href="https://github.com/fontra/fontra/pull/1815">PR 1815</a></li>
 </ul>
 <h2>2024-11-18</h2>
 <p>New feature: background images.</p>
@@ -332,29 +332,29 @@
 <p>Selected background images can be moved around by dragging, and they participate in the Selection Transformation panel's operations.</p>
 <p>The Selection Info panel shows the settings for a selected background image: the Opacity can be edited there and the Transformation settings can be edited numerically there.</p>
 <p>Caveat: support for background images is limited to the <code>.designspace</code>/<code>.ufo</code> and <code>.fontra</code> backends. It is currently not supported in the <code>rcjk</code> backend.</p>
-<p><a href="https://github.com/googlefonts/fontra/issues/1660">Issue 1660</a>, <a href="https://github.com/googlefonts/fontra/issues/1777">Issue 1777</a> (There were too many PRs to mention individually here.)</p>
+<p><a href="https://github.com/fontra/fontra/issues/1660">Issue 1660</a>, <a href="https://github.com/fontra/fontra/issues/1777">Issue 1777</a> (There were too many PRs to mention individually here.)</p>
 <h2>2024-11-13</h2>
 <ul>
-<li>Improved UI translations <a href="https://github.com/googlefonts/fontra/pull/1764">PR 1764</a></li>
-<li>Added "Select previous/next glyph" menu items <a href="https://github.com/googlefonts/fontra/pull/1706">PR 1706</a></li>
-<li>Partial support for background images (more to come) <a href="https://github.com/googlefonts/fontra/pull/1775">PR 1775</a></li>
-<li>Add support for many UFO font info fields, so they won't get lost during round-tripping <a href="https://github.com/googlefonts/fontra/pull/1770">PR 1770</a></li>
-<li>Fixed cosmetic issue with scrollbars on Windows <a href="https://github.com/googlefonts/fontra/pull/1767">PR 1767</a></li>
-<li>Fixed bug with Copy/Paste menu items <a href="https://github.com/googlefonts/fontra/pull/1756">PR 1756</a></li>
+<li>Improved UI translations <a href="https://github.com/fontra/fontra/pull/1764">PR 1764</a></li>
+<li>Added "Select previous/next glyph" menu items <a href="https://github.com/fontra/fontra/pull/1706">PR 1706</a></li>
+<li>Partial support for background images (more to come) <a href="https://github.com/fontra/fontra/pull/1775">PR 1775</a></li>
+<li>Add support for many UFO font info fields, so they won't get lost during round-tripping <a href="https://github.com/fontra/fontra/pull/1770">PR 1770</a></li>
+<li>Fixed cosmetic issue with scrollbars on Windows <a href="https://github.com/fontra/fontra/pull/1767">PR 1767</a></li>
+<li>Fixed bug with Copy/Paste menu items <a href="https://github.com/fontra/fontra/pull/1756">PR 1756</a></li>
 </ul>
 <h2>2024-10-24</h2>
 <ul>
-<li>Various improvements to the font sources panel <a href="https://github.com/googlefonts/fontra/pull/1739">PR 1739</a></li>
-<li>Add changelog file <a href="https://github.com/googlefonts/fontra/pull/1749">PR 1749</a></li>
+<li>Various improvements to the font sources panel <a href="https://github.com/fontra/fontra/pull/1739">PR 1739</a></li>
+<li>Add changelog file <a href="https://github.com/fontra/fontra/pull/1749">PR 1749</a></li>
 </ul>
 <h2>2024-10-23</h2>
 <ul>
-<li>New cross-axis mapping page for avar2 mappings <a href="https://github.com/googlefonts/fontra/pull/1729">PR 1729</a></li>
-<li>Allow custom shortcuts for selecting previous/next reference font <a href="https://github.com/googlefonts/fontra/pull/1742">PR 1742</a></li>
+<li>New cross-axis mapping page for avar2 mappings <a href="https://github.com/fontra/fontra/pull/1729">PR 1729</a></li>
+<li>Allow custom shortcuts for selecting previous/next reference font <a href="https://github.com/fontra/fontra/pull/1742">PR 1742</a></li>
 </ul>
 <h2>2024-10-16</h2>
 <ul>
-<li>New pen tool icon <a href="https://github.com/googlefonts/fontra/pull/1726">PR 1726</a></li>
+<li>New pen tool icon <a href="https://github.com/fontra/fontra/pull/1726">PR 1726</a></li>
 </ul>
 <h2>2024-10-14</h2>
 <ul>
@@ -362,15 +362,15 @@
 </ul>
 <h2>2024-10-13</h2>
 <ul>
-<li>Fontra Pak: build macOS application as "Universal2" binary, so it runs natively on all processor types <a href="https://github.com/googlefonts/fontra-pak/pull/108">Fontra Pak PR 108</a></li>
+<li>Fontra Pak: build macOS application as "Universal2" binary, so it runs natively on all processor types <a href="https://github.com/fontra/fontra-pak/pull/108">Fontra Pak PR 108</a></li>
 </ul>
 <h2>2024-10-12</h2>
 <ul>
-<li>Delete gear panel (move to difference locations, for example: View -&gt; Glyph editor apperance) <a href="https://github.com/googlefonts/fontra/pull/1701">PR 1701</a></li>
+<li>Delete gear panel (move to difference locations, for example: View -&gt; Glyph editor apperance) <a href="https://github.com/fontra/fontra/pull/1701">PR 1701</a></li>
 </ul>
 <h2>2024-10-10</h2>
 <ul>
-<li>Fontra Pak: added "Export as..." functionality <a href="https://github.com/googlefonts/fontra-pak/pull/133">Fontra Pak PR 133</a></li>
+<li>Fontra Pak: added "Export as..." functionality <a href="https://github.com/fontra/fontra-pak/pull/133">Fontra Pak PR 133</a></li>
 </ul>
 <h2>2024-09-27</h2>
 <ul>
