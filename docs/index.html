@@ -103,7 +103,10 @@
         const releaseInfo = await ghResponse.json();
 
         if (!releaseInfo.assets) {
-          console.log(releaseInfo.message);
+          for (const anchor of document.querySelectorAll(`.download > a`)) {
+            const dateElement = anchor.nextElementSibling;
+            dateElement.innerText = "Failed to retrieve download info";
+          }
           return;
         }
 
@@ -145,11 +148,16 @@
     <div class="divider"></div>
     <div class="download link macos">
       <a href="javascript:void(0)">→ Download Fontra Pak for macOS</a>
-      <div class="upload-date">&nbsp;</div>
+      <div class="upload-date">Retrieving download info</div>
     </div>
     <div class="download link windows">
       <a href="javascript:void(0)">→ Download Fontra Pak for Windows 10/11</a>
-      <div class="upload-date">&nbsp;</div>
+      <div class="upload-date">Retrieving download info</div>
+    </div>
+    <div class="link">
+      <a href="https://github.com/fontra/fontra-pak/releases"
+        >→ Fontra Pak Releases on GitHub</a
+      >
     </div>
     <div class="link">
       <a href="./changelog.html">→ Fontra Changelog</a>
