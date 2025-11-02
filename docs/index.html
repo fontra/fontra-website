@@ -23,7 +23,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        gap: 1rem;
+        gap: 0.5rem;
 
         /* text */
         color: white;
@@ -32,11 +32,17 @@
         font-size: 2.25rem;
       }
 
+      div.divider {
+        height: 0.5em;
+      }
+
+
       .fontra-logo {
         width: min(30vw, 30vh);
         height: min(30vw, 30vh);
         border-radius: 27.5%;
         box-shadow: 0.5rem 0.5rem 1.5rem black;
+        margin-bottom: 0.5em;
       }
 
       a {
@@ -109,6 +115,7 @@
     <img class="fontra-logo" src="./fontra-icon.svg" />
 
     <div class="tagline">Fontra — The browser-based Font Editor</div>
+    <div class="divider"></div>
     <div class="link">
       <a href="https://docs.fontra.xyz">→ Fontra Documentation</a>
     </div>
@@ -118,13 +125,7 @@
     <div class="link">
       <a href="https://github.com/fontra/">→ GitHub</a>
     </div>
-    <div class="link">
-      <a href="./Fontra_ATypI_2023.pdf">→ Slides ATypI 2023 (PDF)</a>
-    </div>
-    <div class="link">
-      Fontra is made by
-      <a href="https://black-foundry.com/">→ Black[Foundry]</a>
-    </div>
+    <div class="divider"></div>
     <div class="download link macos">
       <a href="javascript:void(0)">→ Download Fontra Pak for macOS</a>
       <div class="upload-date">&nbsp;</div>
@@ -136,9 +137,7 @@
     <div class="link">
       <a href="./changelog.html">→ Fontra Changelog</a>
     </div>
-    <div class="link">
-      <a href="https://discord.gg/SeZWugEYzd">→ Fontra Discord Server</a>
-    </div>
+    <div class="divider"></div>
     <div class="socials">
         <span class="socials-title">→ Socials</span>
         <a href="https://www.instagram.com/fontra_editor/">
@@ -151,16 +150,12 @@
         <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-discord"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /><path d="M14 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /><path d="M15.5 17c0 1 1.5 3 2 3c1.5 0 2.833 -1.667 3.5 -3c.667 -1.667 .5 -5.833 -1.5 -11.5c-1.457 -1.015 -3 -1.34 -4.5 -1.5l-.972 1.923a11.913 11.913 0 0 0 -4.053 0l-.975 -1.923c-1.5 .16 -3.043 .485 -4.5 1.5c-2 5.667 -2.167 9.833 -1.5 11.5c.667 1.333 2 3 3.5 3c.5 0 2 -2 2 -3" /><path d="M7 16.5c3.5 1 6.5 1 10 0" /></svg>
         </a>
     </div>
-    <br />
-    <div>
-      <iframe
-        title="vimeo-player"
-        src="https://player.vimeo.com/video/827522961?h=3b3c478228"
-        width="640"
-        height="360"
-        frameborder="0"
-        allowfullscreen
-      ></iframe>
+    <div class="link">
+      <a href="https://discord.gg/SeZWugEYzd">→ Fontra Discord Server</a>
+    </div>
+    <div class="divider"></div>
+    <div class="link">
+      <a href="./Fontra_ATypI_2023.pdf">→ Slides ATypI 2023 (PDF)</a>
     </div>
   </body>
 </html>
