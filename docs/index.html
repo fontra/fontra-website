@@ -92,6 +92,11 @@
         const ghResponse = await fetch("https://api.github.com/repos/fontra/fontra-pak/releases/latest");
         const releaseInfo = await ghResponse.json();
 
+        if (!releaseInfo.assets) {
+          console.log(releaseInfo.message)
+          return;
+        }
+
         for (const platform of ["macos", "windows"]) {
           const asset = releaseInfo.assets.find(asset => asset.name.toLowerCase().includes(platform));
           const anchor = document.querySelector(`.download.${platform} > a`);
