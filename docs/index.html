@@ -82,24 +82,25 @@
 
     </style>
     <script>
-      function fetchUploadDates() {
-        for (const element of document.querySelectorAll(".download > a")) {
-          fetch(element.href, {
-            method: "HEAD",
-          }).then((response) => {
-            const headers = Object.fromEntries(response.headers.entries());
-            const timestamp = new Date(headers["last-modified"]);
-            const timeString = timestamp.toLocaleTimeString("en-US", {
-              weekday: "long",
-              year: "numeric",
-              month: "short",
-              day: "numeric",
-              hour: "numeric",
-              minute: "2-digit",
-            });
-            const el = element.nextElementSibling;
-            el.innerText = `Uploaded on ${timeString}`;
+      async function fetchUploadDates() {
+        const ghResponse = await fetch("https://api.github.com/repos/fontra/fontra-pak/releases/latest");
+        const releaseInfo = await ghResponse.json();
+
+        for (const platform of ["macos", "windows"]) {
+          const asset = releaseInfo.assets.find(asset => asset.name.toLowerCase().includes(platform));
+          const anchor = document.querySelector(`.download.${platform} > a`);
+          anchor.href = asset.browser_download_url;
+          const timestamp = new Date(asset.updated_at);
+          const timeString = timestamp.toLocaleTimeString("en-US", {
+            weekday: "long",
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+            hour: "numeric",
+            minute: "2-digit",
           });
+          const dateElement = anchor.nextElementSibling;
+          dateElement.innerText = `Uploaded on ${timeString}`;
         }
       }
     </script>
@@ -124,16 +125,12 @@
       Fontra is made by
       <a href="https://black-foundry.com/">→ Black[Foundry]</a>
     </div>
-    <div class="download link">
-      <a href="https://fontra-download.black-foundry.com/FontraPak.dmg"
-        >→ Download Fontra Pak for macOS</a
-      >
+    <div class="download link macos">
+      <a href="javascript:void(0)">→ Download Fontra Pak for macOS</a>
       <div class="upload-date">&nbsp;</div>
     </div>
-    <div class="download link">
-      <a href="https://fontra-download.black-foundry.com/FontraPak.zip"
-        >→ Download Fontra Pak for Windows 10/11</a
-      >
+    <div class="download link windows">
+      <a href="javascript:void(0)">→ Download Fontra Pak for Windows 10/11</a>
       <div class="upload-date">&nbsp;</div>
     </div>
     <div class="link">
