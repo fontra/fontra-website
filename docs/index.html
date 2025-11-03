@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>Fontra</title>
-    <script
-      defer
-      data-domain="fontra.xyz"
-      src="https://plausible.io/js/script.file-downloads.outbound-links.js"
-    ></script>
+    <script defer data-domain="fontra.xyz" src="https://plausible.io/js/script.file-downloads.outbound-links.js"></script>
     <script>
       window.plausible =
         window.plausible ||
@@ -96,27 +92,9 @@
       }
     </style>
     <script>
-      async function fetchUploadDates() {
-        const ghResponse = await fetch(
-          "https://api.github.com/repos/fontra/fontra-pak/releases/latest",
-        );
-        const releaseInfo = await ghResponse.json();
-
-        if (!releaseInfo.assets) {
-          for (const anchor of document.querySelectorAll(`.download > a`)) {
-            const dateElement = anchor.nextElementSibling;
-            dateElement.innerText = "Failed to retrieve download info";
-          }
-          return;
-        }
-
-        for (const platform of ["macos", "windows"]) {
-          const asset = releaseInfo.assets.find((asset) =>
-            asset.name.toLowerCase().includes(platform),
-          );
-          const anchor = document.querySelector(`.download.${platform} > a`);
-          anchor.href = asset.browser_download_url;
-          const timestamp = new Date(asset.updated_at);
+      async function formatUploadDates() {
+        document.querySelectorAll("time").forEach((timeElement) => {
+          const timestamp = new Date(timeElement.getAttribute("datetime"));
           const timeString = timestamp.toLocaleTimeString("en-US", {
             weekday: "long",
             year: "numeric",
@@ -125,14 +103,13 @@
             hour: "numeric",
             minute: "2-digit",
           });
-          const dateElement = anchor.nextElementSibling;
-          dateElement.innerText = `Version ${releaseInfo.tag_name} uploaded on ${timeString}`;
-        }
+          timeElement.innerText = timeString;
+        });
       }
     </script>
   </head>
-  <body onload="fetchUploadDates()">
-    <img class="fontra-logo" src="./fontra-icon.svg" />
+  <body onload="formatUploadDates()">
+    <img class="fontra-logo" src="./fontra-icon.svg">
 
     <div class="tagline">Fontra — The browser-based Font Editor</div>
     <div class="divider"></div>
@@ -147,17 +124,21 @@
     </div>
     <div class="divider"></div>
     <div class="download link macos">
-      <a href="javascript:void(0)">→ Download Fontra Pak for macOS</a>
-      <div class="upload-date">Retrieving download info</div>
+      <a href="https://github.com/fontra/fontra-pak/releases/download/2025.11.0/FontraPak-macOS.dmg">→ Download Fontra Pak for macOS</a>
+      <div class="upload-date">
+        Version <span class="version">2025.11.0</span> uploaded on
+        <time datetime="2025-11-02T19:09:38Z">2025-11-02T19:09:38Z</time>
+      </div>
     </div>
     <div class="download link windows">
-      <a href="javascript:void(0)">→ Download Fontra Pak for Windows 10/11</a>
-      <div class="upload-date">Retrieving download info</div>
+      <a href="https://github.com/fontra/fontra-pak/releases/download/2025.11.0/FontraPak-Windows.zip">→ Download Fontra Pak for Windows 10/11</a>
+      <div class="upload-date">
+        Version <span class="version">2025.11.0</span> uploaded on
+        <time datetime="2025-11-02T19:09:37Z">2025-11-02T19:09:37Z</time>
+      </div>
     </div>
     <div class="link">
-      <a href="https://github.com/fontra/fontra-pak/releases"
-        >→ Fontra Pak Releases on GitHub</a
-      >
+      <a href="https://github.com/fontra/fontra-pak/releases">→ Fontra Pak Releases on GitHub</a>
     </div>
     <div class="link">
       <a href="./changelog.html">→ Fontra Changelog</a>
@@ -167,15 +148,15 @@
       <span class="socials-title">→ Socials</span>
       <a href="https://www.instagram.com/fontra_editor/">
         <!-- prettier-ignore -->
-        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path><path d="M16.5 7.5v.01"></path></svg>
       </a>
       <a href="https://typo.social/@fontra" rel="me">
         <!-- prettier-ignore -->
-        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-mastodon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.648 15.254c-1.816 1.763 -6.648 1.626 -6.648 1.626a18.262 18.262 0 0 1 -3.288 -.256c1.127 1.985 4.12 2.81 8.982 2.475c-1.945 2.013 -13.598 5.257 -13.668 -7.636l-.026 -1.154c0 -3.036 .023 -4.115 1.352 -5.633c1.671 -1.91 6.648 -1.666 6.648 -1.666s4.977 -.243 6.648 1.667c1.329 1.518 1.352 2.597 1.352 5.633s-.456 4.074 -1.352 4.944z" /><path d="M12 11.204v-2.926c0 -1.258 -.895 -2.278 -2 -2.278s-2 1.02 -2 2.278v4.722m4 -4.722c0 -1.258 .895 -2.278 2 -2.278s2 1.02 2 2.278v4.722" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-mastodon"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M18.648 15.254c-1.816 1.763 -6.648 1.626 -6.648 1.626a18.262 18.262 0 0 1 -3.288 -.256c1.127 1.985 4.12 2.81 8.982 2.475c-1.945 2.013 -13.598 5.257 -13.668 -7.636l-.026 -1.154c0 -3.036 .023 -4.115 1.352 -5.633c1.671 -1.91 6.648 -1.666 6.648 -1.666s4.977 -.243 6.648 1.667c1.329 1.518 1.352 2.597 1.352 5.633s-.456 4.074 -1.352 4.944z"></path><path d="M12 11.204v-2.926c0 -1.258 -.895 -2.278 -2 -2.278s-2 1.02 -2 2.278v4.722m4 -4.722c0 -1.258 .895 -2.278 2 -2.278s2 1.02 2 2.278v4.722"></path></svg>
       </a>
       <a href="https://discord.gg/SeZWugEYzd">
         <!-- prettier-ignore -->
-        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-discord"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /><path d="M14 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /><path d="M15.5 17c0 1 1.5 3 2 3c1.5 0 2.833 -1.667 3.5 -3c.667 -1.667 .5 -5.833 -1.5 -11.5c-1.457 -1.015 -3 -1.34 -4.5 -1.5l-.972 1.923a11.913 11.913 0 0 0 -4.053 0l-.975 -1.923c-1.5 .16 -3.043 .485 -4.5 1.5c-2 5.667 -2.167 9.833 -1.5 11.5c.667 1.333 2 3 3.5 3c.5 0 2 -2 2 -3" /><path d="M7 16.5c3.5 1 6.5 1 10 0" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-discord"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M8 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path><path d="M14 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path><path d="M15.5 17c0 1 1.5 3 2 3c1.5 0 2.833 -1.667 3.5 -3c.667 -1.667 .5 -5.833 -1.5 -11.5c-1.457 -1.015 -3 -1.34 -4.5 -1.5l-.972 1.923a11.913 11.913 0 0 0 -4.053 0l-.975 -1.923c-1.5 .16 -3.043 .485 -4.5 1.5c-2 5.667 -2.167 9.833 -1.5 11.5c.667 1.333 2 3 3.5 3c.5 0 2 -2 2 -3"></path><path d="M7 16.5c3.5 1 6.5 1 10 0"></path></svg>
       </a>
     </div>
     <div class="link">
