@@ -4,6 +4,8 @@ on:
   # push:
   #   branches: [ master ]
   workflow_dispatch:  # allow manual trigger
+  repository_dispatch:
+    types: [release-event]
 
 jobs:
   build:
