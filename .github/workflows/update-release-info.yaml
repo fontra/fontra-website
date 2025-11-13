@@ -1,11 +1,11 @@
-name: Update Changelog Page
+name: Update Download Info
 
 on:
   # push:
   #   branches: [ master ]
-  schedule:
-    - cron: "0 0 * * *"  # once a day
   workflow_dispatch:  # allow manual trigger
+  repository_dispatch:
+    types: [release-event]
 
 jobs:
   build:
@@ -30,9 +30,13 @@ jobs:
         run: |
           python scripts/build_changelog.py
 
-      - name: Commit changelog.html
+      - name: Update Download Info
+        run: |
+          python scripts/update_download_info.py
+
+      - name: Commit download info
         uses: EndBug/add-and-commit@v9
         with:
-          add: "docs/changelog.html"
+          add: "docs/"
           committer_name: GitHub Actions
           committer_email: actions@github.com
