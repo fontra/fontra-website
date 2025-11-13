@@ -10,7 +10,13 @@
 <body>
 <img class="icon" src="./fontra-icon.svg" />
 <h1>Changelog for Fontra</h1>
-<h2>2025-10-18</h2>
+<h2>2025-12-13 [version 2025.11.1]</h2>
+<ul>
+<li>[fontra-pak] Issue releases instead of nightly builds. Fontra Pak releases use a <a href="https://calver.org/">Calender Versioning</a> scheme: "YYYY.MM.PATCH" and can be <a href="https://github.com/fontra/fontra-pak/releases">found here</a>. So, with a GitHub account, you can now subscribe to release notifications by watching releases on the <a href="https://github.com/fontra/fontra-pak">fontra-pak repository</a>.</li>
+<li>Add support for sparse kerning exceptions. These are kerning exceptions that only exist in some locations and not all. <a href="https://github.com/fontra/fontra/issues/2305">Issue 2305</a>, <a href="https://github.com/fontra/fontra/pull/2306">PR 2306</a></li>
+<li>Improve support for global axes in variable components, by allowing the designer to override or fine-tune global axis values. The component sections in selection info panel now have a "hamburger" menu with some options: 1. Show global axes (as part of the component location) (default off), 2. Sort glyph axes (default on). Co-authored with NightFurySL2001. <a href="https://github.com/fontra/fontra/issues/2155">Issue 2155</a>, <a href="https://github.com/fontra/fontra/pull/2276">PR 2276</a></li>
+</ul>
+<h2>2025-10-18 [version 2025.11.0]</h2>
 <ul>
 <li>Add "Font overview" menu item to "Font" menu, so users can go to the Font overview from other views. <a href="https://github.com/fontra/fontra/pull/2293">PR 2293</a></li>
 <li>Fixed the Reference Font panel for Safari. <a href="https://github.com/fontra/fontra/issues/2156">Issue 2156</a>, <a href="https://github.com/fontra/fontra/pull/2165">PR 2165</a></li>
