@@ -39,7 +39,7 @@ htmlTemplate = """\
 </style>
 </head>
 <body>
-<img class="icon" src="./fontra-icon.svg" />
+<a href="https://fontra.xyz"><img class="icon" src="./fontra-icon.svg" /></a>
 {mdHtml}
 </body>
 </html>
