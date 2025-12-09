@@ -21,8 +21,14 @@ releaseInfo = json.loads(
 doc = lxml.html.parse(indexPath)
 root = doc.getroot()
 
+classPrefix = "platform-"
+
 for element in root.find_class("download"):
-    platform = "macos" if "macos" in element.classes else "windows"
+    [platform] = [
+        cls[len(classPrefix) :]
+        for cls in element.classes
+        if cls.startswith(classPrefix)
+    ]
     [asset] = [
         asset for asset in releaseInfo["assets"] if platform in asset["name"].lower()
     ]
