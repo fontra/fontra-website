@@ -4,7 +4,6 @@ import os
 import re
 import pathlib
 import markdown
-from release_info import downloadResource, getReleaseInfo
 from urllib.request import urlopen
 
 
