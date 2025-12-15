@@ -2,14 +2,8 @@ import os
 import re
 import pathlib
 import markdown
+from release_info import downloadResource, getReleaseInfo
 from urllib.request import urlopen
-
-
-def downloadURL(url):
-    print("downloading", url)
-    response = urlopen(url)
-    data = response.read()
-    return data.decode("utf-8")
 
 
 indentPat = re.compile(r"^( +)")
@@ -27,6 +21,8 @@ def doubleIndentation(source):
 thisDir = pathlib.Path(__file__).resolve().parent
 docsDir = thisDir.parent / "docs"
 
+releaseInfo = getReleaseInfo()
+releaseTag = releaseInfo["tag_name"]
 
 htmlTemplate = """\
 <!DOCTYPE html>
@@ -48,10 +44,9 @@ htmlTemplate = """\
 
 print("Generating html...")
 
-changeLogURL = (
-    "https://raw.githubusercontent.com/fontra/fontra/refs/heads/main/CHANGELOG.md"
-)
-markdownSource = downloadURL(changeLogURL)
+changeLogURL = f"https://raw.githubusercontent.com/fontra/fontra/refs/tags/{releaseTag}/CHANGELOG.md"
+
+markdownSource = downloadResource(changeLogURL)
 markdownSource = doubleIndentation(markdownSource)
 
 mdConverter = markdown.Markdown()

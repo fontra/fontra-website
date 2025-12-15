@@ -1,22 +1,13 @@
-import json
 import pathlib
-from urllib.request import urlopen
 import lxml.html
-
-
-def downloadResource(url):
-    response = urlopen(url)
-    data = response.read()
-    return data.decode("utf-8")
+from release_info import getReleaseInfo
 
 
 thisDir = pathlib.Path(__file__).resolve().parent
 docsDir = thisDir.parent / "docs"
 indexPath = docsDir / "index.html"
 
-releaseInfo = json.loads(
-    downloadResource("https://api.github.com/repos/fontra/fontra-pak/releases/latest")
-)
+releaseInfo = getReleaseInfo()
 
 doc = lxml.html.parse(indexPath)
 root = doc.getroot()
