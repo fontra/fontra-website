@@ -26,13 +26,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Build changelog.html
+      - name: Update Download Info and changelog.html
         run: |
-          python scripts/build_changelog.py
-
-      - name: Update Download Info
-        run: |
-          python scripts/update_download_info.py
+          python scripts/update_release_and_changelog.py
 
       - name: Commit download info
         uses: EndBug/add-and-commit@v9
