@@ -1,4 +1,4 @@
-name: Update Download Info
+name: Update Download Info and Changelog
 
 on:
   # push:
@@ -28,7 +28,7 @@ jobs:
 
       - name: Update Download Info and changelog.html
         run: |
-          python scripts/update_release_and_changelog.py
+          python scripts/update_download_info_and_changelog.py
 
       - name: Commit download info
         uses: EndBug/add-and-commit@v9
