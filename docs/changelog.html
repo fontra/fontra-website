@@ -10,6 +10,27 @@
 <body>
 <a href="https://fontra.xyz"><img class="icon" src="./fontra-icon.svg" /></a>
 <h1>Changelog for Fontra</h1>
+<h2>2026-01-11 [version 2026.1.0]</h2>
+<h3>Font overview</h3>
+<ul>
+<li>Implement copy/paste, with multi-glyph selection. <a href="https://github.com/fontra/fontra/issues/2356">Issue 2356</a>, <a href="https://github.com/fontra/fontra/pull/2366">PR 2366</a>, <a href="https://github.com/fontra/fontra/pull/2369">PR 2369</a>, <a href="https://github.com/fontra/fontra/pull/2367">PR 2367</a>, <a href="https://github.com/fontra/fontra/pull/2370">PR 2370</a></li>
+<li>Implement glyph deletion, added context menu, implement "select all" and "select none". <a href="https://github.com/fontra/fontra/issues/2354">Issue 2354</a>, <a href="https://github.com/fontra/fontra/pull/2355">PR 2355</a></li>
+</ul>
+<h3>Responding to external changes</h3>
+<ul>
+<li>[fontra-glyphs] Respond to external changes. <a href="https://github.com/fontra/fontra-glyphs/issues/117">fontra-glyphs Issue 117</a>, <a href="https://github.com/fontra/fontra-glyphs/pull/118">fontra-glyphs PR 118</a>, <a href="https://github.com/fontra/fontra-glyphs/pull/119">fontra-glyphs PR 119</a>.</li>
+<li>[designspace] Respond to more external changes: font info, kerning, groups, features, encoding/cmap changes <a href="https://github.com/fontra/fontra/issues/2360">Issue 2360</a>, <a href="https://github.com/fontra/fontra/issues/2338">Issue 2338</a>, <a href="https://github.com/fontra/fontra/pull/2361">PR 2361</a></li>
+<li>[.fontra backend] Respond to external changes. <a href="https://github.com/fontra/fontra/issues/1872">Issue 1872</a>, <a href="https://github.com/fontra/fontra/pull/2364">PR 2364</a></li>
+<li>[.ufo .fontra] Reload when a .ufo or .fontra folder gets replaced externally. <a href="https://github.com/fontra/fontra/pull/2368">PR 2368</a></li>
+</ul>
+<h3>Miscellaneous</h3>
+<ul>
+<li>[editor] Reworked "paste" logic so it works better in Firefox and Safari. <a href="https://github.com/fontra/fontra/issues/2339">Issue 2339</a>, <a href="https://github.com/fontra/fontra/pull/2367">PR 2367</a></li>
+<li>[designspace] Maintain glyph order when re-adding a previously deleted glyph. <a href="https://github.com/fontra/fontra/pull/2357">PR 2357</a></li>
+<li>[fontra-glyphs] Maintain glyph order when re-adding a previously deleted glyph. <a href="https://github.com/fontra/fontra-glyphs/pull/115">fontra-glyphs PR 115</a></li>
+<li>[fontra-glyphs] Fix kerning group behavior when deleting a glyph and re-adding it. <a href="https://github.com/fontra/fontra-glyphs/pull/116">fontra-glyphs PR 116</a></li>
+<li>[editor] Moved the menu items that are also part of the context menu from the Edit menu to the Glyph menu, where they make more sense. This also fixes a menu redundancy. <a href="https://github.com/fontra/fontra/issues/1833">Issue 1833</a>, <a href="https://github.com/fontra/fontra/pull/2371">PR 2371</a></li>
+</ul>
 <h2>2025-12-30 [version 2025.12.6]</h2>
 <ul>
 <li>[fontra pak] Fix update detection mechanism on MacOS.</li>
