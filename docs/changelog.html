@@ -10,6 +10,10 @@
 <body>
 <a href="https://fontra.xyz"><img class="icon" src="./fontra-icon.svg" /></a>
 <h1>Changelog for Fontra</h1>
+<h2>2026-01-15 [version 2026.1.2]</h2>
+<ul>
+<li>[designspace] Fix a synchronization problem when doing Undo/Redo faster than the backend handles writing the changed glyphs. This would be most noticable with a multiple-glyph selection in the font overview and a complex designspace, where each glyph is represented by many .glif files on disk. <a href="https://github.com/fontra/fontra/pull/2374">PR 2374</a></li>
+</ul>
 <h2>2026-01-12 [version 2026.1.1]</h2>
 <ul>
 <li>Add read support for .ttx <a href="https://github.com/fontra/fontra/pull/2372">PR 2372</a></li>
