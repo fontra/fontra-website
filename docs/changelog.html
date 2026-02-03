@@ -10,6 +10,13 @@
 <body>
 <a href="https://fontra.xyz"><img class="icon" src="./fontra-icon.svg" /></a>
 <h1>Changelog for Fontra</h1>
+<h2>2026-02-03 [version 2026.2.0]</h2>
+<ul>
+<li>[ufo] Fix creating a single-UFO project. <a href="https://github.com/fontra/fontra/pull/2405">PR 2405</a></li>
+<li>[designspace/ufo] Fix regression in editing OpenType features, caused by unneeded reloading. <a href="https://github.com/fontra/fontra/pull/2404">PR 2404</a></li>
+<li>[opentype backend] When reading TrueType or OpenType, setup font sources, so we can see the line metrics in the editor, and so that glyph sources will reference font sources where possible. <a href="https://github.com/fontra/fontra/issues/2399">Issue 2399</a>, <a href="https://github.com/fontra/fontra/pull/2401">PR 2401</a></li>
+<li>[opentype backend] When reading TrueType or OpenType, use the user-visible axis ranges instead of normalized values for glyph source locations. <a href="https://github.com/fontra/fontra/pull/2398">PR 2398</a></li>
+</ul>
 <h2>2026-01-24 [version 2026.1.3]</h2>
 <ul>
 <li>[designspace] Fix a writing failure when multiple glyphs use the same layer name but for different locations. <a href="https://github.com/fontra/fontra/issues/2393">Issue 2393</a>, <a href="https://github.com/fontra/fontra/pull/2394">PR 2394</a></li>
