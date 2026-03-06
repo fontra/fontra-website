@@ -10,6 +10,43 @@
 <body>
 <a href="https://fontra.xyz"><img class="icon" src="./fontra-icon.svg" /></a>
 <h1>Changelog for Fontra</h1>
+<h2>2026-03-06 [version 2026.3.0]</h2>
+<ul>
+<li>[OpenType] Initial support for OpenType features has landed! This requires a longer explanation, but in short:<ul>
+<li>Fontra will now apply text shaping and OpenType features. The user interface for this lives in the text entry panel.</li>
+<li>Fontra now uses HarfBuzz for text shaping and OpenType features, via <a href="https://github.com/harfbuzz/harfbuzzjs">harfbuzzjs</a>. Khaled Hosny contributed many improvements to <code>harfbuzzjs</code> to make this possible.</li>
+<li>For <code>.otf</code> and <code>.ttf</code> fonts, Fontra will use the actual OpenType features from the fonts.</li>
+<li>For source files (<code>.designspace</code>, <code>.ufo</code>, <code>.glyphs</code>, <code>.fontra</code>), it will compile a so called "shaper font" on the fly, using the brand new <a href="https://github.com/fontra/build-shaper-font">build-shaper-font</a> functionality, written by Khaled Hosny, using parts of the <code>fontc</code> code base written in Rust. This runs in the browser using Web Assembly. It is amazing.</li>
+<li>Some glyph positioning features are emulated on the fly using data in the font: <code>curs</code>, <code>kern</code>, <code>mark</code> and <code>mkmk</code>. This uses live kerning data and glyph anchors and allows the user to make edit and immediately see the effects in the rendered text.</li>
+<li>The OpenType feature code editor was improved to do live error checking and reporting (also using the <code>build-shaper-font</code> functionality). You can have two windows or tabs side-by-side, and see changes in the feature code being reflected in the glyph editor virtually instantaneously.</li>
+<li>There is a new right sidebar panel called "Input characters and output glyphs" that contains two lists:<ul>
+<li>The input characters, and a little bit of unicode information for each character</li>
+<li>The output glyphs, showing the glyph name, advance width, positioning offsets and character cluster index for each glyph.</li>
+</ul>
+</li>
+<li>There are still some open issues, and things may still be a little rough around the edges. See <a href="https://github.com/fontra/fontra/issues/2381">Issue 2381</a> for past and ongoing work.</li>
+</ul>
+</li>
+<li>[designspace/ufo] Fix editing the style name for single-UFO projects, by making sure to write the <code>fontSource.name</code> property to the <code>styleName</code> UFO font info property. <a href="https://github.com/fontra/fontra/pull/2464">PR 2464</a></li>
+<li>[fontra-workflow] Add <code>propagate-anchors</code> filter, that tries to match <code>glyphsLib</code> behavior. <a href="https://github.com/fontra/fontra/issues/2453">Issue 2453</a>, <a href="https://github.com/fontra/fontra/pull/2457">PR 2457</a></li>
+<li>[fontra-pak] When exporting <code>.ttf</code> or <code>.otf</code>, apply the <code>propagate-anchors</code> filter. This allows us to export .glyphs files more correctly. <a href="https://github.com/fontra/fontra-pak/pull/226">fontra-pak PR 226</a></li>
+<li>[designspace/ufo] Fix writing of guidelines that have angles outside of the 0..360 range. <a href="https://github.com/fontra/fontra/pull/2454">PR 2454</a></li>
+<li>[glyph sets] Remove Black Foundry glyph sets, they are unmaintained. <a href="https://github.com/fontra/fontra/pull/2446">PR 2446</a></li>
+<li>[kerning emulation] Ignore mark glyphs when emulating kerning. <a href="https://github.com/fontra/fontra/issues/2443">Issue 2443</a>, <a href="https://github.com/fontra/fontra/pull/2444">PR 2444</a></li>
+<li>Improve font source interpolation when custom data isn't interpolatable. <a href="https://github.com/fontra/fontra/pull/2445">PR 2445</a></li>
+<li>[glyph sets] Add JustFont jf 7000 Chinese/Taiwanese character sets. Suggested by user MidnightOwl123. <a href="https://github.com/fontra/fontra/pull/2428">PR 2428</a></li>
+<li>[fontra-glyphs] Fixed a bug where writing OpenType features caused internal data problems, making Fontra unable to read glyphs afterwards. <a href="https://github.com/fontra/fontra-glyphs/pull/125">fontra-glyphs PR 125</a></li>
+<li>Fixed bug that made Fontra unable to show a glyph if the feature code was invalid. <a href="https://github.com/fontra/fontra/issues/2423">Issue 2423</a>, <a href="https://github.com/fontra/fontra/pull/2424">PR 2424</a></li>
+<li>[fontra-glyphs] Add support for right-to-left kerning. <a href="https://github.com/fontra/fontra-glyphs/pull/124">fontra-glyphs PR 124</a></li>
+<li>[selection info / dimensions field] When a single off-curve point is selected, show the dimensions of the handle instead of (0, 0). Suggested by Aleksandra Samuļenkova. <a href="https://github.com/fontra/fontra/pull/2418">PR 2418</a></li>
+<li>[designspace/ufo] Fix reading and writing of right-to-left kerning. <a href="https://github.com/fontra/fontra/pull/2416">PR 2416</a>, <a href="https://github.com/fontra/fontra/pull/2417">PR 2417</a></li>
+<li>Fix a bug in anchor sorting, so inconsistently ordered anchors can now really be interpolated. This fixes a bug in the previous attempt to fix this. <a href="https://github.com/fontra/fontra/pull/2415">PR 2415</a></li>
+<li>[fontra-glyphs] When reading OpenType features, expand include statements and Glyphs-specific dynamic feature syntax into traditional feature syntax. <a href="https://github.com/fontra/fontra-glyphs/pull/123">fontra-glyphs PR 123</a></li>
+<li>[fontra-glyphs] Accept invalid OpenType feature code, as this is inevitable when editing, given Fontra's autosave nature. <a href="https://github.com/fontra/fontra-glyphs/pull/122">fontra-glyphs PR 122</a></li>
+<li>Ignore component custom data when interpolating. This fixes interpolation for .glyphs files that have inconsistent component align settings. <a href="https://github.com/fontra/fontra/pull/2409">PR 2409</a></li>
+<li>Make the topic list of the application settings and font info views foldable. <a href="https://github.com/fontra/fontra/pull/2408">PR 2408</a></li>
+<li>Fix minor layout bug in glyph sets UI. <a href="https://github.com/fontra/fontra/commit/b292d8ee980438a4152da8d3af1b8fb5408f2f75">Commit b292d8ee</a></li>
+</ul>
 <h2>2026-02-03 [version 2026.2.0]</h2>
 <ul>
 <li>[ufo] Fix creating a single-UFO project. <a href="https://github.com/fontra/fontra/pull/2405">PR 2405</a></li>
