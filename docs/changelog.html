@@ -10,6 +10,20 @@
 <body>
 <a href="https://fontra.xyz"><img class="icon" src="./fontra-icon.svg" /></a>
 <h1>Changelog for Fontra</h1>
+<h2>2026-03-12 [version 2026.3.2]</h2>
+<h3>New features</h3>
+<ul>
+<li>[shaping] Add app-level switch to opt-out of ad hoc mark detection. This setting is needed to correctly render glyphs that use "receiving" marks (starting with an underscore) that are not meant to be marks. The default behavior still matches fontmake's default. <a href="https://github.com/fontra/fontra/issues/2487">Issue 2487</a>, <a href="https://github.com/fontra/fontra/pull/2490">PR 2490</a></li>
+<li>[editor] Bring the "glyph sets" functionality from the font overview to the editor. The glyph set selection UI was added to the glyph search panel. Importantly, this finally allows us to use custom glyph name/code point mappings in the editor. <a href="https://github.com/fontra/fontra/pull/2489">PR 2489</a></li>
+<li>[translations] Added a full Traditional Chinese set of translation strings, contributed by 湖远星（Lake桑）. They also filled some gaps in the Simplified Chinese strings. <a href="https://github.com/fontra/fontra/pull/2479">PR 2479</a></li>
+<li>[fontra-pak] Add a sample text field to the launcher window. If this is empty, launch into the font overview, but if it is not, launch into the editor with the text. <a href="https://github.com/fontra/fontra-pak/pull/228">fontra-pak PR 228</a></li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+<li>Don't draw incorrect placeholder strings for empty unencoded glyphs <a href="https://github.com/fontra/fontra/pull/2486">PR 2486</a></li>
+<li>[fontra-pak] Reinstate support for macOS 11, which was accidentally dropped by unnecessarily upgrading the PyQt6 dependency. <a href="https://github.com/fontra/fontra-pak/pull/229">fontra-pak PR 229</a></li>
+<li>[opentype] Use the previous working shaper font if compilation fails during editing of OpenType features. This avoids jarring text breackage during feature editing. <a href="https://github.com/fontra/fontra/issues/2469">Issue 2469</a>, <a href="https://github.com/fontra/fontra/pull/2480">PR 2480</a></li>
+</ul>
 <h2>2026-03-06 [version 2026.3.1]</h2>
 <ul>
 <li>Fix editing kerning and sidebearings, making the glyph list metrics update correctly when using these tools. <a href="https://github.com/fontra/fontra/pull/2468">PR 2468</a></li>
