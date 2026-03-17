@@ -10,6 +10,14 @@
 <body>
 <a href="https://fontra.xyz"><img class="icon" src="./fontra-icon.svg" /></a>
 <h1>Changelog for Fontra</h1>
+<h2>2026-03-17 [version 2026.3.4]</h2>
+<h3>Fixes</h3>
+<ul>
+<li>[shaping] A GDEF table in the feature code must override our own glyph-is-mark logic. <a href="https://github.com/fontra/fontra/issues/2495">Issue 2495</a>, <a href="https://github.com/fontra/fontra/pull/2496">PR 2496</a></li>
+<li>[cross-axis mapping/avar-2] Fix edge case where we specify an output axis value at the default, while the corresponding input value is <em>not</em> at the default. <a href="https://github.com/fontra/fontra/pull/2492">PR 2492</a></li>
+<li>Prevent unnecessary .designspace lib pollution by not writing the "project glyph sets" list if it is empty. <a href="https://github.com/fontra/fontra/pull/2491">PR 2491</a></li>
+<li>Fixed write-on-initial-read bug that was especially harmful for .designspace: Fontra should never write files when it is only reading. <a href="https://github.com/fontra/fontra/pull/2499">PR 2499</a></li>
+</ul>
 <h2>2026-03-12 [version 2026.3.3]</h2>
 <ul>
 <li>Fix font info navigation regression.</li>
