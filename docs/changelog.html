@@ -10,6 +10,20 @@
 <body>
 <a href="https://fontra.xyz"><img class="icon" src="./fontra-icon.svg" /></a>
 <h1>Changelog for Fontra</h1>
+<h2>2026-03-24 [version 2026.3.5]</h2>
+<h3>New features</h3>
+<ul>
+<li>[fontra-pak] Make .fontra the default format when creating a new font, and remove the .rcjk legacy format from the new font format options. <a href="https://github.com/fontra/fontra-pak/pull/231">fontra-pak PR 231</a></li>
+<li>[translations] Added Tagalog (Filipino) translations, contributed by FlaviusChromacitrin. <a href="https://github.com/fontra/fontra/issues/2503">Issue 2503</a>, <a href="https://github.com/fontra/fontra/pull/2506">PR 2506</a></li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+<li>[Windows + OneDrive] Work around erroneous reloads that disrupt editing, caused by OneDrive on Windows: if files are stored in a OneDrive folder, each file write by Fontra causes OneDrive to change the modification time again a bit later, causing Fontra to receive a "file changed" event, even though the file didn't really change. We work around this by also comparing the contents of the file, and ignore the event if it's still the same. <a href="https://github.com/fontra/fontra/pull/2511">PR 2511</a></li>
+<li>[shaping] Make explicit non-mark glyph category take precedence over ad-hoc mark detection. <a href="https://github.com/fontra/fontra/issues/2507">Issue 2507</a>, <a href="https://github.com/fontra/fontra/pull/2508">PR 2508</a></li>
+<li>[designspace/ufo] Don't unnecessarily modify UFO's metainfo.plist file when reading. This happened when the metainfo.plist file was formatted differently from how fontTools.ufoLib would do it. <a href="https://github.com/fontra/fontra/issues/2504">Issue 2504</a>, <a href="https://github.com/fontra/fontra/pull/2505">PR 2505</a></li>
+<li>[fontra-glyphs] Fixed support for smart components that don't respond to font axes, yet use master layers that do. Reported and mostly fixed by Zachary Quinn Scheuren. <a href="https://github.com/fontra/fontra-glyphs/pull/133">fontra-glyphs PR 133</a> and <a href="https://github.com/fontra/fontra-glyphs/pull/134">fontra-glyphs PR 134</a></li>
+<li>[ttx] Fixed .ttx support for fonts that contain a format 2 <code>post</code> table. <a href="https://github.com/fontra/fontra/pull/2501">PR 2501</a></li>
+</ul>
 <h2>2026-03-17 [version 2026.3.4]</h2>
 <h3>Fixes</h3>
 <ul>
