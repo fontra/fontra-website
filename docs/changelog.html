@@ -10,6 +10,23 @@
 <body>
 <a href="https://fontra.xyz"><img class="icon" src="./fontra-icon.svg" /></a>
 <h1>Changelog for Fontra</h1>
+<h2>2026-04-01 [version 2026.4.0]</h2>
+<h3>New features</h3>
+<ul>
+<li>[fontra-pak] Add "Download latest Fontra Pak" button for Linux platform. Contributed by Dr Anirban Mitra. <a href="https://github.com/fontra/fontra-pak/pull/233">PR 233</a></li>
+<li>[fontra-pak] Added "Webfont" (.woff2) export option. Contributed by Dr Anirban Mitra. <a href="https://github.com/fontra/fontra-pak/pull/232">PR 232</a></li>
+<li>Added a "Shaping debugger", as part of the "Input characters and output glyphs" panel. It sits in a new closed-by-default accordion item between "Input characters" and "Output glyphs" and allows the user to step through all the processing steps involved with text shaping and OpenType feature application, such as character reordering, glyph substition and glyph positioning. The user can see what effect each step has on the rendered string, both visually in the canvas and textually/numerically in the output glyphs list. This builds on the HarfBuzz "message API", and offers similar functionality to the <a href="https://github.com/simoncozens/crowbar">Crowbar</a> tool. <a href="https://github.com/fontra/fontra/pull/2500">PR 2500</a></li>
+</ul>
+<h3>Improvements</h3>
+<ul>
+<li>Improved browser tab management significantly: when navigating to the font info view or to the font overview, activate an existing tab for that view. This avoids opening redundant new tabs, and allows the user to switch tabs with the "Font" menu. <a href="https://github.com/fontra/fontra/pull/2520">PR 2520</a></li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+<li>[ufo] Prevent ufo write error and export error when a path contains an invalid number of subsequent cubic off-curve points. <a href="https://github.com/fontra/fontra/pull/2529">PR 2529</a></li>
+<li>[shaping] Fixed emulated mark positioning around "multiplied" glyph. <a href="https://github.com/fontra/fontra/issues/2521">Issue 2521</a>, <a href="https://github.com/fontra/fontra/pull/2523">PR 2523</a></li>
+<li>Prevent editing of metrics and kerning when the font is read-only, and prevent editing metrics when glyphs are locked. <a href="https://github.com/fontra/fontra/issues/2407">Issue 2407</a>, <a href="https://github.com/fontra/fontra/pull/2513">PR 2513</a></li>
+</ul>
 <h2>2026-03-24 [version 2026.3.5]</h2>
 <h3>New features</h3>
 <ul>
