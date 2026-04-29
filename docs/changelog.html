@@ -10,6 +10,18 @@
 <body>
 <a href="https://fontra.xyz"><img class="icon" src="./fontra-icon.svg" /></a>
 <h1>Changelog for Fontra</h1>
+<h2>2026-04-29 [version 2026.4.4]</h2>
+<h3>New features</h3>
+<ul>
+<li>[Windows installer] Add option to add a desktop shortcut. <a href="https://github.com/fontra/fontra-pak/issues/239">fontra-pak Issue 239</a>, <a href="https://github.com/fontra/fontra-pak/pull/240">fontra-pak PR 240</a></li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+<li>[fontra-pak] Reinstate export as .rcjk. This was accidentally removed when .rcjk was removed as an option for new fonts. <a href="https://github.com/fontra/fontra-pak/pull/244">fontra-pak PR 244</a></li>
+<li>[rcjk] Fix .rcjk export by ignoring empty conditional substitutions. <a href="https://github.com/fontra/fontra/pull/2557">PR 2557</a></li>
+<li>[conditional substitutions] Fix axis (<code>avar</code>) mapping logic for conditional substitutions. Previously Fontra could substitute glyphs at not quite the correct locations, if an axis had an <code>avar</code> mapping. <a href="https://github.com/fontra/fontra/issues/2556">Issue 2556</a>, <a href="https://github.com/fontra/fontra/pull/2558">PR 2558</a></li>
+<li>[conditional substitutions] Fix previewing behavior when a rule has multiple condition sets. <a href="https://github.com/fontra/build-shaper-font/issues/30">build-shaper-font Issue 30</a>, <a href="https://github.com/fontra/build-shaper-font/pull/31">build-shaper-font PR 31</a></li>
+</ul>
 <h2>2026-04-15 [version 2026.4.3]</h2>
 <h3>New features</h3>
 <ul>
