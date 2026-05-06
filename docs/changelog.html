@@ -10,6 +10,25 @@
 <body>
 <a href="https://fontra.xyz"><img class="icon" src="./fontra-icon.svg" /></a>
 <h1>Changelog for Fontra</h1>
+<h2>2026-05-06 [version 2026.5.0]</h2>
+<h3>New features</h3>
+<ul>
+<li>[fontra pak] Add a checkbox to the launcher window that (when checked) causes fonts to be opened in read-only mode. <a href="https://github.com/fontra/fontra-pak/issues/247">fontra-pak Issue 247</a>, <a href="https://github.com/fontra/fontra-pak/pull/248">fontra-pak PR 248</a>, <a href="https://github.com/fontra/fontra/pull/2581">PR 2581</a></li>
+</ul>
+<h3>Improvements</h3>
+<ul>
+<li>[help menu] Added links to the Blog and the Discord invite. Contributed by Dave Crossland. <a href="https://github.com/fontra/fontra/pull/2580">PR 2580</a></li>
+<li>[editor view] Make minimum zoom limit relative to em size (units-per-em). Contributed by Qwerasd. <a href="https://github.com/fontra/fontra/issues/2573">Issue 2573</a>, <a href="https://github.com/fontra/fontra/pull/2574">PR 2574</a></li>
+<li>[shaping] When the "Apply text shaping and features" option is <em>off</em>, don't do any positioning emulation. <a href="https://github.com/fontra/fontra/issues/2517">Issue 2517</a>, <a href="https://github.com/fontra/fontra/pull/2571">PR 2571</a></li>
+<li>[shaping debugger] Improved message formatting in feature debugger. Contributed by Khaled Hosny. <a href="https://github.com/fontra/fontra/pull/2566">PR 2566</a></li>
+<li>[opentype feature editor] When navigating to a line from an error message or from the shaping debugger, scroll the selected line into the center of the view like most editors do, instead of near the edge. Contributed by Khaled Hosny. <a href="https://github.com/fontra/fontra/pull/2565">PR 2565</a></li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+<li>[editor view] Fix inconsistent advance widths for undefined glyphs. <a href="https://github.com/fontra/fontra/issues/2572">Issue 2572</a>, <a href="https://github.com/fontra/fontra/pull/2575">PR 2575</a></li>
+<li>[editor view] Fix display glitch with Safari on very large screens. Contributed by Qwerasd. <a href="https://github.com/fontra/fontra/pull/2567">PR 2567</a></li>
+<li>[fontra-glyphs] Use the correct encoding when reading .plist files. This fixes read errors with certain .glyphs and .glyphspackage files. <a href="https://github.com/fontra/fontra-glyphs/issues/140">fontra-glyphs Issue 140</a>, <a href="https://github.com/fontra/fontra-glyphs/pull/141">fontra-glyphs PR 141</a></li>
+</ul>
 <h2>2026-04-29 [version 2026.4.4]</h2>
 <h3>New features</h3>
 <ul>
