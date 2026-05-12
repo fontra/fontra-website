@@ -10,6 +10,20 @@
 <body>
 <a href="https://fontra.xyz"><img class="icon" src="./fontra-icon.svg" /></a>
 <h1>Changelog for Fontra</h1>
+<h2>2026-05-12 [version 2026.5.1]</h2>
+<h3>New features</h3>
+<ul>
+<li>[Designspace navigation panel] Add a new accordion section for hidden axes. Add an associated view option (under its hamburger menu button) "Show only effective location", similar to "Show effective location", but that will only show (inactive) sliders for the effective location. This is useful when the hidden axes are all controlled by the non-hidden axes via cross-axis mappings (aka <code>avar-2</code>). <a href="https://github.com/fontra/fontra/issues/2553">Issue 2553</a>, <a href="https://github.com/fontra/fontra/pull/2584">PR 2584</a></li>
+<li>[Axes panel] Add "Hidden" checkbox to Axis box and New Axis dialog, so we can finally edit the "hidden" axis flag. <a href="https://github.com/fontra/fontra/issues/1373">Issue 1373</a>, <a href="https://github.com/fontra/fontra/pull/2582">PR 2582</a></li>
+</ul>
+<h3>Improvements</h3>
+<ul>
+<li>[front-end code] Our highly competent contributor Qwerasd started to convert part of the front-end code base from JavaScript to TypeScript. This process will in the long term improve maintainability and stability. <a href="https://github.com/fontra/fontra/pull/2585">PR 2585</a>, <a href="https://github.com/fontra/fontra/pull/2590">PR 2590</a></li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+<li>[fontra-pak] Fix "Open fonts in read-only mode" on Windows: this new checkbox sometimes had an unpredictable effect. <a href="https://github.com/fontra/fontra-pak/pull/249">PR 249</a></li>
+</ul>
 <h2>2026-05-06 [version 2026.5.0]</h2>
 <h3>New features</h3>
 <ul>
