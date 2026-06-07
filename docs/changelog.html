@@ -10,6 +10,17 @@
 <body>
 <a href="https://fontra.xyz"><img class="icon" src="./fontra-icon.svg" /></a>
 <h1>Changelog for Fontra</h1>
+<h2>2026-06-07 [version 2026.6.0]</h2>
+<h3>Improvements</h3>
+<ul>
+<li>[fontra-workflow] Reformatted the .yaml test files so that each step starts with its operational keyword, which reads a lot better. <a href="https://github.com/fontra/fontra/pull/2620">PR 2620</a></li>
+<li>[fontra-workflow] Add support for instantiating with cross-axis mappings <a href="https://github.com/fontra/fontra/pull/2619">PR 2619</a></li>
+<li>[fontra-workflow] Make the fontra-workflow backend respond to external changes to the .yaml file. <a href="https://github.com/fontra/fontra/pull/2618">PR 2618</a></li>
+<li>[shaping] Gracefully handle invalid conditional substitution rules that use unknown axes. <a href="https://github.com/fontra/fontra/pull/2598">PR 2598</a></li>
+<li>[glyph search] Allow <code>U+</code>- or <code>0x</code>-prefixed hex code points in various glyph search fields, to find glyphs by their hexadecimal code point. <a href="https://github.com/fontra/fontra/issues/2606">Issue 2606</a>, <a href="https://github.com/fontra/fontra/pull/2608">PR 2608</a></li>
+<li>[cross-axis mappings] When a font has cross axis mappings, activate "show effective location" by default. <a href="https://github.com/fontra/fontra/pull/2609">PR 2609</a></li>
+<li>[cross-axis mappings] When creating a new cross-axis mapping, make sure it is in view by scrolling to the end. This improves the experience when there are many mappings. <a href="https://github.com/fontra/fontra/pull/2610">PR 2610</a></li>
+</ul>
 <h2>2026-05-12 [version 2026.5.1]</h2>
 <h3>New features</h3>
 <ul>
