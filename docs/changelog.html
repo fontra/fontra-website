@@ -10,6 +10,26 @@
 <body>
 <a href="https://fontra.xyz"><img class="icon" src="./fontra-icon.svg" /></a>
 <h1>Changelog for Fontra</h1>
+<h2>2026-07-10 [version 2026.7.0]</h2>
+<h3>New features</h3>
+<ul>
+<li>[font overview] Support cross-axis mappings, put hidden axes in a separate section, and in general bring the axes UI in line with the glyph editor. <a href="https://github.com/fontra/fontra/issues/2652">Issue 2652</a>, <a href="https://github.com/fontra/fontra/pull/2691">PR 2691</a></li>
+<li>[font overview] Allow quick glyph selection by typing a glyph name or a character. <a href="https://github.com/fontra/fontra/issues/2677">Issue 2677</a>, <a href="https://github.com/fontra/fontra/pull/2682">PR 2682</a></li>
+<li>[font overview] Add "Copy Glyph Name(s) and "Copy Character(s)" context menus. <a href="https://github.com/fontra/fontra/issues/2676">Issue 2676</a>, <a href="https://github.com/fontra/fontra/pull/2681">PR 2681</a></li>
+</ul>
+<h3>Improvements</h3>
+<ul>
+<li>[menus] Make menus behave well when the items don't fit the viewport. <a href="https://github.com/fontra/fontra/pull/2694">PR 2694</a></li>
+<li>[editor] Improve zoom in/out behavior when there is no selection. This used to use the scene center, and now uses the view port center, which behaves much better with larger texts. <a href="https://github.com/fontra/fontra/issues/2686">Issue 2686</a>, <a href="https://github.com/fontra/fontra/pull/2687">PR 2687</a></li>
+<li>[font overview] Change the behavior of "Select All" to really select all, and not skip glyphs that aren't in the font (but are in the combined selected glyph sets) <a href="https://github.com/fontra/fontra/pull/2681">PR 2681</a></li>
+<li>[glyphsets] Updated the Google Fonts glyphsets to 1.1.3. <a href="https://github.com/fontra/fontra/issues/2673">Issue 2673</a>, <a href="https://github.com/fontra/fontra/pull/2675">PR 2675</a></li>
+<li>[languages] Some new strings and some improved strings for Simplified Chinese and Traditional Chinese, contributed by 湖远星（Lake桑）. <a href="https://github.com/fontra/fontra/pull/2674">PR 2674</a></li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+<li>Fix bug with font source interpolation after toggling the "Is Sparse" flag. <a href="https://github.com/fontra/fontra/pull/2693">PR 2693</a></li>
+<li>[font overview, Firefox] Prevent opening two tabs instead of one when typing Enter to open the selection in the glyph editor. <a href="https://github.com/fontra/fontra/issues/2678">Issue 2678</a> <a href="https://github.com/fontra/fontra/pull/2680">PR 2680</a></li>
+</ul>
 <h2>2026-06-28 [version 2026.6.5]</h2>
 <h3>Fixes</h3>
 <ul>
