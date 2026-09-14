@@ -10,6 +10,28 @@
 <body>
 <a href="https://fontra.xyz"><img class="icon" src="./fontra-icon.svg" /></a>
 <h1>Changelog for Fontra</h1>
+<h2>2026-09-14 [version 2026.9.0]</h2>
+<h3>New features</h3>
+<ul>
+<li>[text entry panel] Add fields to set the text size and line height. Add new "Text layout options" accordion section for text alignment, text size and line height. <a href="https://github.com/fontra/fontra/issues/105">Issue 105</a>, <a href="https://github.com/fontra/fontra/issues/1400">Issue 1400</a>, <a href="https://github.com/fontra/fontra/pull/2765">PR 2765</a></li>
+<li>[command line] The <code>fontra</code> command line tool got a new subcommand <code>new</code>, for creating a new font. <a href="https://github.com/fontra/fontra/discussions/2761">Discussion 2761</a>, <a href="https://github.com/fontra/fontra/pull/2762">PR 2762</a></li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+<li>[glyph editor] Fix behavior when moving a window between screens with different resolutions. <a href="https://github.com/fontra/fontra/pull/2766">PR 2766</a></li>
+<li>[fontra-pak linux] Fix window appearance and behavior on GNOME Wayland. <a href="https://github.com/fontra/fontra-pak/pull/267">fontra-pak PR 267</a></li>
+<li>[opentype features panel] Recompile when glyphs are being added to or deleted from the font. <a href="https://github.com/fontra/fontra/pull/2764">PR 2764</a></li>
+<li>[firefox] Work around text selection problem within draggable boxes. <a href="https://github.com/fontra/fontra/pull/2763">PR 2763</a></li>
+<li>[glyph editor] Fix text align change when in auto-view-box mode. <a href="https://github.com/fontra/fontra/pull/2758">PR 2758</a></li>
+<li>[woff/woff2] Fix shaping and OpenType features for woff/woff2 fonts. <a href="https://github.com/fontra/fontra/pull/2753">PR 2753</a></li>
+<li>Remove confusing kerning visualization when "Apply text shaping and features" is off. <a href="https://github.com/fontra/fontra/pull/2748">PR 2748</a></li>
+<li>Refuse to edit kerning when it can't or won't be shown. <a href="https://github.com/fontra/fontra/issues/2692">Issue 2692</a>, <a href="https://github.com/fontra/fontra/pull/2750">PR 2750</a></li>
+</ul>
+<h3>Improvements</h3>
+<ul>
+<li>[font info] Make sure various font info can't be edited when in read-only mode. <a href="https://github.com/fontra/fontra/pull/2759">PR 2759</a></li>
+<li>[shaping debugger] Make showing kerning as part of the advance width field opt-out. <a href="https://github.com/fontra/fontra/issues/2522">Issue 2522</a>, <a href="https://github.com/fontra/fontra/pull/2749">PR 2749</a></li>
+</ul>
 <h2>2026-08-29 [version 2026.8.0]</h2>
 <h3>New features</h3>
 <ul>
