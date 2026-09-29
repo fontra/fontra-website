@@ -10,6 +10,30 @@
 <body>
 <a href="https://fontra.xyz"><img class="icon" src="./fontra-icon.svg" /></a>
 <h1>Changelog for Fontra</h1>
+<h2>2026-09-29 [version 2026.9.1]</h2>
+<h3>New features</h3>
+<ul>
+<li>[glyph editor] Show the background image for otherwise empty glyphs, even when not editing, so background images can be used as placeholders or references white using the spacing tool. <a href="https://github.com/fontra/fontra/issues/2775">Issue 2775</a>, <a href="https://github.com/fontra/fontra/pull/2783">PR 2783</a></li>
+<li>[glyph editor] Allow the arrow key nudge values to be customized. <a href="https://github.com/fontra/fontra/issues/2772">Issue 2772</a>, <a href="https://github.com/fontra/fontra/pull/2773">PR 2773</a></li>
+<li>[font overview / glyph cell] Add tooltip for each glyph, showing the full glyph name, unicode character, code point and unicode name. <a href="https://github.com/fontra/fontra/issues/2767">Issue 2767</a>, <a href="https://github.com/fontra/fontra/pull/2768">PR 2768</a></li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+<li>[glyph editor] When a guideline overlaps with a (line) segment, make sure that we can select the line segment by clicking on it. Improve visualization of hovered and selected guidelines. <a href="https://github.com/fontra/fontra/issues/2777">Issue 2777</a>, <a href="https://github.com/fontra/fontra/pull/2781">PR 2781</a>, <a href="https://github.com/fontra/fontra/pull/2782">Issue 2782</a></li>
+<li>[linux] Fix GNOME Wayland appearance issues by upgrading PyQt. <a href="https://github.com/fontra/fontra-pak/issues/271">Issue 271</a>, <a href="https://github.com/fontra/fontra-pak/pull/278">PR 278</a></li>
+<li>[linux] Revert GNOME Wayland appearance fixes as they caused crashes. <a href="https://github.com/fontra/fontra-pak/pull/270">fontra-pak PR 270</a></li>
+<li>[linux] Skip version check when running as a flatpak. <a href="https://github.com/fontra/fontra-pak/pull/277">PR 277</a></li>
+<li>[linux] Fix a bug in the version check. <a href="https://github.com/fontra/fontra-pak/pull/269">fontra-pak PR 269</a></li>
+<li>[conditional substitutions] Respond to changes in the set of glyphs, and update the glyphname suggestions in the substitution fields. <a href="https://github.com/fontra/fontra/pull/2771">PR 2771</a></li>
+</ul>
+<h3>Improvements</h3>
+<ul>
+<li>[tooltips] Use standard HTML "title" tooltip functionality instead of custom and error-prone CSS solution. Looks a little different, works a lot better. <a href="https://github.com/fontra/fontra/pull/2769">PR 2769</a></li>
+</ul>
+<h3>Miscellaneous</h3>
+<ul>
+<li>[source code] Drop support for Python 3.10. <a href="https://github.com/fontra/fontra/pull/2774">PR 2774</a></li>
+</ul>
 <h2>2026-09-14 [version 2026.9.0]</h2>
 <h3>New features</h3>
 <ul>
