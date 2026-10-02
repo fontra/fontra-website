@@ -1,0 +1,363 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Fontra — Latest Changes</title>
+    <link>https://fontra.xyz/changelog.html</link>
+    <description>Latest changes in Fontra</description>
+    <atom:link href="https://fontra.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fontra 2026.9.2</title>
+      <link>https://fontra.xyz/changelog.html#2026.9.2</link>
+      <guid>https://fontra.xyz/changelog.html#2026.9.2</guid>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
+      <description>&lt;ul&gt;
+&lt;li&gt;[languages] Tweaks and improvements to various languages: English, Spanish, French, Italian, Portuguese and Russian. &lt;a href="https://github.com/fontra/fontra/pull/2786"&gt;PR 2786&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Fontra 2026.9.1</title>
+      <link>https://fontra.xyz/changelog.html#2026.9.1</link>
+      <guid>https://fontra.xyz/changelog.html#2026.9.1</guid>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
+      <description>&lt;h3&gt;New features&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[glyph editor] Show the background image for otherwise empty glyphs, even when not editing, so background images can be used as placeholders or references white using the spacing tool. &lt;a href="https://github.com/fontra/fontra/issues/2775"&gt;Issue 2775&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2783"&gt;PR 2783&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[glyph editor] Allow the arrow key nudge values to be customized. &lt;a href="https://github.com/fontra/fontra/issues/2772"&gt;Issue 2772&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2773"&gt;PR 2773&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[font overview / glyph cell] Add tooltip for each glyph, showing the full glyph name, unicode character, code point and unicode name. &lt;a href="https://github.com/fontra/fontra/issues/2767"&gt;Issue 2767&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2768"&gt;PR 2768&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[glyph editor] When a guideline overlaps with a (line) segment, make sure that we can select the line segment by clicking on it. Improve visualization of hovered and selected guidelines. &lt;a href="https://github.com/fontra/fontra/issues/2777"&gt;Issue 2777&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2781"&gt;PR 2781&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2782"&gt;Issue 2782&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[linux] Fix GNOME Wayland appearance issues by upgrading PyQt. &lt;a href="https://github.com/fontra/fontra-pak/issues/271"&gt;Issue 271&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra-pak/pull/278"&gt;PR 278&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[linux] Revert GNOME Wayland appearance fixes as they caused crashes. &lt;a href="https://github.com/fontra/fontra-pak/pull/270"&gt;fontra-pak PR 270&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[linux] Skip version check when running as a flatpak. &lt;a href="https://github.com/fontra/fontra-pak/pull/277"&gt;PR 277&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[linux] Fix a bug in the version check. &lt;a href="https://github.com/fontra/fontra-pak/pull/269"&gt;fontra-pak PR 269&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[conditional substitutions] Respond to changes in the set of glyphs, and update the glyphname suggestions in the substitution fields. &lt;a href="https://github.com/fontra/fontra/pull/2771"&gt;PR 2771&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[tooltips] Use standard HTML "title" tooltip functionality instead of custom and error-prone CSS solution. Looks a little different, works a lot better. &lt;a href="https://github.com/fontra/fontra/pull/2769"&gt;PR 2769&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Miscellaneous&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[source code] Drop support for Python 3.10. &lt;a href="https://github.com/fontra/fontra/pull/2774"&gt;PR 2774&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Fontra 2026.9.0</title>
+      <link>https://fontra.xyz/changelog.html#2026.9.0</link>
+      <guid>https://fontra.xyz/changelog.html#2026.9.0</guid>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
+      <description>&lt;h3&gt;New features&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[text entry panel] Add fields to set the text size and line height. Add new "Text layout options" accordion section for text alignment, text size and line height. &lt;a href="https://github.com/fontra/fontra/issues/105"&gt;Issue 105&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/issues/1400"&gt;Issue 1400&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2765"&gt;PR 2765&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[command line] The &lt;code&gt;fontra&lt;/code&gt; command line tool got a new subcommand &lt;code&gt;new&lt;/code&gt;, for creating a new font. &lt;a href="https://github.com/fontra/fontra/discussions/2761"&gt;Discussion 2761&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2762"&gt;PR 2762&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[glyph editor] Fix behavior when moving a window between screens with different resolutions. &lt;a href="https://github.com/fontra/fontra/pull/2766"&gt;PR 2766&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[fontra-pak linux] Fix window appearance and behavior on GNOME Wayland. &lt;a href="https://github.com/fontra/fontra-pak/pull/267"&gt;fontra-pak PR 267&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[opentype features panel] Recompile when glyphs are being added to or deleted from the font. &lt;a href="https://github.com/fontra/fontra/pull/2764"&gt;PR 2764&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[firefox] Work around text selection problem within draggable boxes. &lt;a href="https://github.com/fontra/fontra/pull/2763"&gt;PR 2763&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[glyph editor] Fix text align change when in auto-view-box mode. &lt;a href="https://github.com/fontra/fontra/pull/2758"&gt;PR 2758&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[woff/woff2] Fix shaping and OpenType features for woff/woff2 fonts. &lt;a href="https://github.com/fontra/fontra/pull/2753"&gt;PR 2753&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove confusing kerning visualization when "Apply text shaping and features" is off. &lt;a href="https://github.com/fontra/fontra/pull/2748"&gt;PR 2748&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Refuse to edit kerning when it can't or won't be shown. &lt;a href="https://github.com/fontra/fontra/issues/2692"&gt;Issue 2692&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2750"&gt;PR 2750&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[font info] Make sure various font info can't be edited when in read-only mode. &lt;a href="https://github.com/fontra/fontra/pull/2759"&gt;PR 2759&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[shaping debugger] Make showing kerning as part of the advance width field opt-out. &lt;a href="https://github.com/fontra/fontra/issues/2522"&gt;Issue 2522&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2749"&gt;PR 2749&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Fontra 2026.8.0</title>
+      <link>https://fontra.xyz/changelog.html#2026.8.0</link>
+      <guid>https://fontra.xyz/changelog.html#2026.8.0</guid>
+      <pubDate>Sat, 29 Aug 2026 00:00:00 +0000</pubDate>
+      <description>&lt;h3&gt;New features&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Added a new font info panel to author and edit conditional substitutions (Designspace "Rules"). &lt;a href="https://github.com/fontra/fontra/issues/2688"&gt;Issue 2688&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2743"&gt;PR 2743&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[fontra-glyphs] Support reading of Glyphs-specific feature variation syntax. &lt;a href="https://github.com/fontra/fontra-glyphs/issues/144"&gt;fontra-glyphs Issue 144&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra-glyphs/pull/154"&gt;fontra-glyphs PR 154&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2736"&gt;PR 2736&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Allow the font size in the OpenType code editor to be changed with Zoom In and Zoom out menu items (command/control plus/minus) in the (new) View menu. &lt;a href="https://github.com/fontra/fontra/issues/2470"&gt;Issue 2470&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2735"&gt;PR 2735&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Optionally show handles and nodes in background layers. To toggle, use the "Nodes and handles for background layers" menu in "View -&amp;gt; Glyph editor appearance". &lt;a href="https://github.com/fontra/fontra/pull/2733"&gt;PR 2733&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[languages] Initial Russian translation contributed by Dmitry Sivukhin. &lt;a href="https://github.com/fontra/fontra/pull/2738"&gt;PR 2738&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[languages] Initial Italian translation. &lt;a href="https://github.com/fontra/fontra/pull/2732"&gt;PR 2732&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[languages] Separate Spanish for Spain and Latin America. &lt;a href="https://github.com/fontra/fontra/pull/2732"&gt;PR 2732&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix editing the left sidebearing in the Selection Info panel: move anchors and guidelines as well. &lt;a href="https://github.com/fontra/fontra/issues/2745"&gt;Issue 2745&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2746"&gt;PR 2746&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support glyph names with spaces. &lt;a href="https://github.com/fontra/fontra/issues/2740"&gt;Issue 2740&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2741"&gt;PR 2741&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix the menu item background color in dark mode when the item has a submenu; Don't dismiss a menu panel when clicking on an item with a submenu. &lt;a href="https://github.com/fontra/fontra/pull/2739"&gt;PR 2739&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fixes behavior when a character is not encoded, but the (suggested) glyph name for it does exist in the font. &lt;a href="https://github.com/fontra/fontra/pull/2724"&gt;PR 2724&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Spanish, Portuguese, Chinese, French improvements. &lt;a href="https://github.com/fontra/fontra/pull/2732"&gt;PR 2732&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Fontra 2026.7.2</title>
+      <link>https://fontra.xyz/changelog.html#2026.7.2</link>
+      <guid>https://fontra.xyz/changelog.html#2026.7.2</guid>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 +0000</pubDate>
+      <description>&lt;h3&gt;New features&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[languages] Add Spanish translations contributed by Adolfo Jayme Barrientos, Miguel A. Contreras, Gen Ramirez and Romina Hernández. &lt;a href="https://github.com/fontra/fontra/pull/2717"&gt;PR 2717&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2718"&gt;PR 2718&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[languages] Add Portuguese translations contributed by Hallef Henrique P. Sousa, Eduardo Omine and Hugo Carvalho. &lt;a href="https://github.com/fontra/fontra/pull/2708"&gt;PR 2708&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2710"&gt;PR 2710&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2711"&gt;PR 2711&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2714"&gt;PR 2714&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2718"&gt;PR 2718&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[languages] Added more French strings contributed by Gaëtan Baehr. &lt;a href="https://github.com/fontra/fontra/pull/2717"&gt;PR 2717&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[languages] Added more opportunities for localizations. &lt;a href="https://github.com/fontra/fontra/pull/2709"&gt;PR 2709&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[languages] Add missing Dutch translations. &lt;a href="https://github.com/fontra/fontra/pull/2713"&gt;PR 2713&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Fontra 2026.7.1</title>
+      <link>https://fontra.xyz/changelog.html#2026.7.1</link>
+      <guid>https://fontra.xyz/changelog.html#2026.7.1</guid>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
+      <description>&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[designspace] Respond to external changes in include()'d feature files. &lt;a href="https://github.com/fontra/fontra/pull/2703"&gt;PR 2703&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[fontra-glyphs] Respond to external changes in include()'d feature files. &lt;a href="https://github.com/fontra/fontra-glyphs/pull/151"&gt;fontra-glyphs PR 151&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[fontra-glyphs] Fix handling of external feature files. &lt;a href="https://github.com/fontra/fontra-glyphs/issues/149"&gt;fontra-glyphs Issue 149&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra-glyphs/pull/150"&gt;fontra-glyphs PR 150&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix unintended "linking" issue with pasting a single anchor (or guideline) into multiple sources. &lt;a href="https://github.com/fontra/fontra/issues/2705"&gt;Issue 2705&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2707"&gt;PR 2707&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[menu bar] Fixes regression with submenus. &lt;a href="https://github.com/fontra/fontra/pull/2696"&gt;PR 2696&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[Fontra Pak export/designspace] Fix/work around TTF/OTF export problem by writing features to all source UFOs. &lt;a href="https://github.com/fontra/fontra/pull/2697"&gt;PR 2697&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Fontra 2026.7.0</title>
+      <link>https://fontra.xyz/changelog.html#2026.7.0</link>
+      <guid>https://fontra.xyz/changelog.html#2026.7.0</guid>
+      <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+      <description>&lt;h3&gt;New features&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[font overview] Support cross-axis mappings, put hidden axes in a separate section, and in general bring the axes UI in line with the glyph editor. &lt;a href="https://github.com/fontra/fontra/issues/2652"&gt;Issue 2652&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2691"&gt;PR 2691&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[font overview] Allow quick glyph selection by typing a glyph name or a character. &lt;a href="https://github.com/fontra/fontra/issues/2677"&gt;Issue 2677&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2682"&gt;PR 2682&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[font overview] Add "Copy Glyph Name(s) and "Copy Character(s)" context menus. &lt;a href="https://github.com/fontra/fontra/issues/2676"&gt;Issue 2676&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2681"&gt;PR 2681&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[menus] Make menus behave well when the items don't fit the viewport. &lt;a href="https://github.com/fontra/fontra/pull/2694"&gt;PR 2694&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[editor] Improve zoom in/out behavior when there is no selection. This used to use the scene center, and now uses the view port center, which behaves much better with larger texts. &lt;a href="https://github.com/fontra/fontra/issues/2686"&gt;Issue 2686&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2687"&gt;PR 2687&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[font overview] Change the behavior of "Select All" to really select all, and not skip glyphs that aren't in the font (but are in the combined selected glyph sets) &lt;a href="https://github.com/fontra/fontra/pull/2681"&gt;PR 2681&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[glyphsets] Updated the Google Fonts glyphsets to 1.1.3. &lt;a href="https://github.com/fontra/fontra/issues/2673"&gt;Issue 2673&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2675"&gt;PR 2675&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[languages] Some new strings and some improved strings for Simplified Chinese and Traditional Chinese, contributed by 湖远星（Lake桑）. &lt;a href="https://github.com/fontra/fontra/pull/2674"&gt;PR 2674&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix bug with font source interpolation after toggling the "Is Sparse" flag. &lt;a href="https://github.com/fontra/fontra/pull/2693"&gt;PR 2693&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[font overview, Firefox] Prevent opening two tabs instead of one when typing Enter to open the selection in the glyph editor. &lt;a href="https://github.com/fontra/fontra/issues/2678"&gt;Issue 2678&lt;/a&gt; &lt;a href="https://github.com/fontra/fontra/pull/2680"&gt;PR 2680&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Fontra 2026.6.5</title>
+      <link>https://fontra.xyz/changelog.html#2026.6.5</link>
+      <guid>https://fontra.xyz/changelog.html#2026.6.5</guid>
+      <pubDate>Sun, 28 Jun 2026 00:00:00 +0000</pubDate>
+      <description>&lt;h3&gt;Fixes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[languages] Fix caching behavior for language files (UI strings), to ensure we always see the latest version. &lt;a href="https://github.com/fontra/fontra/issues/2668"&gt;Issue 2668&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2669"&gt;PR 2669&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[tests] Ensure tests written in TypeScript are run as part of the test suite. &lt;a href="https://github.com/fontra/fontra/issues/2664"&gt;Issue 2664&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2670"&gt;PR 2670&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Fontra 2026.6.4</title>
+      <link>https://fontra.xyz/changelog.html#2026.6.4</link>
+      <guid>https://fontra.xyz/changelog.html#2026.6.4</guid>
+      <pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
+      <description>&lt;h3&gt;New features&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[editor] Add contextual menus for curve type conversion (to cubic, to quadratic). &lt;a href="https://github.com/fontra/fontra/issues/151"&gt;Issue 151&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/issues/2662"&gt;Issue 2662&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2666"&gt;PR 2666&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[editor] Use tab key to cycle through the selectable items (points, components, anchors, guidelines). &lt;a href="https://github.com/fontra/fontra/issues/2638"&gt;Issue 2638&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2645"&gt;PR 2645&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[Safari] Work around Safari performance problem with long canvas texts. Found and fixed by Qwerasd &lt;a href="https://github.com/fontra/fontra/issues/2654"&gt;Issue 2654&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2665"&gt;PR 2665&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[editor] Make the middle mouse button a shortcut for the hand tool (for panning), as is common in drawing applications. &lt;a href="https://github.com/fontra/fontra/issues/2659"&gt;Issue 2659&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2661"&gt;PR 2661&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[browser] Keep forward history when using the browser back button. &lt;a href="https://github.com/fontra/fontra/pull/2660"&gt;PR 2660&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Make page/view titles more consistent, remove "Fontra" prefixes. &lt;a href="https://github.com/fontra/fontra/issues/2650"&gt;Issue 2650&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2657"&gt;PR 2657&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Work around a problem with dead-key text input on Chromium browsers on Windows. &lt;a href="https://github.com/fontra/fontra/issues/2628"&gt;Issue 2628&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2631"&gt;PR 2631&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Fontra 2026.6.3</title>
+      <link>https://fontra.xyz/changelog.html#2026.6.3</link>
+      <guid>https://fontra.xyz/changelog.html#2026.6.3</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 +0000</pubDate>
+      <description>&lt;h3&gt;Fixes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix erratic behavior when .fontra data is stored in a folder that is managed by iCloud. &lt;a href="https://github.com/fontra/fontra/issues/2626"&gt;Issue 2626&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2630"&gt;PR 2630&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Fontra 2026.6.2</title>
+      <link>https://fontra.xyz/changelog.html#2026.6.2</link>
+      <guid>https://fontra.xyz/changelog.html#2026.6.2</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate>
+      <description>&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[cross-axis-mappings] Add checkbox to deactivate individual mappings. &lt;a href="https://github.com/fontra/fontra/pull/2627"&gt;PR 2627&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[cross-axis-mappings] Improve behavior in the presence of discrete axes, by ignoring them. &lt;a href="https://github.com/fontra/fontra/issues/2623"&gt;Issue 2623&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2624"&gt;PR 2624&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2625"&gt;PR 2625&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[fontra-workflow] Add a &lt;code&gt;drop-kerning&lt;/code&gt; filter. &lt;a href="https://github.com/fontra/fontra/pull/2622"&gt;PR 2622&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[fontra-pak] Fix "check for updates" functionality. &lt;a href="https://github.com/fontra/fontra-pak/pull/252"&gt;fontra-pak PR 252&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Fontra 2026.6.1</title>
+      <link>https://fontra.xyz/changelog.html#2026.6.1</link>
+      <guid>https://fontra.xyz/changelog.html#2026.6.1</guid>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
+      <description>&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[fontra-workflow] Improve performance of full instantiation, especially when there are many axes. &lt;a href="https://github.com/fontra/fontra/pull/2621"&gt;PR 2621&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Fontra 2026.6.0</title>
+      <link>https://fontra.xyz/changelog.html#2026.6.0</link>
+      <guid>https://fontra.xyz/changelog.html#2026.6.0</guid>
+      <pubDate>Sun, 07 Jun 2026 00:00:00 +0000</pubDate>
+      <description>&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[fontra-workflow] Reformatted the .yaml test files so that each step starts with its operational keyword, which reads a lot better. &lt;a href="https://github.com/fontra/fontra/pull/2620"&gt;PR 2620&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[fontra-workflow] Add support for instantiating with cross-axis mappings &lt;a href="https://github.com/fontra/fontra/pull/2619"&gt;PR 2619&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[fontra-workflow] Make the fontra-workflow backend respond to external changes to the .yaml file. &lt;a href="https://github.com/fontra/fontra/pull/2618"&gt;PR 2618&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[shaping] Gracefully handle invalid conditional substitution rules that use unknown axes. &lt;a href="https://github.com/fontra/fontra/pull/2598"&gt;PR 2598&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[glyph search] Allow &lt;code&gt;U+&lt;/code&gt;- or &lt;code&gt;0x&lt;/code&gt;-prefixed hex code points in various glyph search fields, to find glyphs by their hexadecimal code point. &lt;a href="https://github.com/fontra/fontra/issues/2606"&gt;Issue 2606&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2608"&gt;PR 2608&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[cross-axis mappings] When a font has cross axis mappings, activate "show effective location" by default. &lt;a href="https://github.com/fontra/fontra/pull/2609"&gt;PR 2609&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[cross-axis mappings] When creating a new cross-axis mapping, make sure it is in view by scrolling to the end. This improves the experience when there are many mappings. &lt;a href="https://github.com/fontra/fontra/pull/2610"&gt;PR 2610&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Fontra 2026.5.1</title>
+      <link>https://fontra.xyz/changelog.html#2026.5.1</link>
+      <guid>https://fontra.xyz/changelog.html#2026.5.1</guid>
+      <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
+      <description>&lt;h3&gt;New features&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[Designspace navigation panel] Add a new accordion section for hidden axes. Add an associated view option (under its hamburger menu button) "Show only effective location", similar to "Show effective location", but that will only show (inactive) sliders for the effective location. This is useful when the hidden axes are all controlled by the non-hidden axes via cross-axis mappings (aka &lt;code&gt;avar-2&lt;/code&gt;). &lt;a href="https://github.com/fontra/fontra/issues/2553"&gt;Issue 2553&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2584"&gt;PR 2584&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[Axes panel] Add "Hidden" checkbox to Axis box and New Axis dialog, so we can finally edit the "hidden" axis flag. &lt;a href="https://github.com/fontra/fontra/issues/1373"&gt;Issue 1373&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2582"&gt;PR 2582&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[front-end code] Our highly competent contributor Qwerasd started to convert part of the front-end code base from JavaScript to TypeScript. This process will in the long term improve maintainability and stability. &lt;a href="https://github.com/fontra/fontra/pull/2585"&gt;PR 2585&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2590"&gt;PR 2590&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[fontra-pak] Fix "Open fonts in read-only mode" on Windows: this new checkbox sometimes had an unpredictable effect. &lt;a href="https://github.com/fontra/fontra-pak/pull/249"&gt;PR 249&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Fontra 2026.5.0</title>
+      <link>https://fontra.xyz/changelog.html#2026.5.0</link>
+      <guid>https://fontra.xyz/changelog.html#2026.5.0</guid>
+      <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
+      <description>&lt;h3&gt;New features&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[fontra pak] Add a checkbox to the launcher window that (when checked) causes fonts to be opened in read-only mode. &lt;a href="https://github.com/fontra/fontra-pak/issues/247"&gt;fontra-pak Issue 247&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra-pak/pull/248"&gt;fontra-pak PR 248&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2581"&gt;PR 2581&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[help menu] Added links to the Blog and the Discord invite. Contributed by Dave Crossland. &lt;a href="https://github.com/fontra/fontra/pull/2580"&gt;PR 2580&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[editor view] Make minimum zoom limit relative to em size (units-per-em). Contributed by Qwerasd. &lt;a href="https://github.com/fontra/fontra/issues/2573"&gt;Issue 2573&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2574"&gt;PR 2574&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[shaping] When the "Apply text shaping and features" option is &lt;em&gt;off&lt;/em&gt;, don't do any positioning emulation. &lt;a href="https://github.com/fontra/fontra/issues/2517"&gt;Issue 2517&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2571"&gt;PR 2571&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[shaping debugger] Improved message formatting in feature debugger. Contributed by Khaled Hosny. &lt;a href="https://github.com/fontra/fontra/pull/2566"&gt;PR 2566&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[opentype feature editor] When navigating to a line from an error message or from the shaping debugger, scroll the selected line into the center of the view like most editors do, instead of near the edge. Contributed by Khaled Hosny. &lt;a href="https://github.com/fontra/fontra/pull/2565"&gt;PR 2565&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[editor view] Fix inconsistent advance widths for undefined glyphs. &lt;a href="https://github.com/fontra/fontra/issues/2572"&gt;Issue 2572&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2575"&gt;PR 2575&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[editor view] Fix display glitch with Safari on very large screens. Contributed by Qwerasd. &lt;a href="https://github.com/fontra/fontra/pull/2567"&gt;PR 2567&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[fontra-glyphs] Use the correct encoding when reading .plist files. This fixes read errors with certain .glyphs and .glyphspackage files. &lt;a href="https://github.com/fontra/fontra-glyphs/issues/140"&gt;fontra-glyphs Issue 140&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra-glyphs/pull/141"&gt;fontra-glyphs PR 141&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Fontra 2026.4.4</title>
+      <link>https://fontra.xyz/changelog.html#2026.4.4</link>
+      <guid>https://fontra.xyz/changelog.html#2026.4.4</guid>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <description>&lt;h3&gt;New features&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[Windows installer] Add option to add a desktop shortcut. &lt;a href="https://github.com/fontra/fontra-pak/issues/239"&gt;fontra-pak Issue 239&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra-pak/pull/240"&gt;fontra-pak PR 240&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[fontra-pak] Reinstate export as .rcjk. This was accidentally removed when .rcjk was removed as an option for new fonts. &lt;a href="https://github.com/fontra/fontra-pak/pull/244"&gt;fontra-pak PR 244&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[rcjk] Fix .rcjk export by ignoring empty conditional substitutions. &lt;a href="https://github.com/fontra/fontra/pull/2557"&gt;PR 2557&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[conditional substitutions] Fix axis (&lt;code&gt;avar&lt;/code&gt;) mapping logic for conditional substitutions. Previously Fontra could substitute glyphs at not quite the correct locations, if an axis had an &lt;code&gt;avar&lt;/code&gt; mapping. &lt;a href="https://github.com/fontra/fontra/issues/2556"&gt;Issue 2556&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2558"&gt;PR 2558&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[conditional substitutions] Fix previewing behavior when a rule has multiple condition sets. &lt;a href="https://github.com/fontra/build-shaper-font/issues/30"&gt;build-shaper-font Issue 30&lt;/a&gt;, &lt;a href="https://github.com/fontra/build-shaper-font/pull/31"&gt;build-shaper-font PR 31&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Fontra 2026.4.3</title>
+      <link>https://fontra.xyz/changelog.html#2026.4.3</link>
+      <guid>https://fontra.xyz/changelog.html#2026.4.3</guid>
+      <pubDate>Wed, 15 Apr 2026 00:00:00 +0000</pubDate>
+      <description>&lt;h3&gt;New features&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[shaping debugger] Link lookups back to the feature source code, via the &lt;code&gt;Debg&lt;/code&gt; table. &lt;a href="https://github.com/fontra/fontra/pull/2550"&gt;PR 2550&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[opentype backend] When reading .ttf or .otf, don't error when the font has an older version of the OS/2 table. &lt;a href="https://github.com/fontra/fontra/issues/2548"&gt;Issue 2548&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2549"&gt;PR 2549&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Fontra 2026.4.2</title>
+      <link>https://fontra.xyz/changelog.html#2026.4.2</link>
+      <guid>https://fontra.xyz/changelog.html#2026.4.2</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <description>&lt;ul&gt;
+&lt;li&gt;[fontra-pak Windows] Add an .msi installer to the release assets. Contributed by Dr Anirban Mitra &lt;a href="https://github.com/fontra/fontra-pak/issues/209"&gt;fontra-pak Issue 209&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra-pak/pull/238"&gt;fontra-pak PR 238&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Fontra 2026.4.1</title>
+      <link>https://fontra.xyz/changelog.html#2026.4.1</link>
+      <guid>https://fontra.xyz/changelog.html#2026.4.1</guid>
+      <pubDate>Wed, 08 Apr 2026 00:00:00 +0000</pubDate>
+      <description>&lt;h3&gt;New features&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Add support for conditional substitutions, or "designspace rules". This allows Fontra to view these substitutions from .designspace or .fontra files. A user interface to &lt;em&gt;author&lt;/em&gt; these rules will follow later. &lt;a href="https://github.com/fontra/fontra/issues/2460"&gt;Issue 2460&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2539"&gt;PR 2539&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[pointer tool] Convert a line to a curve with alt-click (eliminating the need to switch to the pen tool for this) &lt;a href="https://github.com/fontra/fontra/pull/2538"&gt;PR 2538&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[font overview] Accept the alt/option key as a modifier to toggle the glyph selection (when clicking or dragging). This can already be done with the command/Windows/meta key, but that has an annoying side effect on Windows. &lt;a href="https://github.com/fontra/fontra/issues/2536"&gt;Issue 2536&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2537"&gt;PR 2537&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Fontra 2026.4.0</title>
+      <link>https://fontra.xyz/changelog.html#2026.4.0</link>
+      <guid>https://fontra.xyz/changelog.html#2026.4.0</guid>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
+      <description>&lt;h3&gt;New features&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[fontra-pak] Add "Download latest Fontra Pak" button for Linux platform. Contributed by Dr Anirban Mitra. &lt;a href="https://github.com/fontra/fontra-pak/pull/233"&gt;PR 233&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[fontra-pak] Added "Webfont" (.woff2) export option. Contributed by Dr Anirban Mitra. &lt;a href="https://github.com/fontra/fontra-pak/pull/232"&gt;PR 232&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Added a "Shaping debugger", as part of the "Input characters and output glyphs" panel. It sits in a new closed-by-default accordion item between "Input characters" and "Output glyphs" and allows the user to step through all the processing steps involved with text shaping and OpenType feature application, such as character reordering, glyph substition and glyph positioning. The user can see what effect each step has on the rendered string, both visually in the canvas and textually/numerically in the output glyphs list. This builds on the HarfBuzz "message API", and offers similar functionality to the &lt;a href="https://github.com/simoncozens/crowbar"&gt;Crowbar&lt;/a&gt; tool. &lt;a href="https://github.com/fontra/fontra/pull/2500"&gt;PR 2500&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Improved browser tab management significantly: when navigating to the font info view or to the font overview, activate an existing tab for that view. This avoids opening redundant new tabs, and allows the user to switch tabs with the "Font" menu. &lt;a href="https://github.com/fontra/fontra/pull/2520"&gt;PR 2520&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[ufo] Prevent ufo write error and export error when a path contains an invalid number of subsequent cubic off-curve points. &lt;a href="https://github.com/fontra/fontra/pull/2529"&gt;PR 2529&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[shaping] Fixed emulated mark positioning around "multiplied" glyph. &lt;a href="https://github.com/fontra/fontra/issues/2521"&gt;Issue 2521&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2523"&gt;PR 2523&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Prevent editing of metrics and kerning when the font is read-only, and prevent editing metrics when glyphs are locked. &lt;a href="https://github.com/fontra/fontra/issues/2407"&gt;Issue 2407&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2513"&gt;PR 2513&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>
