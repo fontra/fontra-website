@@ -1,6 +1,5 @@
 import json
 import lxml.html
-import os
 import re
 import pathlib
 import markdown
@@ -36,6 +35,30 @@ def doubleIndentation(source):
     return "\n".join(lines)
 
 
+# "2026-09-29 [version 2026.9.2]", optionally already a heading or bold
+versionLinePat = re.compile(
+    r"^(?:#+\s*|\*\*|__)?\s*"
+    r"(\d{4}-\d{2}-\d{2}\s+\[version\s+([^\]]+)\])"
+    r"\s*(?:\*\*|__)?\s*$",
+    re.IGNORECASE,
+)
+
+
+def addVersionAnchors(source):
+    # "## [2026-09-29 \[version 2026.9.2\]](#2026.9.2) {#2026.9.2}"
+    lines = []
+    for line in source.splitlines():
+        match = versionLinePat.match(line)
+        if match:
+            if lines and lines[-1].strip():
+                lines.append("")  # a heading needs a blank line before it
+            text = match.group(1).replace("[", r"\[").replace("]", r"\]")
+            version = match.group(2).strip()
+            line = f"## [{text}](#{version}) {{#{version}}}"
+        lines.append(line)
+    return "\n".join(lines)
+
+
 htmlTemplate = """\
 <!DOCTYPE html>
 <html>
@@ -44,7 +67,6 @@ htmlTemplate = """\
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fontra — Latest Changes</title>
 <link rel="stylesheet" href="changelog.css">
-</style>
 </head>
 <body>
 <a href="https://fontra.xyz"><img class="icon" src="./fontra-icon.svg" /></a>
@@ -60,13 +82,14 @@ def updateChangeLog(releaseTag):
     changeLogURL = changeLogURLTemplate.format(releaseTag=releaseTag)
 
     markdownSource = downloadResource(changeLogURL)
+    markdownSource = addVersionAnchors(markdownSource)
     markdownSource = doubleIndentation(markdownSource)
 
-    mdConverter = markdown.Markdown()
+    mdConverter = markdown.Markdown(extensions=["attr_list"])
     mdHtml = mdConverter.convert(markdownSource)
 
     outPath = docsDir / "changelog.html"
-    outPath.write_text(htmlTemplate.format(mdHtml=mdHtml, encoding="utf-8"))
+    outPath.write_text(htmlTemplate.format(mdHtml=mdHtml), encoding="utf-8")
 
 
 def updateDownloadInfo(releaseInfo):
@@ -95,7 +118,6 @@ def updateDownloadInfo(releaseInfo):
         datetimeElement.text = asset["updated_at"]
 
     indexPath.write_bytes(lxml.html.tostring(doc, encoding="utf-8") + b"\n")
-
 
 
 if __name__ == "__main__":
