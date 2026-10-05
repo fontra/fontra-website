@@ -9,6 +9,19 @@
 <body>
 <a href="https://fontra.xyz"><img class="icon" src="./fontra-icon.svg" /></a>
 <h1>Changelog for Fontra</h1>
+<h2 id="2026.10.0"><a href="#2026.10.0">2026-10-05 [version 2026.10.0]</a></h2>
+<h3>New features</h3>
+<ul>
+<li>[fontra pak] Added an "Open Font..." button to the main window, using a modified Open dialog that can select font projects that are folders, such as <code>.fontra</code> and <code>.ufo</code>. Contributed by Khaled Hosny. <a href="https://github.com/fontra/fontra-pak/issues/253">Issue 253</a>, <a href="https://github.com/fontra/fontra-pak/pull/281">PR 281</a>, <a href="https://github.com/fontra/fontra-pak/pull/282">PR 282</a></li>
+<li>[fontra pak] Added a menu bar with a "File" menu, that has two items: "New Font..." and "Open Font...". <a href="https://github.com/fontra/fontra-pak/issues/89">Issue 89</a>, <a href="https://github.com/fontra/fontra-pak/pull/283">PR 283</a></li>
+<li>[fontra pak] Made drop area double-clickable as an alternative to open a font. Contributed by Tarik Rokhsane. <a href="https://github.com/fontra/fontra-pak/pull/288">fontra-pak PR 288</a></li>
+</ul>
+<h3>Fixes</h3>
+<ul>
+<li>[font overview] Fix glitch with translated "Group by" labels. <a href="https://github.com/fontra/fontra/issues/2787">Issue 2787</a>, <a href="https://github.com/fontra/fontra/pull/2788">PR 2788</a></li>
+<li>[designspace/ufo/features] Reworded Designspace/UFO feature editing warning to match reality. <a href="https://github.com/fontra/fontra/pull/2794">PR 2794</a></li>
+<li>[fontra pak/linux] Fix bundling problem with opening URLs. <a href="https://github.com/fontra/fontra-pak/issues/286">fontra-pak Issue 286</a>, <a href="https://github.com/fontra/fontra-pak/pull/287">fontra-pak PR 287</a></li>
+</ul>
 <h2 id="2026.9.2"><a href="#2026.9.2">2026-09-29 [version 2026.9.2]</a></h2>
 <ul>
 <li>[languages] Tweaks and improvements to various languages: English, Spanish, French, Italian, Portuguese and Russian. <a href="https://github.com/fontra/fontra/pull/2786">PR 2786</a></li>
@@ -23,10 +36,10 @@
 <h3>Fixes</h3>
 <ul>
 <li>[glyph editor] When a guideline overlaps with a (line) segment, make sure that we can select the line segment by clicking on it. Improve visualization of hovered and selected guidelines. <a href="https://github.com/fontra/fontra/issues/2777">Issue 2777</a>, <a href="https://github.com/fontra/fontra/pull/2781">PR 2781</a>, <a href="https://github.com/fontra/fontra/pull/2782">Issue 2782</a></li>
-<li>[linux] Fix GNOME Wayland appearance issues by upgrading PyQt. <a href="https://github.com/fontra/fontra-pak/issues/271">Issue 271</a>, <a href="https://github.com/fontra/fontra-pak/pull/278">PR 278</a></li>
-<li>[linux] Revert GNOME Wayland appearance fixes as they caused crashes. <a href="https://github.com/fontra/fontra-pak/pull/270">fontra-pak PR 270</a></li>
-<li>[linux] Skip version check when running as a flatpak. <a href="https://github.com/fontra/fontra-pak/pull/277">PR 277</a></li>
-<li>[linux] Fix a bug in the version check. <a href="https://github.com/fontra/fontra-pak/pull/269">fontra-pak PR 269</a></li>
+<li>[fontra-pak/linux] Fix GNOME Wayland appearance issues by upgrading PyQt. <a href="https://github.com/fontra/fontra-pak/issues/271">Issue 271</a>, <a href="https://github.com/fontra/fontra-pak/pull/278">PR 278</a></li>
+<li>[fontra-pak/linux] Revert GNOME Wayland appearance fixes as they caused crashes. <a href="https://github.com/fontra/fontra-pak/pull/270">fontra-pak PR 270</a></li>
+<li>[fontra-pak/linux] Skip version check when running as a flatpak. <a href="https://github.com/fontra/fontra-pak/pull/277">PR 277</a></li>
+<li>[fontra-pak/linux] Fix a bug in the version check. <a href="https://github.com/fontra/fontra-pak/pull/269">fontra-pak PR 269</a></li>
 <li>[conditional substitutions] Respond to changes in the set of glyphs, and update the glyphname suggestions in the substitution fields. <a href="https://github.com/fontra/fontra/pull/2771">PR 2771</a></li>
 </ul>
 <h3>Improvements</h3>
@@ -46,7 +59,7 @@
 <h3>Fixes</h3>
 <ul>
 <li>[glyph editor] Fix behavior when moving a window between screens with different resolutions. <a href="https://github.com/fontra/fontra/pull/2766">PR 2766</a></li>
-<li>[fontra-pak linux] Fix window appearance and behavior on GNOME Wayland. <a href="https://github.com/fontra/fontra-pak/pull/267">fontra-pak PR 267</a></li>
+<li>[fontra-pak/linux] Fix window appearance and behavior on GNOME Wayland. <a href="https://github.com/fontra/fontra-pak/pull/267">fontra-pak PR 267</a></li>
 <li>[opentype features panel] Recompile when glyphs are being added to or deleted from the font. <a href="https://github.com/fontra/fontra/pull/2764">PR 2764</a></li>
 <li>[firefox] Work around text selection problem within draggable boxes. <a href="https://github.com/fontra/fontra/pull/2763">PR 2763</a></li>
 <li>[glyph editor] Fix text align change when in auto-view-box mode. <a href="https://github.com/fontra/fontra/pull/2758">PR 2758</a></li>
