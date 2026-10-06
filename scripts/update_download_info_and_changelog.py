@@ -86,6 +86,11 @@ def splitEntries(source):
 
 def updateFeed(source):
     rss = ET.Element("rss", version="2.0")
+    rss.append(
+        ET.ProcessingInstruction(
+            "xml-stylesheet", 'type="text/xsl" href="pretty-atom-feed.xsl"'
+        )
+    )
     channel = ET.SubElement(rss, "channel")
     ET.SubElement(channel, "title").text = "Fontra — Latest Changes"
     ET.SubElement(channel, "link").text = f"{siteURL}/changelog.html"
@@ -113,14 +118,9 @@ def updateFeed(source):
         )
 
     ET.indent(rss)
-
-    # Convert to XML string and inject the stylesheet processing instruction
-    xml_bytes = ET.tostring(rss, encoding="utf-8", xml_declaration=True)
-    xml_str = xml_bytes.decode("utf-8")
-    stylesheet_pi = '<?xml-stylesheet type="text/xsl" href="pretty-atom-feed.xsl"?>\n'
-    xml_str = xml_str.replace("?>\n", "?>\n" + stylesheet_pi, 1)
-
-    (docsDir / "changelog-feed.xml").write_text(xml_str, encoding="utf-8")
+    ET.ElementTree(rss).write(
+        docsDir / "changelog-feed.xml", encoding="utf-8", xml_declaration=True
+    )
 
 
 htmlTemplate = """\
