@@ -86,6 +86,11 @@ def splitEntries(source):
 
 def updateFeed(source):
     rss = ET.Element("rss", version="2.0")
+    rss.append(
+        ET.ProcessingInstruction(
+            "xml-stylesheet", 'type="text/xsl" href="pretty-atom-feed.xsl"'
+        )
+    )
     channel = ET.SubElement(rss, "channel")
     ET.SubElement(channel, "title").text = "Fontra — Latest Changes"
     ET.SubElement(channel, "link").text = f"{siteURL}/changelog.html"

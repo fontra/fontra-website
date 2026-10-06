@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <?xml-stylesheet type="text/xsl" href="pretty-atom-feed.xsl"?>
   <channel>
     <title>Fontra — Latest Changes</title>
     <link>https://fontra.xyz/changelog.html</link>
