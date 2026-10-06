@@ -1,12 +1,12 @@
 import datetime
 import email.utils
-import xml.etree.ElementTree as ET
 import json
-import lxml.html
-import re
 import pathlib
-import markdown
+import re
+import xml.etree.ElementTree as ET
 from urllib.request import urlopen
+import lxml.html
+import markdown
 
 
 docsDir = pathlib.Path(__file__).resolve().parent.parent / "docs"
@@ -86,11 +86,6 @@ def splitEntries(source):
 
 def updateFeed(source):
     rss = ET.Element("rss", version="2.0")
-    rss.append(
-        ET.ProcessingInstruction(
-            "xml-stylesheet", 'type="text/xsl" href="pretty-atom-feed.xsl"'
-        )
-    )
     channel = ET.SubElement(rss, "channel")
     ET.SubElement(channel, "title").text = "Fontra — Latest Changes"
     ET.SubElement(channel, "link").text = f"{siteURL}/changelog.html"
@@ -118,9 +113,10 @@ def updateFeed(source):
         )
 
     ET.indent(rss)
-    ET.ElementTree(rss).write(
-        docsDir / "changelog-feed.xml", encoding="utf-8", xml_declaration=True
-    )
+    xml_data = ET.tostring(rss, encoding="utf-8").decode("utf-8")
+
+    header = '<?xml version="1.0" encoding="UTF-8"?>\n<?xml-stylesheet type="text/xsl" href="pretty-rss-feed.xsl"?>\n'
+    (docsDir / "changelog-feed.xml").write_text(header + xml_data + "\n", encoding="utf-8")
 
 
 htmlTemplate = """\
