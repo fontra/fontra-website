@@ -1,3 +1,6 @@
+import datetime
+import email.utils
+import xml.etree.ElementTree as ET
 import json
 import lxml.html
 import re
@@ -59,6 +62,62 @@ def addVersionAnchors(source):
     return "\n".join(lines)
 
 
+siteURL = "https://fontra.xyz"
+maxFeedEntries = 20
+atomNS = "http://www.w3.org/2005/Atom"
+ET.register_namespace("atom", atomNS)
+
+
+def splitEntries(source):
+    # -> [(date, version, markdownBody), ...], newest first
+    entries = []
+    for line in source.splitlines():
+        match = versionLinePat.match(line)
+        if match:
+            date = match.group(1)[:10]  # "2026-09-29"
+            version = match.group(2).strip()
+            entries.append((date, version, []))
+        elif line.startswith("## "):
+            break  # older, date-only entries: no version, no feed item
+        elif entries:
+            entries[-1][2].append(line)
+    return [(date, version, "\n".join(body)) for date, version, body in entries]
+
+
+def updateFeed(source):
+    rss = ET.Element("rss", version="2.0")
+    channel = ET.SubElement(rss, "channel")
+    ET.SubElement(channel, "title").text = "Fontra — Latest Changes"
+    ET.SubElement(channel, "link").text = f"{siteURL}/changelog.html"
+    ET.SubElement(channel, "description").text = "Latest changes in Fontra"
+    ET.SubElement(
+        channel,
+        f"{{{atomNS}}}link",
+        href=f"{siteURL}/changelog-feed.xml",
+        rel="self",
+        type="application/rss+xml",
+    )
+
+    for date, version, body in splitEntries(source)[:maxFeedEntries]:
+        link = f"{siteURL}/changelog.html#{version}"
+        published = datetime.datetime.strptime(date, "%Y-%m-%d").replace(
+            tzinfo=datetime.timezone.utc
+        )
+        item = ET.SubElement(channel, "item")
+        ET.SubElement(item, "title").text = f"Fontra {version}"
+        ET.SubElement(item, "link").text = link
+        ET.SubElement(item, "guid").text = link
+        ET.SubElement(item, "pubDate").text = email.utils.format_datetime(published)
+        ET.SubElement(item, "description").text = markdown.markdown(
+            doubleIndentation(body)
+        )
+
+    ET.indent(rss)
+    ET.ElementTree(rss).write(
+        docsDir / "changelog-feed.xml", encoding="utf-8", xml_declaration=True
+    )
+
+
 htmlTemplate = """\
 <!DOCTYPE html>
 <html>
@@ -66,6 +125,7 @@ htmlTemplate = """\
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fontra — Latest Changes</title>
+<link rel="alternate" type="application/rss+xml" title="Fontra changes" href="changelog-feed.xml">
 <link rel="stylesheet" href="changelog.css">
 </head>
 <body>
@@ -82,6 +142,7 @@ def updateChangeLog(releaseTag):
     changeLogURL = changeLogURLTemplate.format(releaseTag=releaseTag)
 
     markdownSource = downloadResource(changeLogURL)
+    updateFeed(markdownSource)
     markdownSource = addVersionAnchors(markdownSource)
     markdownSource = doubleIndentation(markdownSource)
 
