@@ -113,9 +113,14 @@ def updateFeed(source):
         )
 
     ET.indent(rss)
-    ET.ElementTree(rss).write(
-        docsDir / "changelog-feed.xml", encoding="utf-8", xml_declaration=True
-    )
+
+    # Convert to XML string and inject the stylesheet processing instruction
+    xml_bytes = ET.tostring(rss, encoding="utf-8", xml_declaration=True)
+    xml_str = xml_bytes.decode("utf-8")
+    stylesheet_pi = '<?xml-stylesheet type="text/xsl" href="pretty-atom-feed.xsl"?>\n'
+    xml_str = xml_str.replace("?>\n", "?>\n" + stylesheet_pi, 1)
+
+    (docsDir / "changelog-feed.xml").write_text(xml_str, encoding="utf-8")
 
 
 htmlTemplate = """\
