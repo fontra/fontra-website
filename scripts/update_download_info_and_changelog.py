@@ -1,12 +1,12 @@
 import datetime
 import email.utils
-import xml.etree.ElementTree as ET
 import json
-import lxml.html
-import re
 import pathlib
-import markdown
+import re
 from urllib.request import urlopen
+from lxml import etree
+import lxml.html
+import markdown
 
 
 docsDir = pathlib.Path(__file__).resolve().parent.parent / "docs"
@@ -65,7 +65,6 @@ def addVersionAnchors(source):
 siteURL = "https://fontra.xyz"
 maxFeedEntries = 20
 atomNS = "http://www.w3.org/2005/Atom"
-ET.register_namespace("atom", atomNS)
 
 
 def splitEntries(source):
@@ -85,17 +84,13 @@ def splitEntries(source):
 
 
 def updateFeed(source):
-    rss = ET.Element("rss", version="2.0")
-    rss.append(
-        ET.ProcessingInstruction(
-            "xml-stylesheet", 'type="text/xsl" href="pretty-atom-feed.xsl"'
-        )
-    )
-    channel = ET.SubElement(rss, "channel")
-    ET.SubElement(channel, "title").text = "Fontra — Latest Changes"
-    ET.SubElement(channel, "link").text = f"{siteURL}/changelog.html"
-    ET.SubElement(channel, "description").text = "Latest changes in Fontra"
-    ET.SubElement(
+    nsmap = {"atom": atomNS}
+    rss = etree.Element("rss", version="2.0", nsmap=nsmap)
+    channel = etree.SubElement(rss, "channel")
+    etree.SubElement(channel, "title").text = "Fontra — Latest Changes"
+    etree.SubElement(channel, "link").text = f"{siteURL}/changelog.html"
+    etree.SubElement(channel, "description").text = "Latest changes in Fontra"
+    etree.SubElement(
         channel,
         f"{{{atomNS}}}link",
         href=f"{siteURL}/changelog-feed.xml",
@@ -108,18 +103,28 @@ def updateFeed(source):
         published = datetime.datetime.strptime(date, "%Y-%m-%d").replace(
             tzinfo=datetime.timezone.utc
         )
-        item = ET.SubElement(channel, "item")
-        ET.SubElement(item, "title").text = f"Fontra {version}"
-        ET.SubElement(item, "link").text = link
-        ET.SubElement(item, "guid").text = link
-        ET.SubElement(item, "pubDate").text = email.utils.format_datetime(published)
-        ET.SubElement(item, "description").text = markdown.markdown(
+        item = etree.SubElement(channel, "item")
+        etree.SubElement(item, "title").text = f"Fontra {version}"
+        etree.SubElement(item, "link").text = link
+        etree.SubElement(item, "guid").text = link
+        etree.SubElement(item, "pubDate").text = email.utils.format_datetime(published)
+        etree.SubElement(item, "description").text = markdown.markdown(
             doubleIndentation(body)
         )
 
-    ET.indent(rss)
-    ET.ElementTree(rss).write(
-        docsDir / "changelog-feed.xml", encoding="utf-8", xml_declaration=True
+    # Attach processing instruction directly to the prolog before the root element
+    pi = etree.ProcessingInstruction(
+        "xml-stylesheet", 'type="text/xsl" href="pretty-rss-feed.xsl"'
+    )
+    rss.addprevious(pi)
+
+    # Write document tree directly to file
+    tree = etree.ElementTree(rss)
+    tree.write(
+        docsDir / "changelog-feed.xml",
+        encoding="utf-8",
+        xml_declaration=True,
+        pretty_print=True,
     )
 
 
