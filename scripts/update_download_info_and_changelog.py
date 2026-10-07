@@ -1,5 +1,4 @@
 import datetime
-import email.utils
 import json
 import pathlib
 import re
@@ -83,44 +82,56 @@ def splitEntries(source):
     return [(date, version, "\n".join(body)) for date, version, body in entries]
 
 
+def atomTag(name):
+    return f"{{{atomNS}}}{name}"
+
+
 def updateFeed(source):
-    nsmap = {"atom": atomNS}
-    rss = etree.Element("rss", version="2.0", nsmap=nsmap)
-    channel = etree.SubElement(rss, "channel")
-    etree.SubElement(channel, "title").text = "Fontra — Latest Changes"
-    etree.SubElement(channel, "link").text = f"{siteURL}/changelog.html"
-    etree.SubElement(channel, "description").text = "Latest changes in Fontra"
+    # Atom feed, styled by the same pretty-atom-feed.xsl as the blog feed
+    feed = etree.Element(atomTag("feed"), nsmap={None: atomNS})
+    etree.SubElement(feed, atomTag("title")).text = "Fontra — Latest Changes"
+    etree.SubElement(feed, atomTag("subtitle")).text = "Latest changes in Fontra"
     etree.SubElement(
-        channel,
-        f"{{{atomNS}}}link",
+        feed,
+        atomTag("link"),
         href=f"{siteURL}/changelog-feed.xml",
         rel="self",
-        type="application/rss+xml",
     )
+    etree.SubElement(feed, atomTag("link"), href=f"{siteURL}/changelog.html")
+    updatedElement = etree.SubElement(feed, atomTag("updated"))
+    etree.SubElement(feed, atomTag("id")).text = f"{siteURL}/changelog.html"
+    author = etree.SubElement(feed, atomTag("author"))
+    etree.SubElement(author, atomTag("name")).text = "Fontra Team"
 
-    for date, version, body in splitEntries(source)[:maxFeedEntries]:
+    entries = splitEntries(source)[:maxFeedEntries]
+    updatedDates = []
+    for date, version, body in entries:
         link = f"{siteURL}/changelog.html#{version}"
-        published = datetime.datetime.strptime(date, "%Y-%m-%d").replace(
+        updated = datetime.datetime.strptime(date, "%Y-%m-%d").replace(
             tzinfo=datetime.timezone.utc
         )
-        item = etree.SubElement(channel, "item")
-        etree.SubElement(item, "title").text = f"Fontra {version}"
-        etree.SubElement(item, "link").text = link
-        etree.SubElement(item, "guid").text = link
-        etree.SubElement(item, "pubDate").text = email.utils.format_datetime(published)
-        etree.SubElement(item, "description").text = markdown.markdown(
-            doubleIndentation(body)
+        updatedDates.append(updated)
+        entry = etree.SubElement(feed, atomTag("entry"))
+        etree.SubElement(entry, atomTag("title")).text = f"Fontra {version}"
+        etree.SubElement(entry, atomTag("link"), href=link)
+        etree.SubElement(entry, atomTag("updated")).text = updated.strftime(
+            "%Y-%m-%dT%H:%M:%SZ"
         )
+        etree.SubElement(entry, atomTag("id")).text = link
+        content = etree.SubElement(entry, atomTag("content"), type="html")
+        content.text = markdown.markdown(doubleIndentation(body))
 
-    # Attach processing instruction directly to the prolog before the root element
+    # The feed's <updated> is the newest entry date (the entries are newest first)
+    newest = max(updatedDates, default=datetime.datetime.now(datetime.timezone.utc))
+    updatedElement.text = newest.strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    # The processing instruction goes into the prolog, before the root element
     pi = etree.ProcessingInstruction(
-        "xml-stylesheet", 'type="text/xsl" href="pretty-rss-feed.xsl"'
+        "xml-stylesheet", 'type="text/xsl" href="pretty-atom-feed.xsl"'
     )
-    rss.addprevious(pi)
+    feed.addprevious(pi)
 
-    # Write document tree directly to file
-    tree = etree.ElementTree(rss)
-    tree.write(
+    etree.ElementTree(feed).write(
         docsDir / "changelog-feed.xml",
         encoding="utf-8",
         xml_declaration=True,
@@ -135,7 +146,7 @@ htmlTemplate = """\
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fontra — Latest Changes</title>
-<link rel="alternate" type="application/rss+xml" title="Fontra changes" href="changelog-feed.xml">
+<link rel="alternate" type="application/atom+xml" title="Fontra changes" href="changelog-feed.xml">
 <link rel="stylesheet" href="changelog.css">
 </head>
 <body>
