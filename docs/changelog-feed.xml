@@ -5,11 +5,41 @@
   <subtitle>Latest changes in Fontra</subtitle>
   <link href="https://fontra.xyz/changelog-feed.xml" rel="self"/>
   <link href="https://fontra.xyz/changelog.html"/>
-  <updated>2026-10-05T00:00:00Z</updated>
+  <updated>2026-10-30T00:00:00Z</updated>
   <id>https://fontra.xyz/changelog.html</id>
   <author>
     <name>Fontra Team</name>
   </author>
+  <entry>
+    <title>Fontra 2026.10.1</title>
+    <link href="https://fontra.xyz/changelog.html#2026.10.1"/>
+    <updated>2026-10-30T00:00:00Z</updated>
+    <id>https://fontra.xyz/changelog.html#2026.10.1</id>
+    <content type="html">&lt;h3&gt;New features&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[languages] Norwegian (bokmål) contributed by Peder Vatn Austad. &lt;a href="https://github.com/fontra/fontra/pull/2817"&gt;PR 2817&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[opentype backend] Extract kerning from binary fonts. &lt;a href="https://github.com/fontra/fontra/issues/2137"&gt;Issue 2137&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2827"&gt;PR 2827&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[opentype backend] Convert OpenType features to .fea code when reading. This preserves features when exporting as (say) .fontra. This uses the new &lt;code&gt;sr-aef&lt;/code&gt; tool by Simon Cozens, with contributions by Khaled Hosny. &lt;a href="https://github.com/fontra/fontra/issues/2294"&gt;Issue 2294&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2810"&gt;PR 2810&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[fontra pak] When starting the application from the command line, open any fonts passed as arguments. Contributed by Tarik Rokhsane. &lt;a href="https://github.com/fontra/fontra-pak/pull/292"&gt;fontra-pak PR 292&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[fontra pak/linux] Add native Linux install and uninstall script. &lt;a href="https://github.com/fontra/fontra-pak/pull/289"&gt;fontra-pak PR 289&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[fontra pak/macOS/Intel/x86] Made Fontra Pak work again on macOS/Intel. &lt;a href="https://github.com/fontra/fontra-pak/issues/298"&gt;fontra-pak Issue 298&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra-pak/pull/299"&gt;fontra-pak PR 299&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[opentype feature code editor] Make "select all" (and other shortcuts) work in read-only mode. &lt;a href="https://github.com/fontra/fontra/pull/2824"&gt;PR 2824&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[editor] Fix proposed x/y coordinates for "Add Anchor" and "Add Guideline" dialogs in the case they are triggered by a shortcut instead of the context menu. &lt;a href="https://github.com/fontra/fontra/issues/2813"&gt;Issue 2813&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2814"&gt;PR 2814&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[vivaldi] Make shortcuts work in the Vivaldi browser. &lt;a href="https://github.com/fontra/fontra/issues/2807"&gt;Issue 2807&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2808"&gt;PR 2808&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[fontra-workflow] Fixed instantiating named guidelines. Among other things, this fixes exporting a variable font made with variable components that use named guidelines. &lt;a href="https://github.com/fontra/fontra/issues/2800"&gt;Issue 2800&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/issues/2799"&gt;Issue 2799&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2801"&gt;PR 2801&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Improvements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[fontra pak/windows] Show the Fontra icon in the titlebar. Contributed by Tarik Rokhsane. &lt;a href="https://github.com/fontra/fontra-pak/pull/297"&gt;PR 297&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[opentype] Updated the OpenType reader so it can correctly read fonts with variable components according to the latest &lt;code&gt;VARC&lt;/code&gt; specification. &lt;a href="https://github.com/fontra/fontra/pull/2819"&gt;PR 2819&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[fontra pak/linux/windows] On Windows and Linux, launch files in an existing Fontra Pak instance instead of opening a new one. Contributed by Tarik Rokhsane. &lt;a href="https://github.com/fontra/fontra-pak/pull/295"&gt;fontra-pak PR 295&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[editor] Prevent adding components that would cause a cyclic reference. &lt;a href="https://github.com/fontra/fontra/issues/517"&gt;Issue 517&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2818"&gt;PR 2818&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[export] Improve the error message when exporting a font that contains a glyph with a cyclic component reference. &lt;a href="https://github.com/fontra/fontra/pull/2815"&gt;PR 2815&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>Fontra 2026.10.0</title>
     <link href="https://fontra.xyz/changelog.html#2026.10.0"/>
@@ -17,8 +47,8 @@
     <id>https://fontra.xyz/changelog.html#2026.10.0</id>
     <content type="html">&lt;h3&gt;New features&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;[fontra pak] Added an "Open Font..." button to the main window, using a modified Open dialog that can select font projects that are folders, such as &lt;code&gt;.fontra&lt;/code&gt; and &lt;code&gt;.ufo&lt;/code&gt;. Contributed by Khaled Hosny. &lt;a href="https://github.com/fontra/fontra-pak/issues/253"&gt;Issue 253&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra-pak/pull/281"&gt;PR 281&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra-pak/pull/282"&gt;PR 282&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[fontra pak] Added a menu bar with a "File" menu, that has two items: "New Font..." and "Open Font...". &lt;a href="https://github.com/fontra/fontra-pak/issues/89"&gt;Issue 89&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra-pak/pull/283"&gt;PR 283&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[fontra pak] Added an "Open Font..." button to the main window, using a modified Open dialog that can select font projects that are folders, such as &lt;code&gt;.fontra&lt;/code&gt; and &lt;code&gt;.ufo&lt;/code&gt;. Contributed by Khaled Hosny. &lt;a href="https://github.com/fontra/fontra-pak/issues/253"&gt;fontra-pak Issue 253&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra-pak/pull/281"&gt;fontra-pak PR 281&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra-pak/pull/282"&gt;fontra-pak PR 282&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[fontra pak] Added a menu bar with a "File" menu, that has two items: "New Font..." and "Open Font...". &lt;a href="https://github.com/fontra/fontra-pak/issues/89"&gt;fontra-pak Issue 89&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra-pak/pull/283"&gt;fontra-pak PR 283&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;[fontra pak] Made drop area double-clickable as an alternative to open a font. Contributed by Tarik Rokhsane. &lt;a href="https://github.com/fontra/fontra-pak/pull/288"&gt;fontra-pak PR 288&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Fixes&lt;/h3&gt;
@@ -343,21 +373,6 @@
     <id>https://fontra.xyz/changelog.html#2026.4.2</id>
     <content type="html">&lt;ul&gt;
 &lt;li&gt;[fontra-pak Windows] Add an .msi installer to the release assets. Contributed by Dr Anirban Mitra &lt;a href="https://github.com/fontra/fontra-pak/issues/209"&gt;fontra-pak Issue 209&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra-pak/pull/238"&gt;fontra-pak PR 238&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <title>Fontra 2026.4.1</title>
-    <link href="https://fontra.xyz/changelog.html#2026.4.1"/>
-    <updated>2026-04-08T00:00:00Z</updated>
-    <id>https://fontra.xyz/changelog.html#2026.4.1</id>
-    <content type="html">&lt;h3&gt;New features&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Add support for conditional substitutions, or "designspace rules". This allows Fontra to view these substitutions from .designspace or .fontra files. A user interface to &lt;em&gt;author&lt;/em&gt; these rules will follow later. &lt;a href="https://github.com/fontra/fontra/issues/2460"&gt;Issue 2460&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2539"&gt;PR 2539&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[pointer tool] Convert a line to a curve with alt-click (eliminating the need to switch to the pen tool for this) &lt;a href="https://github.com/fontra/fontra/pull/2538"&gt;PR 2538&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Fixes&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;[font overview] Accept the alt/option key as a modifier to toggle the glyph selection (when clicking or dragging). This can already be done with the command/Windows/meta key, but that has an annoying side effect on Windows. &lt;a href="https://github.com/fontra/fontra/issues/2536"&gt;Issue 2536&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2537"&gt;PR 2537&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content>
   </entry>
 </feed>
