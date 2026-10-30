@@ -11,6 +11,16 @@
     <name>Fontra Team</name>
   </author>
   <entry>
+    <title>Fontra 2026.10.2</title>
+    <link href="https://fontra.xyz/changelog.html#2026.10.2"/>
+    <updated>2026-10-30T00:00:00Z</updated>
+    <id>https://fontra.xyz/changelog.html#2026.10.2</id>
+    <content type="html">&lt;h3&gt;Fixes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[fontra pak] Fixed extracting OpenType features from binary files. This was caused by a bundling problem. &lt;a href="https://github.com/fontra/fontra-pak/issues/302"&gt;fontra-pak Issue 302&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2828"&gt;PR 2828&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra-pak/pull/303"&gt;fontra-pak PR 303&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
+  <entry>
     <title>Fontra 2026.10.1</title>
     <link href="https://fontra.xyz/changelog.html#2026.10.1"/>
     <updated>2026-10-30T00:00:00Z</updated>
@@ -364,15 +374,6 @@
 &lt;h3&gt;Fixes&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;[opentype backend] When reading .ttf or .otf, don't error when the font has an older version of the OS/2 table. &lt;a href="https://github.com/fontra/fontra/issues/2548"&gt;Issue 2548&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra/pull/2549"&gt;PR 2549&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <title>Fontra 2026.4.2</title>
-    <link href="https://fontra.xyz/changelog.html#2026.4.2"/>
-    <updated>2026-04-14T00:00:00Z</updated>
-    <id>https://fontra.xyz/changelog.html#2026.4.2</id>
-    <content type="html">&lt;ul&gt;
-&lt;li&gt;[fontra-pak Windows] Add an .msi installer to the release assets. Contributed by Dr Anirban Mitra &lt;a href="https://github.com/fontra/fontra-pak/issues/209"&gt;fontra-pak Issue 209&lt;/a&gt;, &lt;a href="https://github.com/fontra/fontra-pak/pull/238"&gt;fontra-pak PR 238&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content>
   </entry>
 </feed>
